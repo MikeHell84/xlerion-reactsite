@@ -29,9 +29,9 @@ try {
     // Get database connection
     $db = Database::getInstance()->getConnection();
 
-    // Insert contact message (modify table name as needed)
-    // $stmt = $db->prepare("INSERT INTO contacts (name, email, message, created_at) VALUES (?, ?, ?, NOW())");
-    // $stmt->execute([$name, $email, $message]);
+    // Insert contact message
+    $stmt = $db->prepare("INSERT INTO contacts (name, email, message, created_at) VALUES (?, ?, ?, NOW())");
+    $stmt->execute([$name, $email, $message]);
 
     sendResponse([
         'success' => true,

@@ -54,6 +54,6 @@ class Database {
 
     // Prevent unserializing of the instance
     public function __wakeup() {
-        throw new Exception("Cannot unserialize singleton");
+        throw new Exception("Singleton cannot be unserialized. Create a new instance using getInstance() instead.");
     }
 }

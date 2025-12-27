@@ -4,9 +4,19 @@
  * Common functions and headers for all API endpoints
  */
 
+require_once __DIR__ . '/../config/env.php';
+
 // Set headers for JSON API
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
+
+// CORS configuration - restrict in production
+$allowed_origins = ['http://localhost:3000', 'http://localhost:8000'];
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+
+if (in_array($origin, $allowed_origins) || EnvLoader::get('APP_ENV') === 'development') {
+    header('Access-Control-Allow-Origin: ' . ($origin ?: '*'));
+}
+
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section id="home" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-5">
+    <section id="home" className="text-white py-5" style={{ background: 'linear-gradient(to right, #0d6efd, #6610f2)' }}>
       <div className="container">
         <div className="row align-items-center min-vh-75">
           <div className="col-lg-6">
