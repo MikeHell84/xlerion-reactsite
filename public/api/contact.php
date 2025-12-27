@@ -7,7 +7,8 @@ require_once __DIR__ . '/../../includes/config.php';
 $isJson = (isset($_SERVER['HTTP_ACCEPT']) && str_contains($_SERVER['HTTP_ACCEPT'], 'application/json')) || (strpos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false);
 
 function respond($data, $code = 200){
-    if($GLOBALS['isJson']){
+    $acceptsJson = (isset($_SERVER['HTTP_ACCEPT']) && str_contains($_SERVER['HTTP_ACCEPT'], 'application/json')) || (strpos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false);
+    if($acceptsJson){
         header('Content-Type: application/json'); http_response_code($code); echo json_encode($data, JSON_UNESCAPED_UNICODE); exit;
     }
     // default: redirect back to contact page with status
