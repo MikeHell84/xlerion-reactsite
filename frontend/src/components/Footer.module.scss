@@ -1,6 +1,119 @@
+// Footer.module.scss
+// Modular SCSS for the site footer. Mobile-first styles, low specificity.
+// Tokens are sourced from the global `xlerion.scss` when available.
+@import '../styles/xlerion.scss';
+
+// Fallback tokens in case global file doesn't define them.
+$primary: #007BFF !default;
+$dark: #212529 !default;
+$accent: #00FF88 !default;
+$muted: #6c757d !default;
+
+.footer-container {
+  background: $dark;
+  color: #e9ecef;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+
+  // Ensure links are readable
+  a {
+    color: lighten($muted, 20%);
+    text-decoration: none;
+  }
+}
+
+// Column groups (links / contact / social / newsletter)
+.footer-links {
+  .list-unstyled {
+    padding-left: 0;
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+  }
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  // Individual icon wrapper
+  .footer-social-item {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: transparent;
+    color: #fff;
+    transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+
+    &:hover {
+      transform: translateY(-3px) scale(1.03);
+      background: $accent;
+      color: $dark;
+    }
+  }
+}
+
+.footer-newsletter {
+  form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  input[type="email"] {
+    flex: 1 1 auto;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+    color: #fff;
+  }
+
+  button {
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    background: $primary;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($primary, 6%);
+    }
+  }
+
+  .msg {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #ccead9;
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: lighten($muted, 10%);
+}
+
+// Responsive: stack columns on small screens
+@media (min-width: 768px) {
+  .footer-container {
+    padding: 3rem 2rem;
+  }
+}
+
 .footer {
-  padding:1.5rem 0;
-  background:#0f1724;
-  color:#fff;
-  text-align:center;
+  padding: 1.5rem 0;
+  background: #0f1724;
+  color: #fff;
+  text-align: center;
 }

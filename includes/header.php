@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="/public/build/assets/index-Bw7mgMLM.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg xlerion-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Xlerion</a>
+    <a class="navbar-brand" href="/inicio.php">Xlerion</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,8 +26,14 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="/inicio.php">Inicio</a></li>
         <li class="nav-item"><a class="nav-link" href="/filosofia.php">Filosofía</a></li>
+        <li class="nav-item"><a class="nav-link" href="/soluciones.php">Soluciones</a></li>
         <li class="nav-item"><a class="nav-link" href="/proyectos.php">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="/documentacion.php">Documentación</a></li>
+        <li class="nav-item"><a class="nav-link" href="/fundador.php">Fundador</a></li>
+        <li class="nav-item"><a class="nav-link" href="/convocatorias.php">Convocatorias</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blog.php">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="/contacto.php">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="/legal.php">Legal</a></li>
       </ul>
     </div>
   </div>

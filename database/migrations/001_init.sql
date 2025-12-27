@@ -1,0 +1,40 @@
+-- Migration: initial schema for Xlerion
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role ENUM('admin','editor') NOT NULL DEFAULT 'editor',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS pages (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  slug VARCHAR(200) NOT NULL UNIQUE,
+  title VARCHAR(255) NOT NULL,
+  content MEDIUMTEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS modules (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  page_id INT NOT NULL,
+  type VARCHAR(100) NOT NULL,
+  content MEDIUMTEXT,
+  `order` INT DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (page_id) REFERENCES pages(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS backups (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  path VARCHAR(1024) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- NOTE: Replace the placeholder password hash before production.
+INSERT INTO users (username, password, role)
+SELECT 'admin', '$2y$10$changemechangemechangemechangemechangemech', 'admin'
+WHERE NOT EXISTS (SELECT 1 FROM users WHERE username='admin');
