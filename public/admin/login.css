@@ -19,6 +19,19 @@
   padding: 1rem;
 }
 
+/* Parallax background - positioned as fixed background, not taking up space */
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: url("/media/parallax-bg.jpg") no-repeat center center;
+  background-size: cover;
+  pointer-events: none;
+}
+
 /* Wrapper centers vertically and horizontally on small screens */
 .login-wrapper {
   display: flex;
@@ -122,3 +135,5 @@
     width: 50%;
   }
 }
+
+/*# sourceMappingURL=login.css.map */
