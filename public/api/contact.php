@@ -44,9 +44,27 @@ $entry = [
 $saved = false; $errorMsg = null;
 try{
     $pdo = get_pdo();
-    $sql = "INSERT INTO contacts (`name`,`email`,`message`,`created_at`) VALUES (:name,:email,:message,:created_at)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute($entry);
+    // Adapt to existing contacts schema if necessary
+    $colsStmt = $pdo->query("SHOW COLUMNS FROM contacts");
+    $cols = array_map(function($c){ return $c['Field']; }, $colsStmt->fetchAll(PDO::FETCH_ASSOC));
+    if(in_array('name', $cols)){
+        $sql = "INSERT INTO contacts (`name`,`email`,`message`,`created_at`) VALUES (:name,:email,:message,:created_at)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute($entry);
+    } elseif(in_array('first_name', $cols) && in_array('last_name', $cols)){
+        // split full name into first/last
+        $parts = preg_split('/\s+/', $entry['name'], 2);
+        $first = $parts[0] ?? '';
+        $last = $parts[1] ?? '';
+        $sql = "INSERT INTO contacts (first_name,last_name,email,notes,created_at) VALUES (:first,:last,:email,:notes,:created_at)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['first'=>$first,'last'=>$last,'email'=>$entry['email'],'notes'=>$entry['message'],'created_at'=>$entry['created_at']]);
+    } else {
+        // fallback: try basic columns
+        $sql = "INSERT INTO contacts (email,notes,created_at) VALUES (:email,:notes,:created_at)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['email'=>$entry['email'],'notes'=>$entry['message'],'created_at'=>$entry['created_at']]);
+    }
     $saved = true;
 } catch (Exception $e){
     $errorMsg = $e->getMessage();
