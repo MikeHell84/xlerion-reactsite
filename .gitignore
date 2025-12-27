@@ -2,3 +2,6 @@
 node_modules
 listaTareas.md
 DetallesServidor.md
+public/build/
+backup/
+frontend/node_modules/
