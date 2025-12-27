@@ -1,0 +1,5 @@
+{
+  "navbar": true,
+  "footer": true,
+  "note": "Set true to prevent editing via admin UI. Toggle manually if needed."
+}
