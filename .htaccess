@@ -1,0 +1,25 @@
+# Root .htaccess for Xlerion ReactJS Site
+# This routes requests to the public directory
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirect to public directory
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Protect sensitive files and directories
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to sensitive directories
+RedirectMatch 403 ^/(config|database|src|node_modules)/.*$
+
+# Protect .env files
+<FilesMatch "\.env">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

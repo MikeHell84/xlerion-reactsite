@@ -1,0 +1,33 @@
+# Apache Configuration for API Directory
+# Place this file in the api/ directory
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Allow API endpoint access
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /api/index.php [L]
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    # CORS headers for API
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+# PHP Settings
+<IfModule mod_php8.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value max_execution_time 30
+    php_value max_input_time 30
+</IfModule>
+
+# Protect .env files
+<FilesMatch "^\.env">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
