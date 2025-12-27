@@ -12,6 +12,8 @@
     <!-- Tailwind (via CDN for utility classes) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/public/xlerion.css">
+    <!-- React build CSS (if present) -->
+    <link rel="stylesheet" href="/public/build/assets/index-Bw7mgMLM.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
