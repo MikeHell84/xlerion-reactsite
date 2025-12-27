@@ -3,6 +3,14 @@
 // Receives POST from contact form; saves to DB (PDO) or falls back to backup JSON.
 require_once __DIR__ . '/../../includes/config.php';
 
+// DEBUG: dump some server vars to a temp file for diagnosis (removed after)
+@file_put_contents(__DIR__ . '/contact_debug.json', json_encode([
+    'HTTP_ACCEPT'=>($_SERVER['HTTP_ACCEPT'] ?? null),
+    'CONTENT_TYPE'=>($_SERVER['CONTENT_TYPE'] ?? null),
+    'REQUEST_METHOD'=>($_SERVER['REQUEST_METHOD'] ?? null),
+    'POST'=>$_POST
+], JSON_PRETTY_PRINT));
+
 // Allow both form POST and JSON
 $isJson = (isset($_SERVER['HTTP_ACCEPT']) && str_contains($_SERVER['HTTP_ACCEPT'], 'application/json')) || (strpos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false);
 
