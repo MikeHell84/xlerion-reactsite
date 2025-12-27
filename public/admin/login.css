@@ -110,11 +110,50 @@
     max-width: 420px;
     padding: 2rem;
   }
+
   .login-card .btn-group {
     flex-direction: row;
   }
+
   .login-card .btn-group .xlerion-btn-primary,
   .login-card .btn-group .xlerion-btn-secondary {
     width: 50%;
+  }
+}
+
+/* Mobile overrides to ensure correct stacked layout and touch targets */
+@media (max-width: 767px) {
+  .login-card {
+    width: 95vw !important;
+    margin-top: 4vh !important;
+    padding: 1.2rem !important;
+  }
+
+  /* Force forms to stack vertically on mobile (overrides Daisy row rule) */
+  .login-card form,
+  .login-card form>.btn-group,
+  .admin-login-card form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+  }
+
+  .login-card .btn-group {
+    width: 100% !important;
+  }
+
+  .login-card .xlerion-btn-primary,
+  .login-card .xlerion-btn-secondary,
+  .admin-login-card .daisy-btn,
+  .admin-login-card .daisy-btn-accent {
+    width: 90vw !important;
+    max-width: 340px !important;
+    margin: 0.25rem auto !important;
+    display: block !important;
+  }
+
+  .login-card img {
+    max-width: 72px !important;
   }
 }

@@ -1,15 +1,6 @@
 @import url('https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css');
 
-/* --- Diseño responsivo profesional para botones login --- */
-body .admin-login-card form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-/* --- Diseño responsivo profesional para botones login --- */
+/* --- Diseño responsivo profesional para botones login (desktop-first in this file) --- */
 body .admin-login-card form {
     display: flex;
     flex-direction: row;
