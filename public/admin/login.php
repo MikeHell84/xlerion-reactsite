@@ -33,7 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link href="/admin/daisy-tailwind.css" rel="stylesheet">
   <link href="/admin/admin-login.css" rel="stylesheet">
   <!-- Compiled login styles (Login.module.scss -> login.css) -->
-  <link href="/admin/login.css" rel="stylesheet">
+  <?php $loginCss = '/admin/login.css'; $loginCssPath = __DIR__ . $loginCss; $ver = file_exists($loginCssPath) ? filemtime($loginCssPath) : time(); ?>
+  <link href="<?= $loginCss ?>?v=<?= $ver ?>" rel="stylesheet">
 </head>
 <body>
   <main>

@@ -1,173 +1,160 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+.xlerion-btn-primary {
+  width: 100%;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 123, 255, 0.12);
+  letter-spacing: 0.01em;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  outline: none;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.xlerion-btn-primary:hover, .xlerion-btn-primary:focus {
+  background: #00FF88;
+  color: #222;
+  box-shadow: 0 6px 24px rgba(0, 255, 136, 0.18);
+}
 
-/* Parallax background for login */
-.parallax-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    background: url('/media/images/parallax/documentacion-recursos-parallax.jpg') center center / cover no-repeat;
-    opacity: 0.18;
-    transition: transform 0.18s cubic-bezier(.4, 1.2, .4, 1), opacity 0.3s;
-    pointer-events: none;
+.xlerion-btn-secondary {
+  width: 100%;
+  background: transparent;
+  color: #00FF88;
+  border: 2px solid #00FF88;
+  border-radius: 16px;
+  padding: 0.7rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: none;
+  letter-spacing: 0.01em;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+.xlerion-btn-secondary:hover, .xlerion-btn-secondary:focus {
+  background: #00FF88;
+  color: #222;
+  border-color: #007BFF;
 }
 
 .admin-login-card {
-    position: relative;
-    z-index: 2;
-}
-
-/* Xlerion Admin Login - Diseño profesional y accesible */
-/* Azul láser: #00f0ff */
-:root {
-    --xlerion-primary: #00f0ff;
-    --xlerion-accent: #00FF88;
-    --xlerion-dark: #212529;
-    --xlerion-muted: #6c757d;
-    --xlerion-bg: #181a1b;
-    --xlerion-card-bg: #000;
-    --xlerion-radius: 14px;
-    --xlerion-shadow: 0 6px 32px rgba(0, 240, 255, 0.10);
-    --xlerion-font: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    background: var(--xlerion-bg);
-    font-family: var(--xlerion-font);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.admin-login-card {
-    background: var(--xlerion-card-bg);
-    border-radius: var(--xlerion-radius);
-    box-shadow: var(--xlerion-shadow);
-    padding: 2.5rem 2rem 2rem 2rem;
-    max-width: 400px;
-    width: 100%;
-    border: 1.5px solid var(--xlerion-primary);
-    color: var(--xlerion-primary);
+  width: 95vw;
+  max-width: 400px;
+  margin: 5vh auto 0 auto;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 14px;
+  box-shadow: 0 1.5px 8px rgba(0, 240, 255, 0.1333333333);
+  background: rgba(17, 17, 17, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
 .admin-login-card h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--xlerion-primary);
-    text-align: center;
-    letter-spacing: 0.01em;
-    text-shadow: 0 0 8px #00f0ff, 0 0 2px #00f0ff;
+  font-size: clamp(1.3rem, 6vw, 2rem);
+  margin-bottom: 1.3rem;
+  text-align: center;
 }
 
 .admin-login-card label {
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-    display: block;
-    color: var(--xlerion-primary);
-    text-shadow: 0 0 2px #00f0ff;
-    text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.7rem;
 }
 
-body .admin-login-card .forgot-password-link {
-    display: block !important;
-    margin: 0.5rem auto 0 auto !important;
-    color: var(--xlerion-accent) !important;
-    background: transparent !important;
-    border: 1.5px solid var(--xlerion-accent) !important;
-    border-radius: var(--xlerion-radius) !important;
-    text-align: center !important;
-    font-size: 1rem !important;
-    font-family: var(--xlerion-font) !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
-    text-decoration: none !important;
-    padding: 0.45rem 1.2rem !important;
-    box-shadow: 0 0 8px rgba(0, 255, 136, 0.10) !important;
-    transition: color 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s !important;
-    outline: none !important;
+.admin-login-card input {
+  font-size: 1.05rem;
+  min-height: 44px;
+  width: 100%;
+  margin-bottom: 1.1rem;
+  border-radius: 8px;
 }
 
-body .admin-login-card .forgot-password-link:hover,
-body .admin-login-card .forgot-password-link:focus {
-    color: var(--xlerion-primary) !important;
-    background: rgba(0, 240, 255, 0.08) !important;
-    border-color: var(--xlerion-primary) !important;
-    box-shadow: 0 0 12px var(--xlerion-primary) !important;
+.admin-login-card button {
+  font-size: 1.08rem;
+  min-height: 46px;
+  width: 100%;
+  margin-bottom: 1.1rem;
+  border-radius: 8px;
 }
 
-.recovery-form {
-    margin-top: 1rem;
-    text-align: center;
+@media (max-width: 480px) {
+  .admin-login-card {
+    width: 98vw;
+    margin-top: 3vh;
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    box-shadow: 0 1.5px 8px rgba(0, 240, 255, 0.1333333333);
+  }
+  .admin-login-card h1 {
+    font-size: clamp(1.1rem, 7vw, 1.5rem);
+  }
+}
+.admin-login-card img {
+  max-width: 70px;
+  max-height: 70px;
+  margin-bottom: 1rem;
 }
 
-.recovery-form input[type="email"] {
-    margin: 0.5rem auto 1rem auto;
-    display: block;
-    width: 80%;
-    max-width: 260px;
+.admin-login-card {
+  width: 98vw;
+  max-width: 400px;
+  margin: 8vh auto 0 auto;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0, 240, 255, 0.2);
+  background: rgba(17, 17, 17, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
-.recovery-form button[type="submit"] {
-    margin: 0 auto;
-    display: block;
+.admin-login-card h1 {
+  font-size: clamp(1.2rem, 5vw, 1.7rem);
+  margin-bottom: 1.2rem;
+  text-align: center;
 }
 
-.admin-login-card input[type="text"],
-.admin-login-card input[type="password"] {
-    width: 100%;
-    padding: 0.75rem 0.75rem;
-    border: 1.5px solid #222c;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    background: #181a1b;
-    color: var(--xlerion-primary);
-    transition: border-color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 0 0 1px #00f0ff33;
+.admin-login-card label {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.7rem;
 }
 
-.admin-login-card input:focus {
-    border-color: var(--xlerion-primary);
-    outline: none;
-    background: #111;
-    color: #00f0ff;
-    box-shadow: 0 0 0 2px #00f0ff99;
+.admin-login-card input,
+.admin-login-card button {
+  font-size: 1.05rem;
+  min-height: 44px;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
 }
 
-body .admin-login-card .xlerion-btn-primary {
-    width: 100% !important;
-    background: var(--xlerion-primary) !important;
-    color: #000 !important;
-    border: none !important;
-    border-radius: 6px !important;
-    padding: 0.75rem !important;
-    font-size: 1.1rem !important;
-    font-weight: 700 !important;
-    cursor: pointer !important;
-    transition: background 0.18s, box-shadow 0.18s !important;
-    box-shadow: 0 2px 8px #00f0ff33 !important;
-    letter-spacing: 0.01em !important;
-    text-shadow: 0 0 2px #00f0ff !important;
-    font-family: var(--xlerion-font) !important;
-    margin-top: 1.2rem !important;
-    margin-bottom: 0.5rem !important;
-    outline: none !important;
+.admin-login-card img {
+  max-width: 70px;
+  max-height: 70px;
+  margin-bottom: 1rem;
 }
 
-body .admin-login-card .xlerion-btn-primary:hover,
-body .admin-login-card .xlerion-btn-primary:focus {
-    background: #00b8cc !important;
-    color: #fff !important;
-    box-shadow: 0 4px 16px #00f0ff55 !important;
+@media (min-width: 480px) {
+  .admin-login-card {
+    padding: 2.5rem 2rem 2.5rem 2rem;
+    max-width: 350px;
+  }
 }
-
-.admin-login-card .error {
-    color: #ff3b3b;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-weight: 500;
+@media (min-width: 480px) {
+  .admin-login-card {
+    padding: 2.5rem 2rem 2.5rem 2rem;
+    max-width: 350px;
+  }
 }
