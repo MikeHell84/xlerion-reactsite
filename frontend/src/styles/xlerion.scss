@@ -1,36 +1,241 @@
-// Global SCSS for Xlerion
-$brand: #0b5f73;
-$accent: #ff6b6b;
-$muted: #6b7280;
-$bg: #ffffff;
-$surface: #f8fafc;
-$radius: 8px;
+// xlerion.scss - Global design tokens, utilities and component primitives
+// Compiled to `public/xlerion.css` for production. Edit partials under
+// `frontend/src/styles/` and run `npm run build:css` to regenerate.
 
-// Mixins
-@mixin btn($bg, $color:#fff){
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+// --------------------------------------------------
+// Design tokens
+// --------------------------------------------------
+$xlerion-blue: #007BFF !default; // Azul eléctrico (primario)
+$xlerion-dark: #212529 !default; // Gris oscuro (secundario)
+$xlerion-accent: #00FF88 !default; // Verde neón (acento)
+$xlerion-muted: #6c757d !default;
+
+// Spacing scale (modular)
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 16px;
+$space-4: 32px;
+
+// Typography
+$font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+// Breakpoints
+$bp-mobile: 0;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+
+// --------------------------------------------------
+// Tokens: CSS custom properties for runtime interop
+// --------------------------------------------------
+:root {
+  --xlerion-primary: #{$xlerion-blue};
+  --xlerion-primary-rgb: 0, 123, 255;
+  /* derived RGB for opacity use */
+  --xlerion-dark: #{$xlerion-dark};
+  --xlerion-accent: #{$xlerion-accent};
+  --xlerion-accent-rgb: 0, 255, 136;
+  /* derived RGB for opacity use */
+  --xlerion-muted: #{$xlerion-muted};
+  --xlerion-space-1: #{$space-1};
+  --xlerion-space-2: #{$space-2};
+  --xlerion-space-3: #{$space-3};
+  --xlerion-space-4: #{$space-4};
+  --xlerion-font-sans: #{$font-sans};
+
+  /* Warning / accent palettes (centralized tokens for gradients) */
+  --xlerion-warn-start: #ff005c;
+  --xlerion-warn-end: #ffb300;
+  --xlerion-warn-start-rgb: 255, 0, 92;
+  --xlerion-warn-end-rgb: 255, 179, 0;
+
+  /* Gradient tokens */
+  --xlerion-gradient-primary: linear-gradient(90deg, rgba(var(--xlerion-primary-rgb), 1) 0%, rgba(var(--xlerion-primary-rgb), 0.85) 100%);
+  --xlerion-gradient-warn: linear-gradient(90deg, var(--xlerion-warn-start) 0%, var(--xlerion-warn-end) 100%);
+
+  /* Surface & alerts used by admin UI */
+  --xlerion-surface: #f7f7f7;
+  --xlerion-alert-bg: #ffecec;
+  --xlerion-alert-border: #f5c2c2;
+
+  /* Map Bootstrap core colors to Xlerion tokens for consistent components */
+  --bs-primary: var(--xlerion-primary);
+  --bs-dark: var(--xlerion-dark);
+  --bs-link-color: var(--xlerion-primary);
+}
+
+// --------------------------------------------------
+// Mixins & utilities
+// --------------------------------------------------
+// Button mixin: low-specificity primitive used by component styles
+@mixin xlerion-button($bg: $xlerion-blue, $color: #fff, $radius: 8px) {
+  display: inline-block;
   background: $bg;
   color: $color;
+  padding: $space-2 $space-3;
   border-radius: $radius;
-  padding: .6rem 1rem;
-  display: inline-block;
-  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+
+  &:hover {
+    background: darken($bg, 6%);
+    transform: translateY(-1px);
+  }
 }
 
-// Base
-*{box-sizing:border-box}
-html,body{height:100%;background:$bg;color:#111827;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
-
-.btn-primary{@include btn($brand)}
-.btn-accent{@include btn($accent)}
-
-.hero{padding:4rem 0;background:linear-gradient(180deg, rgba(11,95,115,0.06), rgba(11,95,115,0.02));border-radius:$radius}
-.testimonial{border-left:4px solid $accent;padding:1rem;margin:1rem 0;background:$surface}
-
-// Section prefixes to avoid collisions
-.inicio-hero{@extend .hero}
-.filosofia-valores ul{list-style:disc;margin-left:1.25rem}
-
-// Responsive
-@media (max-width: 768px){
-  .grid-2{grid-template-columns:1fr}
+// Card mixin
+@mixin xlerion-card($radius: 10px, $shadow: 0 6px 18px rgba(16, 24, 40, 0.08)) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  background: #fff;
 }
+
+// Utility mixins
+@mixin xlerion-transition($props: all, $time: 200ms, $fn: ease) {
+  transition: $props $time $fn;
+}
+
+@mixin xlerion-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// --------------------------------------------------
+// Base styles
+// --------------------------------------------------
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%;
+  background: #fff;
+  color: #111827;
+  font-family:#{$font-sans}
+}
+
+// Headings and typography scale
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:#{$font-sans};
+  margin: 0 0 $space-3 0
+}
+
+p {
+  margin: 0 0 $space-3 0
+}
+
+// Buttons global utility
+.xlerion-btn {
+  @include xlerion-button();
+}
+
+// Forms
+input,
+textarea,
+select {
+  font-family: inherit
+}
+
+// --------------------------------------------------
+// Components: navbar, footer, cards, forms, hero
+// Prefixed with .xlerion- to avoid conflicts
+// --------------------------------------------------
+
+// Navbar primitive (light weight)
+.xlerion-navbar {
+  background: var(--xlerion-primary);
+  color: #fff;
+  padding: $space-2 $space-3;
+}
+
+// Navbar link and toggler colors to match corporate palette
+.xlerion-navbar .navbar-brand,
+.xlerion-navbar .nav-link {
+  color: #fff !important;
+}
+
+.xlerion-navbar .nav-link:hover,
+.xlerion-navbar .nav-link:focus {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.xlerion-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.xlerion-navbar .navbar-toggler-icon {
+  filter: invert(1) brightness(2);
+}
+
+/* Brand weight and more-specific navbar selector to override competing rules */
+.xlerion-navbar .navbar-brand {
+  font-weight: 600;
+}
+
+nav.navbar.xlerion-navbar {
+  background: var(--xlerion-primary);
+  color: #fff;
+}
+
+nav.navbar.xlerion-navbar .navbar-brand,
+nav.navbar.xlerion-navbar .nav-link {
+  color: #fff;
+}
+
+// Footer has its own module (Footer.module.scss) but keep base helpers here
+.xlerion-footer {
+  font-size: 0.95rem;
+}
+
+.xlerion-card {
+  @include xlerion-card();
+  padding: $space-3;
+}
+
+.xlerion-hero {
+  padding: $space-4 0;
+  background: linear-gradient(180deg, rgba(0, 123, 255, 0.06), rgba(0, 123, 255, 0.02));
+}
+
+// Small utilities
+.xlerion-shadow-sm {
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.06);
+}
+
+.xlerion-rounded {
+  border-radius: 8px;
+}
+
+// Responsive helpers (mobile-first)
+@media (min-width: $bp-tablet) {
+  .xlerion-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 $space-3;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .xlerion-container {
+    max-width: 1140px;
+  }
+}
+
+// --------------------------------------------------
+// Documentation comments: where to place partials
+// - base/ (reset, typography, tokens)
+// - components/ (buttons, cards, navbar, footer)
+// - layout/ (grid, containers)
+// - utilities/ (helpers, mixins)
+// Keep partials imported here when the project grows.
+// --------------------------------------------------

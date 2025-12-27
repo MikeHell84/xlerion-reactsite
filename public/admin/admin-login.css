@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+/* Using design tokens defined in frontend/src/styles/xlerion.scss (via :root vars)
+   Colors should reference CSS custom properties like --xlerion-primary / --xlerion-accent */
 .xlerion-btn-primary {
   width: 100%;
-  background: #007BFF;
-  color: #fff;
+  background: var(--xlerion-primary);
+  color: var(--bs-white);
   border: none;
   border-radius: 16px;
   padding: 0.75rem;
@@ -10,7 +12,7 @@
   font-weight: 700;
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   cursor: pointer;
-  box-shadow: 0 4px 18px rgba(0, 123, 255, 0.12);
+  box-shadow: 0 4px 18px rgba(var(--xlerion-primary-rgb), 0.12);
   letter-spacing: 0.01em;
   transition: background 0.18s, box-shadow 0.18s, color 0.18s;
   outline: none;
@@ -18,16 +20,16 @@
   margin-bottom: 0.5rem;
 }
 .xlerion-btn-primary:hover, .xlerion-btn-primary:focus {
-  background: #00FF88;
-  color: #222;
-  box-shadow: 0 6px 24px rgba(0, 255, 136, 0.18);
+  background: var(--xlerion-accent);
+  color: var(--bs-dark);
+  box-shadow: 0 6px 24px rgba(var(--xlerion-accent-rgb), 0.18);
 }
 
 .xlerion-btn-secondary {
   width: 100%;
   background: transparent;
-  color: #00FF88;
-  border: 2px solid #00FF88;
+  color: var(--xlerion-accent);
+  border: 2px solid var(--xlerion-accent);
   border-radius: 16px;
   padding: 0.7rem;
   font-size: 1.05rem;
@@ -41,9 +43,9 @@
   margin-bottom: 0.5rem;
 }
 .xlerion-btn-secondary:hover, .xlerion-btn-secondary:focus {
-  background: #00FF88;
-  color: #222;
-  border-color: #007BFF;
+  background: var(--xlerion-accent);
+  color: var(--bs-dark);
+  border-color: var(--xlerion-primary);
 }
 
 .admin-login-card {
@@ -52,7 +54,7 @@
   margin: 5vh auto 0 auto;
   padding: 2rem 1rem 2rem 1rem;
   border-radius: 14px;
-  box-shadow: 0 1.5px 8px rgba(0, 240, 255, 0.1333333333);
+  box-shadow: 0 1.5px 8px rgba(var(--xlerion-primary-rgb), 0.133);
   background: rgba(17, 17, 17, 0.8);
   display: flex;
   flex-direction: column;
@@ -93,7 +95,7 @@
     width: 98vw;
     margin-top: 3vh;
     padding: 1.2rem 0.5rem 1.5rem 0.5rem;
-    box-shadow: 0 1.5px 8px rgba(0, 240, 255, 0.1333333333);
+    box-shadow: 0 1.5px 8px rgba(var(--xlerion-primary-rgb), 0.133);
   }
   .admin-login-card h1 {
     font-size: clamp(1.1rem, 7vw, 1.5rem);
@@ -111,7 +113,7 @@
   margin: 8vh auto 0 auto;
   padding: 2rem 1rem 2rem 1rem;
   border-radius: 14px;
-  box-shadow: 0 2px 16px rgba(0, 240, 255, 0.2);
+  box-shadow: 0 2px 16px rgba(var(--xlerion-primary-rgb), 0.2);
   background: rgba(17, 17, 17, 0.8);
   display: flex;
   flex-direction: column;
@@ -158,3 +160,5 @@
     max-width: 350px;
   }
 }
+
+/*# sourceMappingURL=admin-login.css.map */

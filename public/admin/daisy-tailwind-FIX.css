@@ -1,6 +1,4 @@
-@import url('https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css');
-
-/* --- Diseño responsivo profesional para botones login (desktop-first in this file) --- */
+/* --- Botones login XLERION: azul y rojo ácido, responsive --- */
 body .admin-login-card form {
     display: flex;
     flex-direction: row;
@@ -35,9 +33,6 @@ body .admin-login-card .daisy-btn-accent {
     display: inline-block !important;
 }
 
-/* DaisyUI + TailwindCSS CDN para botones modernos y personalizables */
-
-/* DaisyUI + TailwindCSS CDN para botones modernos y personalizables */
 @media (max-width: 767px) {
     body .admin-login-card form {
         flex-direction: column !important;
@@ -53,5 +48,3 @@ body .admin-login-card .daisy-btn-accent {
         display: block !important;
     }
 }
-
-/* Prioridad: los estilos de DaisyUI y Tailwind se pueden sobrescribir con !important si es necesario. */

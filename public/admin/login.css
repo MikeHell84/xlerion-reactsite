@@ -1,4 +1,6 @@
+/* $primary removed to avoid token duplication */
 /* Xlerion primary laser blue */
+/* keep neutral shadow */
 /* Utility fallbacks (tailwind-like) */
 .w-full {
   width: 100%;
@@ -35,7 +37,7 @@
   padding: 1.6rem;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  border: 2px solid rgba(0, 255, 136, 0.06);
+  border: 2px solid rgba(var(--xlerion-accent-rgb), 0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,14 +45,14 @@
 
 .login-card h1 {
   font-size: clamp(1.2rem, 6vw, 1.8rem);
-  color: #00FF88;
+  color: var(--xlerion-accent);
   margin-bottom: 0.8rem;
 }
 
 .login-card label {
   align-self: flex-start;
   font-size: 0.95rem;
-  color: #cdd;
+  color: var(--xlerion-muted);
   margin-bottom: 0.25rem;
 }
 
@@ -59,22 +61,23 @@
   border-radius: 8px;
   padding: 0.6rem 0.75rem;
   border: none;
-  background: #fff;
-  color: #222;
+  background: var(--bs-white);
+  color: var(--bs-dark);
 }
 
 /* Buttons */
 .xlerion-btn-primary {
   display: inline-block;
   width: 100%;
-  background: #00f0ff;
-  color: #fff;
+  background: var(--xlerion-primary);
+  color: var(--bs-white);
   border: none;
   border-radius: 0.75rem;
   /* rounded-lg */
   padding: 0.65rem 0.9rem;
   font-weight: 700;
-  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.18);
+  box-shadow: 0 6px 18px rgba(var(--xlerion-primary-rgb), 0.18);
+  /* keep for subtle glow */
   /* shadow-md */
   transition: background-color 0.18s ease, transform 0.12s ease;
   /* transition-colors */
@@ -82,16 +85,16 @@
 
 .xlerion-btn-primary:hover,
 .xlerion-btn-primary:focus {
-  background: #00FF88;
-  color: #111;
+  background: var(--xlerion-accent);
+  color: var(--xlerion-dark);
   transform: translateY(-2px);
 }
 
 .xlerion-btn-secondary {
   width: 100%;
   background: transparent;
-  color: #00FF88;
-  border: 2px solid #00FF88;
+  color: var(--xlerion-accent);
+  border: 2px solid var(--xlerion-accent);
   border-radius: 0.75rem;
   padding: 0.55rem 0.9rem;
   margin-top: 0.35rem;
