@@ -1,0 +1,9 @@
+.navbarRoot {
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+.brand {
+  font-weight:700;
+  color: $brand; /* token, compiled in global SCSS */
+}

@@ -1,0 +1,36 @@
+// Global SCSS for Xlerion
+$brand: #0b5f73;
+$accent: #ff6b6b;
+$muted: #6b7280;
+$bg: #ffffff;
+$surface: #f8fafc;
+$radius: 8px;
+
+// Mixins
+@mixin btn($bg, $color:#fff){
+  background: $bg;
+  color: $color;
+  border-radius: $radius;
+  padding: .6rem 1rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+// Base
+*{box-sizing:border-box}
+html,body{height:100%;background:$bg;color:#111827;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+
+.btn-primary{@include btn($brand)}
+.btn-accent{@include btn($accent)}
+
+.hero{padding:4rem 0;background:linear-gradient(180deg, rgba(11,95,115,0.06), rgba(11,95,115,0.02));border-radius:$radius}
+.testimonial{border-left:4px solid $accent;padding:1rem;margin:1rem 0;background:$surface}
+
+// Section prefixes to avoid collisions
+.inicio-hero{@extend .hero}
+.filosofia-valores ul{list-style:disc;margin-left:1.25rem}
+
+// Responsive
+@media (max-width: 768px){
+  .grid-2{grid-template-columns:1fr}
+}
