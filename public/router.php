@@ -5,6 +5,9 @@ $uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 // Map requests to project root so URIs that include /public/ still resolve correctly
 $projectRoot = dirname(__DIR__);
 $file = $projectRoot . $uri;
+
+// debug
+@file_put_contents(__DIR__ . '/router_debug.json', json_encode(['uri'=>$uri,'file'=>$file,'exists'=>file_exists($file)], JSON_PRETTY_PRINT));
 if ($uri !== '/' && file_exists($file) && !is_dir($file)) {
     return false;
 }
