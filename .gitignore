@@ -8,9 +8,11 @@ vendor/
 # Build output
 dist/
 build/
-public/js/bundle.js
-public/js/bundle.js.map
-public/css/styles.css
+public/js/
+public/*.woff
+public/*.woff2
+public/*.ttf
+public/index.html
 
 # IDE
 .vscode/
