@@ -1,3 +1,4 @@
+/* Xlerion primary laser blue */
 /* Utility fallbacks (tailwind-like) */
 .w-full {
   width: 100%;
@@ -66,7 +67,7 @@
 .xlerion-btn-primary {
   display: inline-block;
   width: 100%;
-  background: #007BFF;
+  background: #00f0ff;
   color: #fff;
   border: none;
   border-radius: 0.75rem;
