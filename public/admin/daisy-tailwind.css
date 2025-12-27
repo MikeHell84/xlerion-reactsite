@@ -1,0 +1,66 @@
+@import url('https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css');
+
+/* --- Diseño responsivo profesional para botones login --- */
+body .admin-login-card form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* --- Diseño responsivo profesional para botones login --- */
+body .admin-login-card form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+body .admin-login-card .daisy-btn {
+    background: linear-gradient(90deg, #00f0ff 0%, #00bfff 100%) !important;
+    color: #fff !important;
+    border: 2px solid #00f0ff !important;
+    font-weight: bold !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 24px #00f0ff44 !important;
+    padding: 0.4rem 1.2rem !important;
+    font-size: 1.15rem !important;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s !important;
+    display: inline-block !important;
+}
+
+body .admin-login-card .daisy-btn-accent {
+    background: linear-gradient(90deg, #ff005c 0%, #ffb300 100%) !important;
+    color: #fff !important;
+    border: 2px solid #ff005c !important;
+    font-weight: bold !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 24px #ff005c44 !important;
+    padding: 0.4rem 1.2rem !important;
+    font-size: 1.15rem !important;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s !important;
+    display: inline-block !important;
+}
+
+/* DaisyUI + TailwindCSS CDN para botones modernos y personalizables */
+
+/* DaisyUI + TailwindCSS CDN para botones modernos y personalizables */
+@media (max-width: 767px) {
+    body .admin-login-card form {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.7rem !important;
+    }
+
+    body .admin-login-card .daisy-btn,
+    body .admin-login-card .daisy-btn-accent {
+        width: 90vw !important;
+        max-width: 98vw !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+}
+
+/* Prioridad: los estilos de DaisyUI y Tailwind se pueden sobrescribir con !important si es necesario. */
