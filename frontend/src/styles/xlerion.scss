@@ -418,8 +418,9 @@ nav.navbar.xlerion-navbar .nav-link {
   will-change: transform, opacity;
   transform: translate3d(0, 0, 0) scale(1);
   transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
-  filter: saturate(0.9) contrast(0.98) brightness(0.7);
-  opacity: 0.36;
+  /* slightly brighter on mobile so image reads better over dark surfaces */
+  filter: saturate(0.95) contrast(0.98) brightness(0.9);
+  opacity: 0.6; /* increased for better visibility on mobile */
   /* subtle presence on mobile */
 }
 
@@ -462,9 +463,9 @@ nav.navbar.xlerion-navbar .nav-link {
     will-change: transform, opacity;
     transform: translate3d(0, 0, 0) scale(1);
     transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
-    filter: saturate(1) contrast(1) brightness(1);
-    opacity: 1;
-    /* fully visible on desktop */
+    /* brighten slightly so image doesn't read as black against the dark body */
+    filter: saturate(1.05) contrast(1.02) brightness(1.05);
+    opacity: 1; /* fully visible on desktop */
   }
 
   .admin-login-wrapper {
