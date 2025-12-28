@@ -41,7 +41,50 @@
 
     // Mobile: deviceorientation
     if (window.DeviceOrientationEvent) {
-        window.addEventListener('deviceorientation', (e) => { onDeviceOrientation(e); scheduleRender(); }, { passive: true });
+        // On iOS 13+ permissions must be requested from user gesture
+        const bindOrientation = () => {
+            window.addEventListener('deviceorientation', (e) => { onDeviceOrientation(e); scheduleRender(); }, { passive: true });
+        };
+
+        if (typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function') {
+            // show a small permission button overlay
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.textContent = 'Activar movimiento';
+            Object.assign(btn.style, {
+                position: 'fixed',
+                right: '16px',
+                bottom: '16px',
+                zIndex: 9999,
+                padding: '10px 14px',
+                borderRadius: '8px',
+                border: 'none',
+                background: 'rgba(0,0,0,0.6)',
+                color: '#fff',
+                fontSize: '14px',
+                cursor: 'pointer'
+            });
+            document.body.appendChild(btn);
+
+            btn.addEventListener('click', async () => {
+                try {
+                    const resp = await DeviceMotionEvent.requestPermission();
+                    // Some platforms also have DeviceOrientationEvent.requestPermission
+                    if (typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+                        try { await DeviceOrientationEvent.requestPermission(); } catch (e) { /* ignore */ }
+                    }
+                    if (resp === 'granted') {
+                        bindOrientation();
+                    }
+                } catch (err) {
+                    // permission denied or not supported
+                }
+                // remove button regardless
+                btn.remove();
+            }, { once: true });
+        } else {
+            bindOrientation();
+        }
     }
 
     // gentle reset on resize

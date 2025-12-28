@@ -36,6 +36,8 @@ if (!empty($_SESSION['user']) && !empty($_SESSION['user']['id'])) {
     </div>
     </div>
 </body>
+    <script src="/admin/login-parallax.js"></script>
+</body>
 </html>
 
 
