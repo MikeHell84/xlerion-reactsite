@@ -299,7 +299,8 @@ nav.navbar.xlerion-navbar .nav-link {
   .login-box {
     background: var(--xlerion-dark-mobile) !important;
     color: var(--xlerion-white) !important;
-    box-shadow: none !important;
+    box-shadow: 0 8px 30px rgba(var(--xlerion-primary-rgb), 0.12) !important;
+    border: 1px solid rgba(var(--xlerion-primary-rgb), 0.9) !important;
     border-radius: 0.8rem !important;
     max-width: 420px !important;
     width: 100% !important;
@@ -426,7 +427,7 @@ nav.navbar.xlerion-navbar .nav-link {
   .login-box {
     background: #000 !important;
     color: #fff !important;
-    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.65) !important;
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.65) !important, 0 0 24px rgba(var(--xlerion-primary-rgb), 0.18) !important;
     border: 1px solid var(--xlerion-primary);
   }
 
