@@ -17,7 +17,7 @@ $muted: #6c757d !default;
 
   // Ensure links are readable
   a {
-    color: lighten($muted, 20%);
+    color: color.adjust($muted, $lightness: 20%);
     text-decoration: none;
   }
 }
@@ -84,7 +84,7 @@ $muted: #6c757d !default;
     cursor: pointer;
 
     &:hover {
-      background: darken($primary, 6%);
+      background: color.adjust($primary, $lightness: -6%);
     }
   }
 
@@ -101,7 +101,7 @@ $muted: #6c757d !default;
   margin-top: 1rem;
   text-align: center;
   font-size: 0.85rem;
-  color: lighten($muted, 10%);
+  color: color.adjust($muted, $lightness: 10%);
 }
 
 // Responsive: stack columns on small screens

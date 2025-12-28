@@ -2,6 +2,8 @@
 // Compiled to `public/xlerion.css` for production. Edit partials under
 // `frontend/src/styles/` and run `npm run build:css` to regenerate.
 
+@use "sass:color";
+
 // Fonts - use local Work Sans from media/fonts as the site default
 @font-face {
   font-family: 'Work Sans';
@@ -10,6 +12,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 
 @font-face {
   font-family: 'Work Sans';
@@ -118,7 +121,7 @@ $bp-desktop: 1200px;
   transition: background-color 160ms ease, transform 160ms ease;
 
   &:hover {
-    background: darken($bg, 6%);
+    background: color.adjust($bg, $lightness: -6%);
     transform: translateY(-1px);
   }
 }
@@ -145,7 +148,7 @@ $bp-desktop: 1200px;
 // Base styles
 // --------------------------------------------------
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html,
@@ -153,7 +156,7 @@ body {
   height: 100%;
   background: transparent;
   color: #111827;
-  font-family:#{$font-sans}
+  font-family:#{$font-sans};
 }
 
 /* Reset default page margins so full-bleed layouts work reliably */
@@ -171,11 +174,11 @@ h4,
 h5,
 h6 {
   font-family:#{$font-sans};
-  margin: 0 0 $space-3 0
+  margin: 0 0 $space-3 0;
 }
 
 p {
-  margin: 0 0 $space-3 0
+  margin: 0 0 $space-3 0;
 }
 
 // Buttons global utility
@@ -187,7 +190,7 @@ p {
 input,
 textarea,
 select {
-  font-family: inherit
+  font-family: inherit;
 }
 
 // --------------------------------------------------
@@ -318,7 +321,7 @@ nav.navbar.xlerion-navbar .nav-link {
   transition: background 0.2s;
 
   &:hover {
-    background: darken($xlerion-blue, 10%);
+    background: color.adjust($xlerion-blue, $lightness: -10%);
   }
 }
 
