@@ -15,6 +15,7 @@ if (!empty($_SESSION['user']) && !empty($_SESSION['user']['id'])) {
     <link href="/xlerion.css" rel="stylesheet">
 </head>
 <body>
+    <div class="parallax-bg" aria-hidden="true"></div>
     <div class="admin-login-wrapper">
     <div class="login-box">
         <img src="/media/LogoX.svg" alt="Xlerion" class="login-logo" />
