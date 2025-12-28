@@ -410,7 +410,7 @@ nav.navbar.xlerion-navbar .nav-link {
 /* Desktop-specific: black login panel and parallax background */
 @media (min-width: $bp-desktop) {
   body {
-    background-image: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.08)), url('/media/images/parallax/Oficina0013.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)), url('/media/images/parallax/Oficina0013.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -426,18 +426,19 @@ nav.navbar.xlerion-navbar .nav-link {
   .login-box {
     background: #000 !important;
     color: #fff !important;
-    box-shadow: 0 12px 60px rgba(0,0,0,0.65) !important;
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.65) !important;
+    border: 1px solid var(--xlerion-primary);
   }
 
   .form-control {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     color: #fff;
   }
 
   input.form-control::placeholder,
   textarea.form-control::placeholder {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .xlerion-btn-primary {
@@ -447,7 +448,7 @@ nav.navbar.xlerion-navbar .nav-link {
   }
 
   .forgot-password-link {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     text-align: center;
   }
 }
