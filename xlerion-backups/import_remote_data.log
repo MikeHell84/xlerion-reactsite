@@ -1,0 +1,270 @@
+2025-12-28T21:45:49+00:00
+[
+    {
+        "table": "admin_notifications",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/admin_notifications.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "admins",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/admins.json",
+        "inserted": 0,
+        "skipped": 1,
+        "errors": []
+    },
+    {
+        "table": "backups",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/backups.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "cache",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/cache.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "cache_locks",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/cache_locks.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "client_finances",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/client_finances.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "client_interactions",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/client_interactions.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "client_notes",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/client_notes.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "client_projects",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/client_projects.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "clients",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/clients.json",
+        "inserted": 0,
+        "skipped": 4,
+        "errors": []
+    },
+    {
+        "table": "cms_blocks",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/cms_blocks.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "cms_pages",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/cms_pages.json",
+        "inserted": 0,
+        "skipped": 11,
+        "errors": []
+    },
+    {
+        "table": "contacts",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/contacts.json",
+        "inserted": 0,
+        "skipped": 1,
+        "errors": []
+    },
+    {
+        "table": "crm_audit",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/crm_audit.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "crm_customers",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/crm_customers.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "crm_leads",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/crm_leads.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "failed_jobs",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/failed_jobs.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "forms_submissions",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/forms_submissions.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "interactions",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/interactions.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "job_batches",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/job_batches.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "jobs",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/jobs.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "media_files",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/media_files.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "menu_items",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/menu_items.json",
+        "inserted": 0,
+        "skipped": 10,
+        "errors": []
+    },
+    {
+        "table": "menu_sections",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/menu_sections.json",
+        "inserted": 0,
+        "skipped": 13,
+        "errors": []
+    },
+    {
+        "table": "migrations",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/migrations.json",
+        "inserted": 0,
+        "skipped": 7,
+        "errors": []
+    },
+    {
+        "table": "modules",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/modules.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "opportunities",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/opportunities.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "page_views",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/page_views.json",
+        "inserted": 0,
+        "skipped": 20,
+        "errors": []
+    },
+    {
+        "table": "pages",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/pages.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "password_reset_tokens",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/password_reset_tokens.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "password_resets",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/password_resets.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "resources",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/resources.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "sections",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/sections.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "sessions",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/sessions.json",
+        "inserted": 0,
+        "skipped": 3,
+        "errors": []
+    },
+    {
+        "table": "tasks",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/tasks.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "td_interactions",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/td_interactions.json",
+        "inserted": 0,
+        "skipped": 0,
+        "errors": []
+    },
+    {
+        "table": "td_projects",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/td_projects.json",
+        "inserted": 0,
+        "skipped": 2,
+        "errors": []
+    },
+    {
+        "table": "users",
+        "file": "X:\\Programacion\\UltimateSite\\scripts\/..\/data\/remote_data\/users.json",
+        "inserted": 0,
+        "skipped": 1,
+        "errors": []
+    }
+]
+
