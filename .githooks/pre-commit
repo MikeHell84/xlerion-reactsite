@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Pre-commit hook: run the Node precommit script from the repo root
+REPO_ROOT=$(git rev-parse --show-toplevel)
+node "$REPO_ROOT/scripts/precommit.js"
+EXIT_CODE=$?
+if [ $EXIT_CODE -ne 0 ]; then
+  echo "pre-commit checks failed (see message above). Aborting commit." >&2
+  exit $EXIT_CODE
+fi
+exit 0
