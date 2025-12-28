@@ -126,6 +126,13 @@ body {
   font-family:#{$font-sans}
 }
 
+/* Reset default page margins so full-bleed layouts work reliably */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 // Headings and typography scale
 h1,
 h2,
@@ -272,25 +279,23 @@ nav.navbar.xlerion-navbar .nav-link {
   body {
     background: var(--xlerion-dark-mobile) !important;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     display: block;
+    margin: 0;
   }
 
   .login-box {
     background: var(--xlerion-dark-mobile) !important;
     color: var(--xlerion-white) !important;
     box-shadow: none !important;
-    border-radius: 0 !important;
-    max-width: none !important;
-    width: 100vw !important;
-    min-height: 100vh !important;
-    margin: 0 !important;
-    padding: 2.5rem 0.5rem 2rem 0.5rem !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: stretch !important;
+    border-radius: 0.8rem !important;
+    max-width: 420px !important;
+    width: 100% !important;
+    min-height: auto !important;
+    margin: 0 auto !important;
+    padding: 2.5rem 1rem 2rem 1rem !important;
+    display: block !important;
   }
 
   .login-title {
@@ -303,6 +308,31 @@ nav.navbar.xlerion-navbar .nav-link {
   .form-control {
     border-radius: 0.3rem !important;
     font-size: 1.15rem !important;
+  }
+
+  /* Mobile input visual polish: rounded, padded, company colors */
+  input.form-control,
+  input[type="text"],
+  input[type="password"],
+  textarea.form-control {
+    width: 100% !important;
+    padding: 0.7rem 0.9rem !important;
+    border-radius: 0.6rem !important;
+    border: 1px solid rgba(var(--xlerion-primary-rgb), 0.18) !important;
+    background: #fff !important;
+    color: #111 !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+
+  input.form-control:focus,
+  textarea.form-control:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    outline: none !important;
+    border-color: var(--xlerion-primary) !important;
+    box-shadow: 0 6px 18px rgba(var(--xlerion-primary-rgb), 0.08) !important;
   }
 
   .xlerion-btn-primary {
@@ -320,6 +350,15 @@ nav.navbar.xlerion-navbar .nav-link {
     margin-top: 1.2rem !important;
     font-size: 1.05rem !important;
   }
+}
+
+/* Ensure the admin wrapper centers content on all viewports */
+.admin-login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: $space-3;
 }
 
 // Small utilities
