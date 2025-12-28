@@ -9,28 +9,69 @@ if (!$pdo) {
 
 // handle update
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = intval($_POST['id'] ?? 0);
-    $csrf = $_POST['csrf_token'] ?? null;
-    if (!validate_csrf_token($csrf)) { echo 'Invalid CSRF'; exit; }
-    $fields = [];
-    $params = [];
-    $allowed = ['name','email','password','totp_secret','two_factor_enabled','last_login_at','is_admin','reset_token','reset_token_expires'];
-    foreach ($allowed as $f) {
-        if (isset($_POST[$f])) {
-            if ($f === 'password' && $_POST[$f] === '') continue; // skip empty password
-            if ($f === 'password') { $val = password_hash($_POST[$f], PASSWORD_DEFAULT); }
-            else { $val = $_POST[$f]; }
-            $fields[] = "`$f` = ?"; $params[] = $val;
-        }
+  $id = intval($_POST['id'] ?? 0);
+  $csrf = $_POST['csrf_token'] ?? null;
+  if (!validate_csrf_token($csrf)) { echo 'Invalid CSRF'; exit; }
+
+  $current = current_user();
+  $isAdminUser = (!empty($current['role']) && $current['role'] === 'admin') || (!empty($current['is_admin']));
+
+  $fields = [];
+  $params = [];
+  // allowed candidate fields
+  $allowed = ['name','email','password','totp_secret','two_factor_enabled','last_login_at','is_admin','role','reset_token','reset_token_expires'];
+
+  // server-side protection: non-admins may not change `is_admin` or `role`
+  if (!$isAdminUser) {
+    // remove sensitive fields from allowed set
+    $sensitive = ['is_admin','role'];
+    foreach ($sensitive as $s) {
+      if (isset($_POST[$s])) {
+        audit_log('user.update_blocked', $_SESSION['user']['id'] ?? null, ['target_id'=>$id,'field'=>$s,'attempt_value'=>$_POST[$s]]);
+      }
     }
-    if ($id && count($fields)) {
-        $params[] = $id;
-        $sql = 'UPDATE users SET ' . implode(', ', $fields) . ' WHERE id = ?';
-        $stmt = $pdo->prepare($sql);
-        $ok = $stmt->execute($params);
-        audit_log('user.update', $_SESSION['user']['id'] ?? null, ['id'=>$id]);
-        header('Location: users.php'); exit;
+    $allowed = array_diff($allowed, $sensitive);
+  }
+
+  $errors = [];
+  foreach ($allowed as $f) {
+    if (isset($_POST[$f])) {
+      $raw = $_POST[$f];
+      // basic validations
+      if ($f === 'password') {
+        if ($raw === '') continue; // skip empty password
+        $val = password_hash($raw, PASSWORD_DEFAULT);
+      } elseif ($f === 'email') {
+        $val = filter_var($raw, FILTER_VALIDATE_EMAIL);
+        if ($val === false) { $errors[] = 'Email inválido'; continue; }
+      } elseif (in_array($f, ['two_factor_enabled','is_admin'])) {
+        $val = ($raw === '1' || $raw === 1 || $raw === 'on') ? 1 : 0;
+      } elseif ($f === 'reset_token_expires') {
+        $val = intval($raw);
+      } else {
+        $val = $raw;
+      }
+      $fields[] = "`$f` = ?"; $params[] = $val;
     }
+  }
+
+  if (!empty($errors)) {
+    // simple error output; admin UI can be extended to show nicer messages
+    foreach ($errors as $e) echo '<div style="color:red">' . htmlspecialchars($e) . '</div>';
+    exit;
+  }
+
+  if ($id && count($fields)) {
+    $params[] = $id;
+    $sql = 'UPDATE users SET ' . implode(', ', $fields) . ' WHERE id = ?';
+    $stmt = $pdo->prepare($sql);
+    $ok = $stmt->execute($params);
+    if ($ok) {
+      // record which fields changed
+      audit_log('user.update', $_SESSION['user']['id'] ?? null, ['id'=>$id,'fields'=>array_map(function($s){ return preg_replace('/`/','',$s); }, $fields)]);
+    }
+    header('Location: users.php'); exit;
+  }
 }
 
 $stmt = $pdo->query('SELECT * FROM users ORDER BY id ASC');
