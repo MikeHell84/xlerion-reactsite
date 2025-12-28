@@ -325,6 +325,63 @@ nav.navbar.xlerion-navbar .nav-link {
   }
 }
 
+/* Recovery form: align action buttons and keep brand colors/shapes */
+.recovery-form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  align-items: stretch;
+}
+
+.recovery-form>div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recovery-form .xlerion-btn-primary {
+  flex: 1 1 auto;
+  width: auto;
+  margin-top: 0;
+  padding: 0.85rem 0.9rem;
+  border-radius: 0.8rem;
+}
+
+.recovery-form .xlerion-btn {
+  flex: 0 0 96px;
+  padding: 0.68rem 0.9rem;
+  border-radius: 0.7rem;
+  background: var(--xlerion-primary);
+  color: #000;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(var(--xlerion-primary-rgb), 0.12);
+}
+
+.recovery-form .xlerion-btn:hover,
+.recovery-form .xlerion-btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.96);
+}
+
+/* Mobile: stack buttons and make both full-width for easy tapping */
+@media (max-width: 600px) {
+  .recovery-form>div {
+    flex-direction: column;
+    gap: $space-2;
+  }
+
+  .recovery-form .xlerion-btn,
+  .recovery-form .xlerion-btn-primary {
+    flex: none;
+    width: 100%;
+  }
+}
+
 .forgot-password-link {
   display: block;
   text-align: right;
