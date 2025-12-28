@@ -442,26 +442,35 @@ nav.navbar.xlerion-navbar .nav-link {
 
 /* Desktop-specific: black login panel and parallax background */
 @media (min-width: $bp-desktop) {
+
+  /* Ensure a consistent dark backdrop on desktop so low-opacity parallax
+     doesn't reveal the default white page background when it translates. */
   body {
-    background: none;
+    background: #000;
+    color: #fff;
   }
 
   .parallax-bg {
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: -2;
+    /* keep behind all UI */
     background-image: url('/media/images/parallax/Oficina0013.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    will-change: transform;
+    will-change: transform, opacity;
     transform: translate3d(0, 0, 0) scale(1);
-    transition: transform 400ms cubic-bezier(.2, .8, .2, 1);
-    filter: saturate(1) contrast(1) brightness(.98);
+    transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
+    filter: saturate(1) contrast(1) brightness(1);
+    opacity: 1;
+    /* fully visible on desktop */
   }
 
   .admin-login-wrapper {
     background: transparent;
+    position: relative;
+    z-index: 1;
   }
 
   .login-box {
@@ -469,6 +478,9 @@ nav.navbar.xlerion-navbar .nav-link {
     color: #fff !important;
     box-shadow: 0 12px 60px rgba(0, 0, 0, 0.65) !important, 0 0 24px rgba(var(--xlerion-primary-rgb), 0.18) !important;
     border: 1px solid var(--xlerion-primary);
+    position: relative;
+    z-index: 2;
+    /* sit above parallax */
   }
 
   .form-control {
