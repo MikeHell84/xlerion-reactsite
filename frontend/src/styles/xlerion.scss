@@ -368,6 +368,19 @@ nav.navbar.xlerion-navbar .nav-link {
   filter: brightness(0.96);
 }
 
+/* Center input text and placeholders inside recovery form */
+.recovery-form input.form-control,
+.recovery-form textarea.form-control {
+  text-align: center;
+  caret-color: var(--xlerion-primary);
+}
+
+.recovery-form input.form-control::placeholder,
+.recovery-form textarea.form-control::placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* Mobile: stack buttons and make both full-width for easy tapping */
 @media (max-width: 600px) {
   .recovery-form>div {
