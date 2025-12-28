@@ -597,7 +597,8 @@ body.admin-login-page .login-box {
 
   .xlerion-btn-primary {
     background: var(--xlerion-primary);
-    color: var(--xlerion-white);
+    color: #000 !important;
+    font-family: 'Work Sans', var(--xlerion-font-sans) !important;
     box-shadow: 0 6px 18px rgba(var(--xlerion-primary-rgb), 0.12);
   }
 

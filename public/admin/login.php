@@ -12,7 +12,7 @@ if (!empty($_SESSION['user']) && !empty($_SESSION['user']['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin - Xlerion</title>
-    <link href="/xlerion.css" rel="stylesheet">
+    <link href="/xlerion.css?v=<?php echo filemtime(__DIR__ . '/../xlerion.css'); ?>" rel="stylesheet">
 </head>
 <body class="admin-login-page">
     <div class="parallax-bg" aria-hidden="true"></div>
