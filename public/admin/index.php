@@ -64,7 +64,48 @@ $user = current_user();
         <div><label>Content HTML<br><textarea name="content" rows="10"></textarea></label></div>
         <div style="margin-top:8px"><button type="submit">Guardar</button></div>
       </form>
-    <?php else: ?>
+    <?php elseif (isset($_GET['page']) && $_GET['page'] === 'edit_page'):
+      // Edit by id or slug
+      $pdo = try_get_pdo();
+      $page = null;
+      $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
+      $slug = isset($_GET['slug']) ? preg_replace('/[^a-z0-9\-\_]/i','', $_GET['slug']) : null;
+      if ($pdo) {
+        if ($id) {
+          $stmt = $pdo->prepare('SELECT id,slug,title,content FROM pages WHERE id = ? LIMIT 1');
+          $stmt->execute([$id]);
+          $page = $stmt->fetch();
+        } elseif ($slug) {
+          $stmt = $pdo->prepare('SELECT id,slug,title,content FROM pages WHERE slug = ? LIMIT 1');
+          $stmt->execute([$slug]);
+          $page = $stmt->fetch();
+        }
+      } else {
+        // Fallback to JSON file
+        $pagesFile = __DIR__ . '/../../data/pages.json';
+        if (file_exists($pagesFile)) {
+          $data = json_decode(file_get_contents($pagesFile), true);
+          foreach ($data as $p) {
+            if ($id && isset($p['id']) && $p['id'] == $id) { $page = $p; break; }
+            if ($slug && isset($p['slug']) && $p['slug'] === $slug) { $page = $p; break; }
+          }
+        }
+      }
+
+      if (!$page) {
+        echo '<div style="padding:12px;background:var(--xlerion-alert-bg);border:1px solid var(--xlerion-alert-border);margin-bottom:12px">Página no encontrada. Puedes crearla con "Crear nueva página".</div>';
+      } else {
+    ?>
+      <h2>Editar página: <?=htmlspecialchars($page['slug'])?></h2>
+      <form method="post" action="/public/admin/save_page.php">
+        <input type="hidden" name="id" value="<?=htmlspecialchars($page['id'])?>">
+        <div><label>Slug<br><input name="slug" value="<?=htmlspecialchars($page['slug'])?>" required></label></div>
+        <div><label>Title<br><input name="title" value="<?=htmlspecialchars($page['title'])?>" required></label></div>
+        <div><label>Content HTML<br><textarea name="content" rows="12"><?=htmlspecialchars($page['content'])?></textarea></label></div>
+        <div style="margin-top:8px"><button type="submit">Guardar cambios</button></div>
+      </form>
+    <?php }
+    else: ?>
       <p>Bienvenido, usa el menú lateral para administrar el contenido.</p>
     <?php endif; ?>
   </main>
