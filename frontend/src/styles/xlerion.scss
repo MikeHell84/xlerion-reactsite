@@ -419,7 +419,7 @@ nav.navbar.xlerion-navbar .nav-link {
   transform: translate3d(0, 0, 0) scale(1);
   transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
   /* slightly brighter on mobile so image reads better over dark surfaces */
-  filter: saturate(0.95) contrast(0.98) brightness(0.9) blur(4px);
+  filter: saturate(0.95) contrast(0.98) brightness(0.9) blur(16px);
   opacity: 0.6;
   /* increased for better visibility on mobile */
   /* subtle presence on mobile */
@@ -531,7 +531,7 @@ body.admin-login-page .login-box {
     transform: translate3d(0, 0, 0) scale(1);
     transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
     /* brighten slightly so image doesn't read as black against the dark body */
-    filter: saturate(1.05) contrast(1.02) brightness(1.05) blur(4px);
+    filter: saturate(1.05) contrast(1.02) brightness(1.05) blur(16px);
     opacity: 1;
     /* fully visible on desktop */
   }
