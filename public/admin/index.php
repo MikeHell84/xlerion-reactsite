@@ -8,7 +8,7 @@ $user = current_user();
 <head>
   <meta charset="utf-8">
   <title>Admin Dashboard</title>
-  <link href="/public/xlerion.css" rel="stylesheet">
+  <link href="/xlerion.css" rel="stylesheet">
 </head>
 <body>
   <aside style="width:220px;float:left;padding:20px;background:var(--xlerion-surface);min-height:100vh;">
