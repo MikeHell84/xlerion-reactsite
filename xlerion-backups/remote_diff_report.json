@@ -1,0 +1,380 @@
+{
+    "generated_at": "2025-12-28T21:48:05+00:00",
+    "tables": {
+        "admin_notifications": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "admins": {
+            "remote_count": 1,
+            "local_count": 1,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        },
+        "backups": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "cache": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "cache_locks": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "client_finances": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "client_interactions": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "client_notes": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "client_projects": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "clients": {
+            "remote_count": 4,
+            "local_count": 4,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        },
+        "cms_blocks": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "cms_pages": {
+            "remote_count": 11,
+            "local_count": 11,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        },
+        "contacts": {
+            "remote_count": 1,
+            "local_count": 1,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        },
+        "crm_audit": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "crm_customers": {
+            "remote_count": 0,
+            "local_count": 1,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 1
+        },
+        "crm_leads": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "failed_jobs": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "forms_submissions": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "interactions": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "job_batches": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "jobs": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "media_files": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "menu_items": {
+            "remote_count": 10,
+            "local_count": 10,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        },
+        "menu_sections": {
+            "remote_count": 13,
+            "local_count": 13,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        },
+        "migrations": {
+            "remote_count": 7,
+            "local_count": 7,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        },
+        "modules": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "opportunities": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "page_views": {
+            "remote_count": 20,
+            "local_count": 232,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 212,
+            "remote_only_sample": [],
+            "local_only_sample": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30
+            ]
+        },
+        "pages": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "password_reset_tokens": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "password_resets": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "resources": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "sections": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "sessions": {
+            "remote_count": 3,
+            "local_count": 3,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        },
+        "tasks": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "td_interactions": {
+            "remote_count": 0,
+            "local_count": 0,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0
+        },
+        "td_projects": {
+            "remote_count": 2,
+            "local_count": 2,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        },
+        "users": {
+            "remote_count": 1,
+            "local_count": 1,
+            "remote_only_ids": [],
+            "local_only_ids": [],
+            "note": "",
+            "remote_only_count": 0,
+            "local_only_count": 0,
+            "remote_only_sample": [],
+            "local_only_sample": []
+        }
+    }
+}
