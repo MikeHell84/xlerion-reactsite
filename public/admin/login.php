@@ -5,6 +5,40 @@ if (!empty($_SESSION['user']) && !empty($_SESSION['user']['id'])) {
     header('Location: index.php');
     exit;
 }
+// Handle POST login
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = trim($_POST['username'] ?? '');
+    $password = $_POST['password'] ?? '';
+    $logged = false;
+    // Try DB auth if available
+    $pdo = try_get_pdo();
+    if ($pdo) {
+        try {
+            $stmt = $pdo->prepare('SELECT id, username, password, role FROM users WHERE username = ? LIMIT 1');
+            $stmt->execute([$username]);
+            $user = $stmt->fetch();
+            if ($user && password_verify($password, $user['password'])) {
+                unset($user['password']);
+                $_SESSION['user'] = $user;
+                header('Location: index.php');
+                exit;
+            }
+        } catch (Exception $e) {
+            // fallthrough to env-based check
+        }
+    }
+
+    // Fallback: check ADMIN_PASS_HASH in .env for a single admin account
+    $env = $GLOBALS['env'] ?? [];
+    $hash = $env['ADMIN_PASS_HASH'] ?? '';
+    if ($username === ($env['ADMIN_USER'] ?? 'admin') && $hash && password_verify($password, $hash)) {
+        $_SESSION['user'] = ['id' => 1, 'username' => $username, 'role' => 'admin'];
+        header('Location: index.php');
+        exit;
+    }
+
+    $error = 'Credenciales inválidas';
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
