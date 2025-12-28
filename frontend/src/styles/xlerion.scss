@@ -255,7 +255,7 @@ nav.navbar.xlerion-navbar .nav-link {
 .login-box {
   background: var(--xlerion-white);
   color: var(--xlerion-text);
-  padding: 2.5rem 2rem 2rem 2rem;
+  padding: 3rem 2rem 3rem 2rem;
   border-radius: 1.2rem;
   box-shadow: 0 0 32px 0 #0008;
   max-width: 370px;
@@ -295,7 +295,8 @@ nav.navbar.xlerion-navbar .nav-link {
 
 .xlerion-btn-primary {
   background: var(--xlerion-primary);
-  color: var(--xlerion-white);
+  color: #000;
+  font-family: 'Work Sans', var(--xlerion-font-sans);
   border: none;
   border-radius: 0.7rem;
   font-size: 1.1rem;
@@ -344,7 +345,7 @@ nav.navbar.xlerion-navbar .nav-link {
     width: 100% !important;
     min-height: auto !important;
     margin: 0 auto !important;
-    padding: 2.5rem 1rem 2rem 1rem !important;
+    padding: 3rem 1rem 2.5rem 1rem !important;
     display: block !important;
   }
 
@@ -392,7 +393,8 @@ nav.navbar.xlerion-navbar .nav-link {
 
   .xlerion-btn-primary {
     background: var(--xlerion-primary) !important;
-    color: var(--xlerion-white) !important;
+    color: #000 !important;
+    font-family: 'Work Sans', var(--xlerion-font-sans) !important;
     border-radius: 0.3rem !important;
     font-size: 1.2rem !important;
     margin-top: 1.7rem !important;
