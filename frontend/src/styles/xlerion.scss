@@ -549,6 +549,64 @@ body.admin-login-page html {
   overflow-x: hidden !important;
 }
 
+/* Admin Dashboard styles */
+body.admin-dashboard-page {
+  background: #000;
+  color: #fff;
+}
+
+.admin-sidebar {
+  width: 220px;
+  float: left;
+  padding: $space-4;
+  background: rgba(255, 255, 255, 0.04);
+  min-height: 100vh;
+  border-right: 1px solid rgba(var(--xlerion-primary-rgb), 0.06);
+}
+
+.admin-sidebar h3 {
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.admin-sidebar li {
+  margin: 0.35rem 0;
+}
+
+.admin-sidebar a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.admin-sidebar a:hover {
+  color: var(--xlerion-primary);
+  text-decoration: underline;
+}
+
+.admin-main {
+  margin-left: 260px;
+  padding: $space-4;
+  min-height: 100vh;
+}
+
+.admin-main h1 {
+  color: var(--xlerion-primary);
+  font-size: 2rem;
+  margin-bottom: $space-3;
+}
+
+.admin-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: $space-3;
+  border-radius: 0.8rem;
+}
+
 body.admin-login-page .parallax-bg {
   opacity: 0.6 !important;
   filter: saturate(0.95) contrast(0.98) brightness(0.9) blur(13px) !important;

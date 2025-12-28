@@ -10,8 +10,8 @@ $user = current_user();
   <title>Admin Dashboard</title>
   <link href="/xlerion.css" rel="stylesheet">
 </head>
-<body>
-  <aside style="width:220px;float:left;padding:20px;background:var(--xlerion-surface);min-height:100vh;">
+<body class="admin-dashboard-page">
+  <aside class="admin-sidebar">
     <h3>Xlerion CMS</h3>
     <p>Usuario: <?=htmlspecialchars($user['username'])?> (<?=htmlspecialchars($user['role'])?>)</p>
     <ul>
@@ -32,9 +32,10 @@ $user = current_user();
       <li><a href="/public/admin/logout.php">Salir</a></li>
     </ul>
   </aside>
-  <main style="margin-left:240px;padding:20px;">
-    <h1>Dashboard</h1>
-    <?php if (isset($_GET['page']) && $_GET['page'] === 'list_pages'):
+  <main class="admin-main">
+    <div class="admin-card">
+      <h1>Dashboard</h1>
+      <?php if (isset($_GET['page']) && $_GET['page'] === 'list_pages'):
       $pdo = try_get_pdo();
       if (!$pdo) {
         echo '<div style="padding:12px;background:var(--xlerion-alert-bg);border:1px solid var(--xlerion-alert-border);margin-bottom:12px">No hay conexión a la base de datos. El CMS está en modo de solo-lectura o necesita configuración en <code>.env</code>.</div>';
