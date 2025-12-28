@@ -270,7 +270,18 @@ nav.navbar.xlerion-navbar .nav-link {
 .login-box .form-label {
   display: block;
   text-align: center;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Improve vertical rhythm between input groups in the login form */
+.login-box .mb-3 {
+  margin-bottom: 1.25rem;
+}
+
+.login-box input.form-control,
+.login-box textarea.form-control {
+  padding-top: 0.9rem !important;
+  padding-bottom: 0.9rem !important;
 }
 
 .login-title {
