@@ -47,9 +47,15 @@ function require_login() {
         $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
         if (!empty($env['APP_ENV']) && strtolower($env['APP_ENV']) === 'development') {
             if (preg_match('/Simple Browser|SimpleBrowser|vscode|VS Code/i', $ua)) {
-                $_SESSION['user'] = ['id' => 1, 'username' => 'dev', 'role' => 'admin'];
-                return;
-            }
+                    $_SESSION['user'] = ['id' => 1, 'username' => 'dev', 'role' => 'admin'];
+                    return;
+                }
+                // Also allow localhost loopback requests in development (Simple Browser uses local loopback)
+                $remote = $_SERVER['REMOTE_ADDR'] ?? '';
+                if ($remote === '127.0.0.1' || $remote === '::1' || $remote === '::ffff:127.0.0.1') {
+                    $_SESSION['user'] = ['id' => 1, 'username' => 'dev', 'role' => 'admin'];
+                    return;
+                }
         }
         header('Location: /public/admin/login.php');
         exit;
