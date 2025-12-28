@@ -64,6 +64,13 @@ $bp-desktop: 1200px;
   --bs-primary: var(--xlerion-primary);
   --bs-dark: var(--xlerion-dark);
   --bs-link-color: var(--xlerion-primary);
+
+  // Tokens globales Xlerion
+  --xlerion-dark-mobile: #111;
+  --xlerion-white: #fff;
+  --xlerion-text: #222;
+  --xlerion-danger: #dc3545;
+  --xlerion-success: #198754;
 }
 
 // --------------------------------------------------
@@ -207,6 +214,114 @@ nav.navbar.xlerion-navbar .nav-link {
   background: linear-gradient(180deg, rgba(0, 123, 255, 0.06), rgba(0, 123, 255, 0.02));
 }
 
+// Estilos para login admin
+.login-box {
+  background: var(--xlerion-white);
+  color: var(--xlerion-text);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 32px 0 #0008;
+  max-width: 370px;
+  width: 100%;
+}
+
+.login-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-control {
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+}
+
+.xlerion-btn-primary {
+  background: var(--xlerion-primary);
+  color: var(--xlerion-white);
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1.2rem;
+  padding: 0.7rem 0;
+  transition: background 0.2s;
+
+  &:hover {
+    background: darken($xlerion-blue, 10%);
+  }
+}
+
+.forgot-password-link {
+  display: block;
+  text-align: right;
+  margin-top: 0.7rem;
+  color: var(--xlerion-primary);
+  text-decoration: none;
+  font-size: 0.98rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// MOBILE: diseño radicalmente diferente
+@media (max-width: 600px) {
+  body {
+    background: var(--xlerion-dark-mobile) !important;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: block;
+  }
+
+  .login-box {
+    background: var(--xlerion-dark-mobile) !important;
+    color: var(--xlerion-white) !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: none !important;
+    width: 100vw !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 2.5rem 0.5rem 2rem 0.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+  }
+
+  .login-title {
+    font-size: 2.3rem !important;
+    color: var(--xlerion-primary) !important;
+    margin-bottom: 2.2rem !important;
+    text-align: left !important;
+  }
+
+  .form-control {
+    border-radius: 0.3rem !important;
+    font-size: 1.15rem !important;
+  }
+
+  .xlerion-btn-primary {
+    background: var(--xlerion-primary) !important;
+    color: var(--xlerion-white) !important;
+    border-radius: 0.3rem !important;
+    font-size: 1.2rem !important;
+    margin-top: 1.7rem !important;
+    padding: 1.1rem 0 !important;
+  }
+
+  .forgot-password-link {
+    color: var(--xlerion-white) !important;
+    text-align: left !important;
+    margin-top: 1.2rem !important;
+    font-size: 1.05rem !important;
+  }
+}
+
 // Small utilities
 .xlerion-shadow-sm {
   box-shadow: 0 4px 12px rgba(16, 24, 40, 0.06);
@@ -222,6 +337,17 @@ nav.navbar.xlerion-navbar .nav-link {
     max-width: 720px;
     margin: 0 auto;
     padding: 0 $space-3;
+  }
+}
+
+// Center admin login on larger screens
+@media (min-width: 601px) {
+  .admin-login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: $space-4;
   }
 }
 
