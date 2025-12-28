@@ -425,6 +425,27 @@ nav.navbar.xlerion-navbar .nav-link {
   /* subtle presence on mobile */
 }
 
+/* Admin-login specific overrides (applied only to the login page via body.admin-login-page) */
+body.admin-login-page,
+body.admin-login-page html {
+  background: var(--xlerion-dark-mobile) !important;
+  color: var(--xlerion-white) !important;
+  overflow-x: hidden !important;
+}
+
+body.admin-login-page .parallax-bg {
+  opacity: 0.6 !important;
+  filter: saturate(0.95) contrast(0.98) brightness(0.9) !important;
+}
+
+body.admin-login-page .login-box {
+  background: var(--xlerion-dark-mobile) !important;
+  color: var(--xlerion-white) !important;
+  border: 1px solid rgba(var(--xlerion-primary-rgb), 0.18) !important;
+  box-shadow: 0 8px 36px rgba(0,0,0,0.6) !important;
+  z-index: 2;
+}
+
 // Center admin login on larger screens
 @media (min-width: 601px) {
   .admin-login-wrapper {
