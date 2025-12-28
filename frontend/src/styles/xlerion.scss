@@ -407,6 +407,51 @@ nav.navbar.xlerion-navbar .nav-link {
   }
 }
 
+/* Desktop-specific: black login panel and parallax background */
+@media (min-width: $bp-desktop) {
+  body {
+    background-image: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.08)), url('/media/images/parallax/Oficina0013.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .admin-login-wrapper {
+    background: transparent;
+  }
+
+  .login-box {
+    background: #000 !important;
+    color: #fff !important;
+    box-shadow: 0 12px 60px rgba(0,0,0,0.65) !important;
+  }
+
+  .form-control {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff;
+  }
+
+  input.form-control::placeholder,
+  textarea.form-control::placeholder {
+    color: rgba(255,255,255,0.6);
+  }
+
+  .xlerion-btn-primary {
+    background: var(--xlerion-primary);
+    color: var(--xlerion-white);
+    box-shadow: 0 6px 18px rgba(var(--xlerion-primary-rgb), 0.12);
+  }
+
+  .forgot-password-link {
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+  }
+}
+
 // --------------------------------------------------
 // Documentation comments: where to place partials
 // - base/ (reset, typography, tokens)
