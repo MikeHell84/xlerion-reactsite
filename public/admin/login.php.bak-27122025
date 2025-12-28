@@ -1,0 +1,151 @@
+<?php
+require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/LoginForm.php';
+require_once __DIR__ . '/PasswordRecovery.php';
+
+// Si ya está logueado, redirigir al dashboard
+if (!empty($_SESSION['user']) && !empty($_SESSION['user']['id'])) {
+    header('Location: index.php');
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - Xlerion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="admin-login.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #181818;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .login-box {
+            background: #fff;
+            color: #222;
+            margin: 0 auto;
+            margin-top: 7vh;
+            padding: 2.5rem 2rem 2rem 2rem;
+            border-radius: 1.2rem;
+            box-shadow: 0 0 32px 0 #0008;
+            max-width: 370px;
+            width: 100%;
+        }
+        .login-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .form-control {
+            border-radius: 0.7rem;
+            font-size: 1.1rem;
+        }
+        .xlerion-btn-primary {
+            background: #0d6efd;
+            color: #fff;
+            border: none;
+            border-radius: 0.7rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 1.2rem;
+            padding: 0.7rem 0;
+            transition: background 0.2s;
+        }
+        .xlerion-btn-primary:hover {
+            background: #0056b3;
+        }
+        .forgot-password-link {
+            display: block;
+            text-align: right;
+            margin-top: 0.7rem;
+            color: #0d6efd;
+            text-decoration: none;
+            font-size: 0.98rem;
+        }
+        .forgot-password-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: #000 !important;
+                min-height: 100vh;
+                width: 100vw;
+                overflow-x: hidden;
+            }
+            .login-box {
+                background: #111 !important;
+                color: #fff !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                max-width: none !important;
+                width: 100vw !important;
+                min-height: 100vh !important;
+                margin: 0 !important;
+                padding: 2.5rem 0.5rem 2rem 0.5rem !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: stretch !important;
+            }
+            .login-title {
+                font-size: 2.3rem !important;
+                color: #0d6efd !important;
+                margin-bottom: 2.2rem !important;
+                text-align: left !important;
+            }
+            .form-control {
+                border-radius: 0.3rem !important;
+                font-size: 1.15rem !important;
+            }
+            .xlerion-btn-primary {
+                background: #0d6efd !important;
+                color: #fff !important;
+                border-radius: 0.3rem !important;
+                font-size: 1.2rem !important;
+                margin-top: 1.7rem !important;
+                padding: 1.1rem 0 !important;
+            }
+            .forgot-password-link {
+                color: #fff !important;
+                text-align: left !important;
+                margin-top: 1.2rem !important;
+                font-size: 1.05rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-title">Panel Admin Xlerion</div>
+        <?php if (isset($error)) { echo '<div class="alert alert-danger">'.$error.'</div>'; } ?>
+        <form method="post" action="login.php">
+            <div class="mb-3">
+                <label for="username" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="username" name="username" required autofocus>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="xlerion-btn-primary">Ingresar</button>
+            <a href="PasswordRecovery.php" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
+        </form>
+    </div>
+</body>
+</html>

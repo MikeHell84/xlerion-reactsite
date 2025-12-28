@@ -1,5 +1,5 @@
 <?php
-function renderLoginForm($error = '') {
+function renderLoginForm($error = '', $csrf_token = '') {
     ?>
     <div class="login-wrapper">
       <div class="row w-100 justify-content-center">
@@ -9,6 +9,7 @@ function renderLoginForm($error = '') {
             <h1>Panel De Control</h1>
             <?php if (!empty($error)): ?><div class="error mb-2"><?=htmlspecialchars($error)?></div><?php endif; ?>
             <form method="post" autocomplete="off" id="login-form" class="w-full">
+                <input type="hidden" name="csrf_token" value="<?=htmlspecialchars($csrf_token)?>">
                 <label for="username">Usuario</label>
                 <input type="text" id="username" name="username" required autofocus autocomplete="username" class="form-control mb-2">
                 <label for="password">Contraseña</label>
