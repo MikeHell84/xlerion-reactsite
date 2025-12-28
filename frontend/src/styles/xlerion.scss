@@ -8,7 +8,7 @@
 // --------------------------------------------------
 // Design tokens
 // --------------------------------------------------
-$xlerion-blue: #007BFF !default; // Azul eléctrico (primario)
+$xlerion-blue: #0affe9 !default; // Azul láser (primario)
 $xlerion-dark: #212529 !default; // Gris oscuro (secundario)
 $xlerion-accent: #00FF88 !default; // Verde neón (acento)
 $xlerion-muted: #6c757d !default;
@@ -32,7 +32,7 @@ $bp-desktop: 1200px;
 // --------------------------------------------------
 :root {
   --xlerion-primary: #{$xlerion-blue};
-  --xlerion-primary-rgb: 0, 123, 255;
+  --xlerion-primary-rgb: 10, 255, 233;
   /* derived RGB for opacity use */
   --xlerion-dark: #{$xlerion-dark};
   --xlerion-accent: #{$xlerion-accent};
