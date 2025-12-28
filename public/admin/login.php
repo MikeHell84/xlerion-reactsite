@@ -17,6 +17,7 @@ if (!empty($_SESSION['user']) && !empty($_SESSION['user']['id'])) {
 <body>
     <div class="admin-login-wrapper">
     <div class="login-box">
+        <img src="/media/LogoX.svg" alt="Xlerion" class="login-logo" />
         <div class="login-title">Panel Admin Xlerion</div>
         <?php if (isset($error)) { echo '<div class="alert alert-danger">'.$error.'</div>'; } ?>
         <form method="post" action="login.php" autocomplete="off">

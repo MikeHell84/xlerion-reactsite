@@ -250,6 +250,14 @@ nav.navbar.xlerion-navbar .nav-link {
   text-align: center;
 }
 
+/* Logo in login box */
+.login-logo {
+  display: block;
+  margin: 0 auto 0.8rem auto;
+  width: 88px;
+  height: auto;
+}
+
 .form-control {
   border-radius: 0.7rem;
   font-size: 1.1rem;
@@ -315,6 +323,11 @@ nav.navbar.xlerion-navbar .nav-link {
     color: var(--xlerion-primary) !important;
     margin-bottom: 2.2rem !important;
     text-align: center !important;
+  }
+
+  .login-logo {
+    width: 72px !important;
+    margin-bottom: 1rem !important;
   }
 
   .form-control {
