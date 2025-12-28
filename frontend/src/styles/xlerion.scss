@@ -404,6 +404,25 @@ nav.navbar.xlerion-navbar .nav-link {
   }
 }
 
+/* Parallax background base: enable on mobile by default with lower opacity
+     Desktop-specific overrides live in the desktop media query below. */
+.parallax-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: url('/media/images/parallax/Oficina0013.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0) scale(1);
+  transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
+  filter: saturate(0.9) contrast(0.98) brightness(0.7);
+  opacity: 0.36;
+  /* subtle presence on mobile */
+}
+
 // Center admin login on larger screens
 @media (min-width: 601px) {
   .admin-login-wrapper {
