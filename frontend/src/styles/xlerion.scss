@@ -420,7 +420,8 @@ nav.navbar.xlerion-navbar .nav-link {
   transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
   /* slightly brighter on mobile so image reads better over dark surfaces */
   filter: saturate(0.95) contrast(0.98) brightness(0.9);
-  opacity: 0.6; /* increased for better visibility on mobile */
+  opacity: 0.6;
+  /* increased for better visibility on mobile */
   /* subtle presence on mobile */
 }
 
@@ -438,6 +439,51 @@ nav.navbar.xlerion-navbar .nav-link {
 @media (min-width: $bp-desktop) {
   .xlerion-container {
     max-width: 1140px;
+  }
+}
+
+/* Ensure tablet and mobile-landscape widths show the dark admin background
+   so the parallax image reads and login box remains dark. Covers widths
+   from 0 up to desktop breakpoint (exclusive). */
+@media (max-width: 1199px) {
+  body {
+    background: var(--xlerion-dark-mobile) !important;
+    color: var(--xlerion-white);
+  }
+
+  .parallax-bg {
+    /* keep the mobile-visible opacity but ensure it's present on tablets/landscape */
+    opacity: 0.6 !important;
+    filter: saturate(0.95) contrast(0.98) brightness(0.9) !important;
+  }
+
+  .admin-login-wrapper {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  .login-box {
+    background: var(--xlerion-dark-mobile) !important;
+    color: var(--xlerion-white) !important;
+    border: 1px solid rgba(var(--xlerion-primary-rgb), 0.18) !important;
+    box-shadow: 0 8px 36px rgba(0, 0, 0, 0.6) !important;
+    z-index: 2;
+  }
+
+  /* Inputs on dark surfaces: subtle translucent backgrounds instead of full white */
+  input.form-control,
+  textarea.form-control,
+  input[type="text"],
+  input[type="password"] {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  input.form-control::placeholder,
+  textarea.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
   }
 }
 
@@ -465,7 +511,8 @@ nav.navbar.xlerion-navbar .nav-link {
     transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
     /* brighten slightly so image doesn't read as black against the dark body */
     filter: saturate(1.05) contrast(1.02) brightness(1.05);
-    opacity: 1; /* fully visible on desktop */
+    opacity: 1;
+    /* fully visible on desktop */
   }
 
   .admin-login-wrapper {
