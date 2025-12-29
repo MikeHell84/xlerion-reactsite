@@ -1,0 +1,25 @@
+/* Placeholder admin login styles
+   Primary styles are included in public/xlerion.css.
+   This file prevents IDE/link warnings and can be replaced by compiled admin-specific CSS.
+*/
+
+/* Minimal rules to ensure admin login page has baseline spacing */
+body.admin-login-page {
+    background: #000;
+    color: #fff;
+}
+
+.admin-login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.login-box {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+}

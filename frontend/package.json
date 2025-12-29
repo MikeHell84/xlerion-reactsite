@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --outDir ../public/build",
-    "build:css": "sass src/styles/xlerion.scss ../public/xlerion.css --no-source-map --style=compressed",
+    "build:css": "sass src/styles/xlerion.scss ../public/xlerion.css --no-source-map --style=compressed && npx postcss ../public/xlerion.css -o ../public/xlerion.css",
     "preview": "vite preview --port 5173"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
     "sass": "^1.73.0",
-    "vite": "^5.0.0"
+    "vite": "^5.0.0",
+    "postcss-cli": "^10.1.0"
   }
 }

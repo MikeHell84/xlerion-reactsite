@@ -1,0 +1,63 @@
+HTTP/1.1 200 OK
+Host: localhost:8000
+Date: Sun, 28 Dec 2025 23:17:51 GMT
+Connection: close
+X-Powered-By: PHP/8.5.1
+Set-Cookie: PHPSESSID=eeedb13e1fdc7d387ca0c787e6ffacbf; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-type: text/html; charset=UTF-8
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Xlerion Admin</title>
+  <link rel="stylesheet" href="/xlerion.css">
+  <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+</head>
+<body>
+    <aside class="admin-sidebar">
+    <h3>Xlerion CMS</h3>
+    <p>Usuario: dev (admin)</p>
+    <ul id="admin-sections-list">
+        <li><a id="open-dashboard" href="#">Dashboard</a></li>
+        <li style="border-top:1px solid rgba(255,255,255,0.03);margin-top:8px"></li>
+      <li><strong>Contenido</strong></li>
+<li><em>No hay tabla `pages` local</em></li>
+<li><em>No hay tabla `modules` local</em></li>
+<li><button id="show-main-sections" type="button" style="background:none;border:0;padding:0;color:inherit;cursor:pointer">Secciones principales</button></li>
+<li style="margin-top:12px"><strong>CRM</strong></li>
+<li><em>No hay tabla `users` local</em></li>
+<li><a href="/public/admin/crm/customers.php">CRM - Clientes / Contactos</a></li>
+<li><a href="/xlerion-backups/">Backups</a></li>
+<li style="margin-top:12px"><strong>Sistema</strong></li>
+<li><a href="/public/api/pages.php">API: páginas (JSON)</a></li>
+<li><a href="/xlerion-backups/">Backups</a></li>
+<li><a href="/public/admin/crm/README.md">CRM: Documentación</a></li>
+<li style="margin-top:12px"><strong>Utilidades</strong></li>
+<li><a href="/scripts/backup_local_db.ps1">Backup local DB (PowerShell)</a></li>
+<li><a href="/public/admin/logout.php">Salir</a></li>
+    </ul>
+    </aside>
+  <main class="admin-main">
+    <div class="admin-card">
+      <h1>Dashboard</h1>
+      <p>Bienvenido al panel de administración.</p>
+    </div>
+    <div class="admin-card" id="admin-detail" style="display:none;">
+      <h2 id="detail-title">Detalle</h2>
+      <div id="detail-body">Selecciona una sección en el panel lateral para ver sus detalles aquí.</div>
+    </div>
+  </main>
+
+  <script>
+    // expose CSRF token for admin UI (development-safe; validate with validate_csrf_token() server-side)
+    window.XLERION_CSRF = "4b2291b7cb70a9d5ff46f7f6fa6ca3ba";
+    window.PARALLAX_IMAGES = ["\/media\/images\/parallax\/Oficina0010.jpg","\/media\/images\/parallax\/Oficina0013.jpg","\/media\/images\/parallax\/blog-bitacora-parallax.jpg","\/media\/images\/parallax\/contacto-parallax.jpg","\/media\/images\/parallax\/convocatorias-alianzas-parallax.jpg","\/media\/images\/parallax\/cronograma-progreso-parallax.jpg","\/media\/images\/parallax\/documentacion-parallax.jpg","\/media\/images\/parallax\/documentacion-recursos-parallax.jpg","\/media\/images\/parallax\/filosofia-parallax.jpg","\/media\/images\/parallax\/fundador-parallax.jpg","\/media\/images\/parallax\/inversionistas-alianzas-parallax.jpg","\/media\/images\/parallax\/legal-privacidad-parallax.jpg","\/media\/images\/parallax\/noticias-eventos-parallax.jpg","\/media\/images\/parallax\/proyectos-parallax.jpg","\/media\/images\/parallax\/servicios-productos-parallax.jpg","\/media\/images\/parallax\/soluciones-parallax.jpg"];
+  </script>
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

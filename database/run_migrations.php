@@ -3,7 +3,17 @@
 require_once __DIR__ . '/../includes/config.php';
 
 function runMigrations(){
-    $pdo = get_pdo();
+    // Try configured PDO (MySQL). If it fails, fall back to a local SQLite file for development/testing.
+    try {
+        $pdo = get_pdo();
+    } catch (Exception $e) {
+        echo "MySQL connection failed: " . $e->getMessage() . "\n";
+        echo "Falling back to local SQLite database at database/xlerion_dev.sqlite\n";
+        $sqlitePath = __DIR__ . '/xlerion_dev.sqlite';
+        $pdo = new PDO('sqlite:' . $sqlitePath);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    }
     // create a migrations table if not present with our expected schema
     $pdo->exec("CREATE TABLE IF NOT EXISTS migrations (id INT AUTO_INCREMENT PRIMARY KEY, filename VARCHAR(255) NOT NULL UNIQUE, applied_at DATETIME NOT NULL)");
 

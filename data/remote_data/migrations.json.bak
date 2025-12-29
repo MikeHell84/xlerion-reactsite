@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "migration": "0001_01_01_000000_create_users_table",
+        "batch": 1
+    },
+    {
+        "id": 2,
+        "migration": "0001_01_01_000001_create_cache_table",
+        "batch": 1
+    },
+    {
+        "id": 3,
+        "migration": "0001_01_01_000002_create_jobs_table",
+        "batch": 1
+    },
+    {
+        "id": 4,
+        "migration": "2025_11_09_151409_create_menu_items_table",
+        "batch": 1
+    },
+    {
+        "id": 5,
+        "migration": "2025_11_09_151439_create_sections_table",
+        "batch": 1
+    },
+    {
+        "id": 6,
+        "migration": "001_create_pages.sql",
+        "batch": 2
+    },
+    {
+        "id": 7,
+        "migration": "002_create_contacts.sql",
+        "batch": 3
+    }
+]

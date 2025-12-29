@@ -40,15 +40,74 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         save_resets($resetsFile, $resets);
 
-        // For development we show the reset link so it's easy to test.
+        // Build reset link
         $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
         $host = $_SERVER['HTTP_HOST'] ?? '';
         if ($host) {
-            $resetLink = sprintf('%s://%s/admin/PasswordReset.php?token=%s', $scheme, $host, $token);
+          $resetLink = sprintf('%s://%s/admin/PasswordReset.php?token=%s', $scheme, $host, $token);
         } else {
-            $resetLink = '/admin/PasswordReset.php?token=' . $token;
+          $resetLink = '/admin/PasswordReset.php?token=' . $token;
         }
-        $message = 'Se ha generado un enlace de recuperación (visible sólo en entorno de desarrollo).';
+
+        // Try to send the reset link by email. Use .env SMTP settings if available.
+        $sent = false;
+        global $env;
+        $from = $env['MAIL_FROM'] ?? ('no-reply@' . ($_SERVER['HTTP_HOST'] ?? 'localhost'));
+        $subject = 'Recuperación de contraseña - Xlerion';
+        $body = "Hola,\n\nSe ha solicitado restablecer la contraseña para esta cuenta.\n\nUsa el siguiente enlace para restablecerla:\n\n" . $resetLink . "\n\nSi no solicitaste esto, ignora este mensaje.\n";
+
+        // If SMTP host is configured, try basic SMTP send; otherwise try mail().
+        if (!empty($env['SMTP_HOST'])) {
+          $smtpHost = $env['SMTP_HOST'];
+          $smtpPort = $env['SMTP_PORT'] ?? 25;
+          $smtpUser = $env['SMTP_USER'] ?? '';
+          $smtpPass = $env['SMTP_PASS'] ?? '';
+
+          // Basic SMTP client (may fail on servers requiring TLS). Return true on success.
+          $sent = false;
+          $fp = @fsockopen($smtpHost, $smtpPort, $errno, $errstr, 10);
+          if ($fp) {
+            $res = fgets($fp, 512);
+            fputs($fp, "EHLO localhost\r\n");
+            $res = fgets($fp, 512);
+            if (!empty($smtpUser) && !empty($smtpPass)) {
+              fputs($fp, "AUTH LOGIN\r\n");
+              fgets($fp,512);
+              fputs($fp, base64_encode($smtpUser) . "\r\n");
+              fgets($fp,512);
+              fputs($fp, base64_encode($smtpPass) . "\r\n");
+              fgets($fp,512);
+            }
+            fputs($fp, "MAIL FROM: <{$from}>\r\n");
+            fgets($fp,512);
+            fputs($fp, "RCPT TO: <{$email}>\r\n");
+            fgets($fp,512);
+            fputs($fp, "DATA\r\n");
+            fgets($fp,512);
+            $headers = "From: {$from}\r\n" .
+                   "Reply-To: {$from}\r\n" .
+                   "MIME-Version: 1.0\r\n" .
+                   "Content-Type: text/plain; charset=UTF-8\r\n" .
+                   "Subject: {$subject}\r\n" .
+                   "\r\n";
+            fputs($fp, $headers . $body . "\r\n.\r\n");
+            $res = fgets($fp,512);
+            fputs($fp, "QUIT\r\n");
+            fclose($fp);
+            // crude success check
+            if (strpos($res, '250') !== false || strpos($res, '354') !== false) $sent = true;
+          }
+        } else {
+          // Try PHP mail() as a fallback
+          $headers = 'From: ' . $from . "\r\n" . 'Content-Type: text/plain; charset=UTF-8' . "\r\n";
+          $sent = @mail($email, $subject, $body, $headers);
+        }
+
+        if ($sent) {
+          $message = 'Se ha enviado un correo con instrucciones a ' . htmlspecialchars($email) . '.';
+        } else {
+          $message = 'No se ha podido enviar el correo. Enlace de recuperación (solo dev):';
+        }
     }
 }
 

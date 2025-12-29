@@ -1,0 +1,1599 @@
+2025-12-28T20:21:19+00:00 [ERROR] Could not connect to remote DB: SQLSTATE[HY000] [1045] Access denied for user 'xlerionc_admin'@'186.33.50.218' (using password: YES)
+2025-12-28T20:25:07+00:00 Connected to remote DB. Reading tables...
+2025-12-28T20:25:07+00:00 Inspecting table: admin_notifications
+2025-12-28T20:25:07+00:00 Wrote model: includes/remote_models/Admin_notificationsModel.php
+2025-12-28T20:25:07+00:00 Inspecting table: admins
+2025-12-28T20:25:07+00:00 Wrote model: includes/remote_models/AdminsModel.php
+2025-12-28T20:25:07+00:00 Inspecting table: backups
+2025-12-28T20:25:08+00:00 Wrote model: includes/remote_models/BackupsModel.php
+2025-12-28T20:25:08+00:00 Inspecting table: cache
+2025-12-28T20:25:08+00:00 Wrote model: includes/remote_models/CacheModel.php
+2025-12-28T20:25:08+00:00 Inspecting table: cache_locks
+2025-12-28T20:25:08+00:00 Wrote model: includes/remote_models/Cache_locksModel.php
+2025-12-28T20:25:08+00:00 Inspecting table: client_finances
+2025-12-28T20:25:08+00:00 Wrote model: includes/remote_models/Client_financesModel.php
+2025-12-28T20:25:08+00:00 Inspecting table: client_interactions
+2025-12-28T20:25:09+00:00 Wrote model: includes/remote_models/Client_interactionsModel.php
+2025-12-28T20:25:09+00:00 Inspecting table: client_notes
+2025-12-28T20:25:09+00:00 Wrote model: includes/remote_models/Client_notesModel.php
+2025-12-28T20:25:09+00:00 Inspecting table: client_projects
+2025-12-28T20:25:09+00:00 Wrote model: includes/remote_models/Client_projectsModel.php
+2025-12-28T20:25:09+00:00 Inspecting table: clients
+2025-12-28T20:25:09+00:00 Wrote model: includes/remote_models/ClientsModel.php
+2025-12-28T20:25:09+00:00 Inspecting table: cms_blocks
+2025-12-28T20:25:10+00:00 Wrote model: includes/remote_models/Cms_blocksModel.php
+2025-12-28T20:25:10+00:00 Inspecting table: cms_pages
+2025-12-28T20:25:10+00:00 Wrote model: includes/remote_models/Cms_pagesModel.php
+2025-12-28T20:25:10+00:00 Inspecting table: contacts
+2025-12-28T20:25:10+00:00 Wrote model: includes/remote_models/ContactsModel.php
+2025-12-28T20:25:10+00:00 Inspecting table: crm_audit
+2025-12-28T20:25:10+00:00 Wrote model: includes/remote_models/Crm_auditModel.php
+2025-12-28T20:25:10+00:00 Inspecting table: crm_customers
+2025-12-28T20:25:11+00:00 Wrote model: includes/remote_models/Crm_customersModel.php
+2025-12-28T20:25:11+00:00 Inspecting table: crm_leads
+2025-12-28T20:25:11+00:00 Wrote model: includes/remote_models/Crm_leadsModel.php
+2025-12-28T20:25:11+00:00 Inspecting table: failed_jobs
+2025-12-28T20:25:11+00:00 Wrote model: includes/remote_models/Failed_jobsModel.php
+2025-12-28T20:25:11+00:00 Inspecting table: forms_submissions
+2025-12-28T20:25:11+00:00 Wrote model: includes/remote_models/Forms_submissionsModel.php
+2025-12-28T20:25:11+00:00 Inspecting table: interactions
+2025-12-28T20:25:12+00:00 Wrote model: includes/remote_models/InteractionsModel.php
+2025-12-28T20:25:12+00:00 Inspecting table: job_batches
+2025-12-28T20:25:12+00:00 Wrote model: includes/remote_models/Job_batchesModel.php
+2025-12-28T20:25:12+00:00 Inspecting table: jobs
+2025-12-28T20:25:12+00:00 Wrote model: includes/remote_models/JobsModel.php
+2025-12-28T20:25:12+00:00 Inspecting table: media_files
+2025-12-28T20:25:12+00:00 Wrote model: includes/remote_models/Media_filesModel.php
+2025-12-28T20:25:12+00:00 Inspecting table: menu_items
+2025-12-28T20:25:13+00:00 Wrote model: includes/remote_models/Menu_itemsModel.php
+2025-12-28T20:25:13+00:00 Inspecting table: menu_sections
+2025-12-28T20:25:13+00:00 Wrote model: includes/remote_models/Menu_sectionsModel.php
+2025-12-28T20:25:13+00:00 Inspecting table: migrations
+2025-12-28T20:25:13+00:00 Wrote model: includes/remote_models/MigrationsModel.php
+2025-12-28T20:25:13+00:00 Inspecting table: modules
+2025-12-28T20:25:14+00:00 Wrote model: includes/remote_models/ModulesModel.php
+2025-12-28T20:25:14+00:00 Inspecting table: opportunities
+2025-12-28T20:25:14+00:00 Wrote model: includes/remote_models/OpportunitiesModel.php
+2025-12-28T20:25:14+00:00 Inspecting table: page_views
+2025-12-28T20:25:14+00:00 Wrote model: includes/remote_models/Page_viewsModel.php
+2025-12-28T20:25:14+00:00 Inspecting table: pages
+2025-12-28T20:25:14+00:00 Wrote model: includes/remote_models/PagesModel.php
+2025-12-28T20:25:14+00:00 Inspecting table: password_reset_tokens
+2025-12-28T20:25:15+00:00 Wrote model: includes/remote_models/Password_reset_tokensModel.php
+2025-12-28T20:25:15+00:00 Inspecting table: password_resets
+2025-12-28T20:25:15+00:00 Wrote model: includes/remote_models/Password_resetsModel.php
+2025-12-28T20:25:15+00:00 Inspecting table: resources
+2025-12-28T20:25:15+00:00 Wrote model: includes/remote_models/ResourcesModel.php
+2025-12-28T20:25:15+00:00 Inspecting table: sections
+2025-12-28T20:25:15+00:00 Wrote model: includes/remote_models/SectionsModel.php
+2025-12-28T20:25:15+00:00 Inspecting table: sessions
+2025-12-28T20:25:16+00:00 Wrote model: includes/remote_models/SessionsModel.php
+2025-12-28T20:25:16+00:00 Inspecting table: tasks
+2025-12-28T20:25:16+00:00 Wrote model: includes/remote_models/TasksModel.php
+2025-12-28T20:25:16+00:00 Inspecting table: td_interactions
+2025-12-28T20:25:16+00:00 Wrote model: includes/remote_models/Td_interactionsModel.php
+2025-12-28T20:25:16+00:00 Inspecting table: td_projects
+2025-12-28T20:25:20+00:00 Wrote model: includes/remote_models/Td_projectsModel.php
+2025-12-28T20:25:20+00:00 Inspecting table: users
+2025-12-28T20:25:20+00:00 Wrote model: includes/remote_models/UsersModel.php
+2025-12-28T20:25:20+00:00 Saved remote_schema.json and table samples.
+2025-12-28T20:25:20+00:00 LOCAL_DB_* not present in .env — skipping local comparison. To enable, set LOCAL_DB_HOST, LOCAL_DB_DATABASE, LOCAL_DB_USERNAME, LOCAL_DB_PASSWORD.
+2025-12-28T20:25:20+00:00 Done.
+2025-12-28T20:26:11+00:00 Connected to remote DB. Reading tables...
+2025-12-28T20:26:11+00:00 Inspecting table: admin_notifications
+2025-12-28T20:26:11+00:00 Model exists, skipped: includes/remote_models/Admin_notificationsModel.php
+2025-12-28T20:26:11+00:00 Inspecting table: admins
+2025-12-28T20:26:12+00:00 Model exists, skipped: includes/remote_models/AdminsModel.php
+2025-12-28T20:26:12+00:00 Inspecting table: backups
+2025-12-28T20:26:12+00:00 Model exists, skipped: includes/remote_models/BackupsModel.php
+2025-12-28T20:26:12+00:00 Inspecting table: cache
+2025-12-28T20:26:12+00:00 Model exists, skipped: includes/remote_models/CacheModel.php
+2025-12-28T20:26:12+00:00 Inspecting table: cache_locks
+2025-12-28T20:26:12+00:00 Model exists, skipped: includes/remote_models/Cache_locksModel.php
+2025-12-28T20:26:12+00:00 Inspecting table: client_finances
+2025-12-28T20:26:13+00:00 Model exists, skipped: includes/remote_models/Client_financesModel.php
+2025-12-28T20:26:13+00:00 Inspecting table: client_interactions
+2025-12-28T20:26:13+00:00 Model exists, skipped: includes/remote_models/Client_interactionsModel.php
+2025-12-28T20:26:13+00:00 Inspecting table: client_notes
+2025-12-28T20:26:13+00:00 Model exists, skipped: includes/remote_models/Client_notesModel.php
+2025-12-28T20:26:13+00:00 Inspecting table: client_projects
+2025-12-28T20:26:13+00:00 Model exists, skipped: includes/remote_models/Client_projectsModel.php
+2025-12-28T20:26:13+00:00 Inspecting table: clients
+2025-12-28T20:26:14+00:00 Model exists, skipped: includes/remote_models/ClientsModel.php
+2025-12-28T20:26:14+00:00 Inspecting table: cms_blocks
+2025-12-28T20:26:14+00:00 Model exists, skipped: includes/remote_models/Cms_blocksModel.php
+2025-12-28T20:26:14+00:00 Inspecting table: cms_pages
+2025-12-28T20:26:14+00:00 Model exists, skipped: includes/remote_models/Cms_pagesModel.php
+2025-12-28T20:26:14+00:00 Inspecting table: contacts
+2025-12-28T20:26:14+00:00 Model exists, skipped: includes/remote_models/ContactsModel.php
+2025-12-28T20:26:14+00:00 Inspecting table: crm_audit
+2025-12-28T20:26:15+00:00 Model exists, skipped: includes/remote_models/Crm_auditModel.php
+2025-12-28T20:26:15+00:00 Inspecting table: crm_customers
+2025-12-28T20:26:15+00:00 Model exists, skipped: includes/remote_models/Crm_customersModel.php
+2025-12-28T20:26:15+00:00 Inspecting table: crm_leads
+2025-12-28T20:26:15+00:00 Model exists, skipped: includes/remote_models/Crm_leadsModel.php
+2025-12-28T20:26:15+00:00 Inspecting table: failed_jobs
+2025-12-28T20:26:15+00:00 Model exists, skipped: includes/remote_models/Failed_jobsModel.php
+2025-12-28T20:26:15+00:00 Inspecting table: forms_submissions
+2025-12-28T20:26:16+00:00 Model exists, skipped: includes/remote_models/Forms_submissionsModel.php
+2025-12-28T20:26:16+00:00 Inspecting table: interactions
+2025-12-28T20:26:16+00:00 Model exists, skipped: includes/remote_models/InteractionsModel.php
+2025-12-28T20:26:16+00:00 Inspecting table: job_batches
+2025-12-28T20:26:16+00:00 Model exists, skipped: includes/remote_models/Job_batchesModel.php
+2025-12-28T20:26:16+00:00 Inspecting table: jobs
+2025-12-28T20:26:16+00:00 Model exists, skipped: includes/remote_models/JobsModel.php
+2025-12-28T20:26:16+00:00 Inspecting table: media_files
+2025-12-28T20:26:17+00:00 Model exists, skipped: includes/remote_models/Media_filesModel.php
+2025-12-28T20:26:17+00:00 Inspecting table: menu_items
+2025-12-28T20:26:17+00:00 Model exists, skipped: includes/remote_models/Menu_itemsModel.php
+2025-12-28T20:26:17+00:00 Inspecting table: menu_sections
+2025-12-28T20:26:17+00:00 Model exists, skipped: includes/remote_models/Menu_sectionsModel.php
+2025-12-28T20:26:17+00:00 Inspecting table: migrations
+2025-12-28T20:26:17+00:00 Model exists, skipped: includes/remote_models/MigrationsModel.php
+2025-12-28T20:26:17+00:00 Inspecting table: modules
+2025-12-28T20:26:18+00:00 Model exists, skipped: includes/remote_models/ModulesModel.php
+2025-12-28T20:26:18+00:00 Inspecting table: opportunities
+2025-12-28T20:26:18+00:00 Model exists, skipped: includes/remote_models/OpportunitiesModel.php
+2025-12-28T20:26:18+00:00 Inspecting table: page_views
+2025-12-28T20:26:18+00:00 Model exists, skipped: includes/remote_models/Page_viewsModel.php
+2025-12-28T20:26:18+00:00 Inspecting table: pages
+2025-12-28T20:26:19+00:00 Model exists, skipped: includes/remote_models/PagesModel.php
+2025-12-28T20:26:19+00:00 Inspecting table: password_reset_tokens
+2025-12-28T20:26:19+00:00 Model exists, skipped: includes/remote_models/Password_reset_tokensModel.php
+2025-12-28T20:26:19+00:00 Inspecting table: password_resets
+2025-12-28T20:26:19+00:00 Model exists, skipped: includes/remote_models/Password_resetsModel.php
+2025-12-28T20:26:19+00:00 Inspecting table: resources
+2025-12-28T20:26:19+00:00 Model exists, skipped: includes/remote_models/ResourcesModel.php
+2025-12-28T20:26:19+00:00 Inspecting table: sections
+2025-12-28T20:26:20+00:00 Model exists, skipped: includes/remote_models/SectionsModel.php
+2025-12-28T20:26:20+00:00 Inspecting table: sessions
+2025-12-28T20:26:20+00:00 Model exists, skipped: includes/remote_models/SessionsModel.php
+2025-12-28T20:26:20+00:00 Inspecting table: tasks
+2025-12-28T20:26:20+00:00 Model exists, skipped: includes/remote_models/TasksModel.php
+2025-12-28T20:26:20+00:00 Inspecting table: td_interactions
+2025-12-28T20:26:20+00:00 Model exists, skipped: includes/remote_models/Td_interactionsModel.php
+2025-12-28T20:26:20+00:00 Inspecting table: td_projects
+2025-12-28T20:26:25+00:00 Model exists, skipped: includes/remote_models/Td_projectsModel.php
+2025-12-28T20:26:25+00:00 Inspecting table: users
+2025-12-28T20:26:26+00:00 Model exists, skipped: includes/remote_models/UsersModel.php
+2025-12-28T20:26:26+00:00 Saved remote_schema.json and table samples.
+2025-12-28T20:26:26+00:00 LOCAL_DB_* not present in .env — skipping local comparison. To enable, set LOCAL_DB_HOST, LOCAL_DB_DATABASE, LOCAL_DB_USERNAME, LOCAL_DB_PASSWORD.
+2025-12-28T20:26:26+00:00 Done.
+2025-12-28T20:31:47+00:00 Connected to remote DB. Reading tables...
+2025-12-28T20:31:47+00:00 Inspecting table: admin_notifications
+2025-12-28T20:31:48+00:00 Model exists, skipped: includes/remote_models/Admin_notificationsModel.php
+2025-12-28T20:31:48+00:00 Inspecting table: admins
+2025-12-28T20:31:48+00:00 Model exists, skipped: includes/remote_models/AdminsModel.php
+2025-12-28T20:31:48+00:00 Inspecting table: backups
+2025-12-28T20:31:48+00:00 Model exists, skipped: includes/remote_models/BackupsModel.php
+2025-12-28T20:31:48+00:00 Inspecting table: cache
+2025-12-28T20:31:49+00:00 Model exists, skipped: includes/remote_models/CacheModel.php
+2025-12-28T20:31:49+00:00 Inspecting table: cache_locks
+2025-12-28T20:31:49+00:00 Model exists, skipped: includes/remote_models/Cache_locksModel.php
+2025-12-28T20:31:49+00:00 Inspecting table: client_finances
+2025-12-28T20:31:49+00:00 Model exists, skipped: includes/remote_models/Client_financesModel.php
+2025-12-28T20:31:49+00:00 Inspecting table: client_interactions
+2025-12-28T20:31:49+00:00 Model exists, skipped: includes/remote_models/Client_interactionsModel.php
+2025-12-28T20:31:49+00:00 Inspecting table: client_notes
+2025-12-28T20:31:50+00:00 Model exists, skipped: includes/remote_models/Client_notesModel.php
+2025-12-28T20:31:50+00:00 Inspecting table: client_projects
+2025-12-28T20:31:50+00:00 Model exists, skipped: includes/remote_models/Client_projectsModel.php
+2025-12-28T20:31:50+00:00 Inspecting table: clients
+2025-12-28T20:31:50+00:00 Model exists, skipped: includes/remote_models/ClientsModel.php
+2025-12-28T20:31:50+00:00 Inspecting table: cms_blocks
+2025-12-28T20:31:50+00:00 Model exists, skipped: includes/remote_models/Cms_blocksModel.php
+2025-12-28T20:31:50+00:00 Inspecting table: cms_pages
+2025-12-28T20:31:52+00:00 Model exists, skipped: includes/remote_models/Cms_pagesModel.php
+2025-12-28T20:31:52+00:00 Inspecting table: contacts
+2025-12-28T20:31:52+00:00 Model exists, skipped: includes/remote_models/ContactsModel.php
+2025-12-28T20:31:52+00:00 Inspecting table: crm_audit
+2025-12-28T20:31:52+00:00 Model exists, skipped: includes/remote_models/Crm_auditModel.php
+2025-12-28T20:31:52+00:00 Inspecting table: crm_customers
+2025-12-28T20:31:52+00:00 Model exists, skipped: includes/remote_models/Crm_customersModel.php
+2025-12-28T20:31:52+00:00 Inspecting table: crm_leads
+2025-12-28T20:31:53+00:00 Model exists, skipped: includes/remote_models/Crm_leadsModel.php
+2025-12-28T20:31:53+00:00 Inspecting table: failed_jobs
+2025-12-28T20:31:53+00:00 Model exists, skipped: includes/remote_models/Failed_jobsModel.php
+2025-12-28T20:31:53+00:00 Inspecting table: forms_submissions
+2025-12-28T20:31:53+00:00 Model exists, skipped: includes/remote_models/Forms_submissionsModel.php
+2025-12-28T20:31:53+00:00 Inspecting table: interactions
+2025-12-28T20:31:53+00:00 Model exists, skipped: includes/remote_models/InteractionsModel.php
+2025-12-28T20:31:53+00:00 Inspecting table: job_batches
+2025-12-28T20:31:54+00:00 Model exists, skipped: includes/remote_models/Job_batchesModel.php
+2025-12-28T20:31:54+00:00 Inspecting table: jobs
+2025-12-28T20:31:54+00:00 Model exists, skipped: includes/remote_models/JobsModel.php
+2025-12-28T20:31:54+00:00 Inspecting table: media_files
+2025-12-28T20:31:54+00:00 Model exists, skipped: includes/remote_models/Media_filesModel.php
+2025-12-28T20:31:54+00:00 Inspecting table: menu_items
+2025-12-28T20:31:54+00:00 Model exists, skipped: includes/remote_models/Menu_itemsModel.php
+2025-12-28T20:31:54+00:00 Inspecting table: menu_sections
+2025-12-28T20:31:55+00:00 Model exists, skipped: includes/remote_models/Menu_sectionsModel.php
+2025-12-28T20:31:55+00:00 Inspecting table: migrations
+2025-12-28T20:31:55+00:00 Model exists, skipped: includes/remote_models/MigrationsModel.php
+2025-12-28T20:31:55+00:00 Inspecting table: modules
+2025-12-28T20:31:55+00:00 Model exists, skipped: includes/remote_models/ModulesModel.php
+2025-12-28T20:31:55+00:00 Inspecting table: opportunities
+2025-12-28T20:31:55+00:00 Model exists, skipped: includes/remote_models/OpportunitiesModel.php
+2025-12-28T20:31:55+00:00 Inspecting table: page_views
+2025-12-28T20:31:56+00:00 Model exists, skipped: includes/remote_models/Page_viewsModel.php
+2025-12-28T20:31:56+00:00 Inspecting table: pages
+2025-12-28T20:31:56+00:00 Model exists, skipped: includes/remote_models/PagesModel.php
+2025-12-28T20:31:56+00:00 Inspecting table: password_reset_tokens
+2025-12-28T20:31:56+00:00 Model exists, skipped: includes/remote_models/Password_reset_tokensModel.php
+2025-12-28T20:31:56+00:00 Inspecting table: password_resets
+2025-12-28T20:31:57+00:00 Model exists, skipped: includes/remote_models/Password_resetsModel.php
+2025-12-28T20:31:57+00:00 Inspecting table: resources
+2025-12-28T20:31:57+00:00 Model exists, skipped: includes/remote_models/ResourcesModel.php
+2025-12-28T20:31:57+00:00 Inspecting table: sections
+2025-12-28T20:31:57+00:00 Model exists, skipped: includes/remote_models/SectionsModel.php
+2025-12-28T20:31:57+00:00 Inspecting table: sessions
+2025-12-28T20:31:57+00:00 Model exists, skipped: includes/remote_models/SessionsModel.php
+2025-12-28T20:31:57+00:00 Inspecting table: tasks
+2025-12-28T20:31:58+00:00 Model exists, skipped: includes/remote_models/TasksModel.php
+2025-12-28T20:31:58+00:00 Inspecting table: td_interactions
+2025-12-28T20:31:58+00:00 Model exists, skipped: includes/remote_models/Td_interactionsModel.php
+2025-12-28T20:31:58+00:00 Inspecting table: td_projects
+2025-12-28T20:32:12+00:00 Model exists, skipped: includes/remote_models/Td_projectsModel.php
+2025-12-28T20:32:12+00:00 Inspecting table: users
+2025-12-28T20:32:12+00:00 Model exists, skipped: includes/remote_models/UsersModel.php
+2025-12-28T20:32:12+00:00 Saved remote_schema.json and table samples.
+2025-12-28T20:32:12+00:00 LOCAL_DB_* found in .env — attempting local DB comparison (read-only).
+2025-12-28T20:32:12+00:00 [ERROR] Could not connect to local DB: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2025-12-28T20:32:12+00:00 Done.
+2025-12-28T20:52:54+00:00 Connected to remote DB. Reading tables...
+2025-12-28T20:52:54+00:00 Inspecting table: admin_notifications
+2025-12-28T20:52:54+00:00 Model exists, skipped: includes/remote_models/Admin_notificationsModel.php
+2025-12-28T20:52:54+00:00 Inspecting table: admins
+2025-12-28T20:52:54+00:00 Model exists, skipped: includes/remote_models/AdminsModel.php
+2025-12-28T20:52:54+00:00 Inspecting table: backups
+2025-12-28T20:52:55+00:00 Model exists, skipped: includes/remote_models/BackupsModel.php
+2025-12-28T20:52:55+00:00 Inspecting table: cache
+2025-12-28T20:52:55+00:00 Model exists, skipped: includes/remote_models/CacheModel.php
+2025-12-28T20:52:55+00:00 Inspecting table: cache_locks
+2025-12-28T20:52:55+00:00 Model exists, skipped: includes/remote_models/Cache_locksModel.php
+2025-12-28T20:52:55+00:00 Inspecting table: client_finances
+2025-12-28T20:52:55+00:00 Model exists, skipped: includes/remote_models/Client_financesModel.php
+2025-12-28T20:52:55+00:00 Inspecting table: client_interactions
+2025-12-28T20:52:56+00:00 Model exists, skipped: includes/remote_models/Client_interactionsModel.php
+2025-12-28T20:52:56+00:00 Inspecting table: client_notes
+2025-12-28T20:52:56+00:00 Model exists, skipped: includes/remote_models/Client_notesModel.php
+2025-12-28T20:52:56+00:00 Inspecting table: client_projects
+2025-12-28T20:52:56+00:00 Model exists, skipped: includes/remote_models/Client_projectsModel.php
+2025-12-28T20:52:56+00:00 Inspecting table: clients
+2025-12-28T20:52:56+00:00 Model exists, skipped: includes/remote_models/ClientsModel.php
+2025-12-28T20:52:56+00:00 Inspecting table: cms_blocks
+2025-12-28T20:52:57+00:00 Model exists, skipped: includes/remote_models/Cms_blocksModel.php
+2025-12-28T20:52:57+00:00 Inspecting table: cms_pages
+2025-12-28T20:52:57+00:00 Model exists, skipped: includes/remote_models/Cms_pagesModel.php
+2025-12-28T20:52:57+00:00 Inspecting table: contacts
+2025-12-28T20:52:57+00:00 Model exists, skipped: includes/remote_models/ContactsModel.php
+2025-12-28T20:52:57+00:00 Inspecting table: crm_audit
+2025-12-28T20:52:57+00:00 Model exists, skipped: includes/remote_models/Crm_auditModel.php
+2025-12-28T20:52:57+00:00 Inspecting table: crm_customers
+2025-12-28T20:52:58+00:00 Model exists, skipped: includes/remote_models/Crm_customersModel.php
+2025-12-28T20:52:58+00:00 Inspecting table: crm_leads
+2025-12-28T20:52:58+00:00 Model exists, skipped: includes/remote_models/Crm_leadsModel.php
+2025-12-28T20:52:58+00:00 Inspecting table: failed_jobs
+2025-12-28T20:52:58+00:00 Model exists, skipped: includes/remote_models/Failed_jobsModel.php
+2025-12-28T20:52:58+00:00 Inspecting table: forms_submissions
+2025-12-28T20:52:58+00:00 Model exists, skipped: includes/remote_models/Forms_submissionsModel.php
+2025-12-28T20:52:58+00:00 Inspecting table: interactions
+2025-12-28T20:52:59+00:00 Model exists, skipped: includes/remote_models/InteractionsModel.php
+2025-12-28T20:52:59+00:00 Inspecting table: job_batches
+2025-12-28T20:52:59+00:00 Model exists, skipped: includes/remote_models/Job_batchesModel.php
+2025-12-28T20:52:59+00:00 Inspecting table: jobs
+2025-12-28T20:52:59+00:00 Model exists, skipped: includes/remote_models/JobsModel.php
+2025-12-28T20:52:59+00:00 Inspecting table: media_files
+2025-12-28T20:53:00+00:00 Model exists, skipped: includes/remote_models/Media_filesModel.php
+2025-12-28T20:53:00+00:00 Inspecting table: menu_items
+2025-12-28T20:53:00+00:00 Model exists, skipped: includes/remote_models/Menu_itemsModel.php
+2025-12-28T20:53:00+00:00 Inspecting table: menu_sections
+2025-12-28T20:53:00+00:00 Model exists, skipped: includes/remote_models/Menu_sectionsModel.php
+2025-12-28T20:53:00+00:00 Inspecting table: migrations
+2025-12-28T20:53:00+00:00 Model exists, skipped: includes/remote_models/MigrationsModel.php
+2025-12-28T20:53:00+00:00 Inspecting table: modules
+2025-12-28T20:53:01+00:00 Model exists, skipped: includes/remote_models/ModulesModel.php
+2025-12-28T20:53:01+00:00 Inspecting table: opportunities
+2025-12-28T20:53:01+00:00 Model exists, skipped: includes/remote_models/OpportunitiesModel.php
+2025-12-28T20:53:01+00:00 Inspecting table: page_views
+2025-12-28T20:53:01+00:00 Model exists, skipped: includes/remote_models/Page_viewsModel.php
+2025-12-28T20:53:01+00:00 Inspecting table: pages
+2025-12-28T20:53:01+00:00 Model exists, skipped: includes/remote_models/PagesModel.php
+2025-12-28T20:53:01+00:00 Inspecting table: password_reset_tokens
+2025-12-28T20:53:02+00:00 Model exists, skipped: includes/remote_models/Password_reset_tokensModel.php
+2025-12-28T20:53:02+00:00 Inspecting table: password_resets
+2025-12-28T20:53:02+00:00 Model exists, skipped: includes/remote_models/Password_resetsModel.php
+2025-12-28T20:53:02+00:00 Inspecting table: resources
+2025-12-28T20:53:02+00:00 Model exists, skipped: includes/remote_models/ResourcesModel.php
+2025-12-28T20:53:02+00:00 Inspecting table: sections
+2025-12-28T20:53:02+00:00 Model exists, skipped: includes/remote_models/SectionsModel.php
+2025-12-28T20:53:02+00:00 Inspecting table: sessions
+2025-12-28T20:53:03+00:00 Model exists, skipped: includes/remote_models/SessionsModel.php
+2025-12-28T20:53:03+00:00 Inspecting table: tasks
+2025-12-28T20:53:03+00:00 Model exists, skipped: includes/remote_models/TasksModel.php
+2025-12-28T20:53:03+00:00 Inspecting table: td_interactions
+2025-12-28T20:53:03+00:00 Model exists, skipped: includes/remote_models/Td_interactionsModel.php
+2025-12-28T20:53:03+00:00 Inspecting table: td_projects
+2025-12-28T20:53:15+00:00 Model exists, skipped: includes/remote_models/Td_projectsModel.php
+2025-12-28T20:53:15+00:00 Inspecting table: users
+2025-12-28T20:53:15+00:00 Model exists, skipped: includes/remote_models/UsersModel.php
+2025-12-28T20:53:15+00:00 Saved remote_schema.json and table samples.
+2025-12-28T20:53:15+00:00 LOCAL_DB_* found in .env — attempting local DB comparison (read-only).
+2025-12-28T20:53:15+00:00 Wrote migration stubs: X:\Programacion\UltimateSite\scripts/remote_to_local_migration_stubs.sql
+2025-12-28T20:53:15+00:00 Done.
+2025-12-28T20:55:26+00:00 Generated detailed stubs.
+Array
+(
+    [admin_notifications] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                )
+
+        )
+
+    [admins] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                    [2] => updated_at
+                )
+
+        )
+
+    [backups] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                )
+
+        )
+
+    [cache] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => expiration
+                )
+
+        )
+
+    [cache_locks] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => expiration
+                )
+
+        )
+
+    [client_finances] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => client_id
+                    [2] => fecha
+                )
+
+        )
+
+    [client_interactions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => client_id
+                    [2] => fecha
+                )
+
+        )
+
+    [client_notes] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => client_id
+                    [2] => fecha
+                )
+
+        )
+
+    [client_projects] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => client_id
+                    [2] => created_at
+                )
+
+        )
+
+    [clients] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => pipeline_opportunities
+                    [2] => pipeline_progress
+                    [3] => created_by
+                    [4] => created_at
+                )
+
+        )
+
+    [cms_blocks] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => page_id
+                    [2] => order
+                )
+
+        )
+
+    [cms_pages] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_by
+                    [2] => updated_by
+                )
+
+        )
+
+    [contacts] => Array
+        (
+            [status] => missing_locally
+        )
+
+    [crm_audit] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => entity_id
+                    [2] => user_id
+                    [3] => created_at
+                )
+
+        )
+
+    [crm_customers] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                    [2] => updated_at
+                )
+
+        )
+
+    [crm_leads] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => score
+                    [2] => created_at
+                    [3] => updated_at
+                )
+
+        )
+
+    [failed_jobs] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => failed_at
+                )
+
+        )
+
+    [forms_submissions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => is_read
+                )
+
+        )
+
+    [interactions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => performed_at
+                )
+
+        )
+
+    [job_batches] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => total_jobs
+                    [1] => pending_jobs
+                    [2] => failed_jobs
+                    [3] => cancelled_at
+                    [4] => created_at
+                    [5] => finished_at
+                )
+
+        )
+
+    [jobs] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => attempts
+                    [2] => reserved_at
+                    [3] => available_at
+                    [4] => created_at
+                )
+
+        )
+
+    [media_files] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => size
+                    [2] => uploaded_by
+                )
+
+        )
+
+    [menu_items] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => parent_id
+                    [2] => order
+                )
+
+        )
+
+    [menu_sections] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => parent_id
+                    [2] => is_visible
+                    [3] => sort_order
+                    [4] => created_at
+                    [5] => updated_at
+                )
+
+        )
+
+    [migrations] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => batch
+                )
+
+        )
+
+    [modules] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => page_id
+                    [2] => order_index
+                    [3] => created_at
+                    [4] => updated_at
+                )
+
+        )
+
+    [opportunities] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                )
+
+        )
+
+    [page_views] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => page_id
+                )
+
+        )
+
+    [pages] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                    [2] => updated_at
+                )
+
+        )
+
+    [password_reset_tokens] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                )
+
+        )
+
+    [password_resets] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                )
+
+        )
+
+    [resources] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                )
+
+        )
+
+    [sections] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                )
+
+        )
+
+    [sessions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => user_id
+                    [1] => last_activity
+                )
+
+        )
+
+    [tasks] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                )
+
+        )
+
+    [td_interactions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => rating
+                    [2] => created_at
+                )
+
+        )
+
+    [td_projects] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => last_updated
+                )
+
+        )
+
+    [users] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => reset_token_expires
+                )
+
+        )
+
+)
+
+2025-12-28T21:11:32+00:00 Connected to remote DB. Reading tables...
+2025-12-28T21:11:32+00:00 Inspecting table: admin_notifications
+2025-12-28T21:11:32+00:00 Model exists, skipped: includes/remote_models/Admin_notificationsModel.php
+2025-12-28T21:11:32+00:00 Inspecting table: admins
+2025-12-28T21:11:32+00:00 Model exists, skipped: includes/remote_models/AdminsModel.php
+2025-12-28T21:11:32+00:00 Inspecting table: backups
+2025-12-28T21:11:33+00:00 Model exists, skipped: includes/remote_models/BackupsModel.php
+2025-12-28T21:11:33+00:00 Inspecting table: cache
+2025-12-28T21:11:33+00:00 Model exists, skipped: includes/remote_models/CacheModel.php
+2025-12-28T21:11:33+00:00 Inspecting table: cache_locks
+2025-12-28T21:11:33+00:00 Model exists, skipped: includes/remote_models/Cache_locksModel.php
+2025-12-28T21:11:33+00:00 Inspecting table: client_finances
+2025-12-28T21:11:33+00:00 Model exists, skipped: includes/remote_models/Client_financesModel.php
+2025-12-28T21:11:33+00:00 Inspecting table: client_interactions
+2025-12-28T21:11:34+00:00 Model exists, skipped: includes/remote_models/Client_interactionsModel.php
+2025-12-28T21:11:34+00:00 Inspecting table: client_notes
+2025-12-28T21:11:34+00:00 Model exists, skipped: includes/remote_models/Client_notesModel.php
+2025-12-28T21:11:34+00:00 Inspecting table: client_projects
+2025-12-28T21:11:34+00:00 Model exists, skipped: includes/remote_models/Client_projectsModel.php
+2025-12-28T21:11:34+00:00 Inspecting table: clients
+2025-12-28T21:11:34+00:00 Model exists, skipped: includes/remote_models/ClientsModel.php
+2025-12-28T21:11:34+00:00 Inspecting table: cms_blocks
+2025-12-28T21:11:35+00:00 Model exists, skipped: includes/remote_models/Cms_blocksModel.php
+2025-12-28T21:11:35+00:00 Inspecting table: cms_pages
+2025-12-28T21:11:35+00:00 Model exists, skipped: includes/remote_models/Cms_pagesModel.php
+2025-12-28T21:11:35+00:00 Inspecting table: contacts
+2025-12-28T21:11:35+00:00 Model exists, skipped: includes/remote_models/ContactsModel.php
+2025-12-28T21:11:35+00:00 Inspecting table: crm_audit
+2025-12-28T21:11:35+00:00 Model exists, skipped: includes/remote_models/Crm_auditModel.php
+2025-12-28T21:11:35+00:00 Inspecting table: crm_customers
+2025-12-28T21:11:36+00:00 Model exists, skipped: includes/remote_models/Crm_customersModel.php
+2025-12-28T21:11:36+00:00 Inspecting table: crm_leads
+2025-12-28T21:11:36+00:00 Model exists, skipped: includes/remote_models/Crm_leadsModel.php
+2025-12-28T21:11:36+00:00 Inspecting table: failed_jobs
+2025-12-28T21:11:36+00:00 Model exists, skipped: includes/remote_models/Failed_jobsModel.php
+2025-12-28T21:11:36+00:00 Inspecting table: forms_submissions
+2025-12-28T21:11:37+00:00 Model exists, skipped: includes/remote_models/Forms_submissionsModel.php
+2025-12-28T21:11:37+00:00 Inspecting table: interactions
+2025-12-28T21:11:37+00:00 Model exists, skipped: includes/remote_models/InteractionsModel.php
+2025-12-28T21:11:37+00:00 Inspecting table: job_batches
+2025-12-28T21:11:37+00:00 Model exists, skipped: includes/remote_models/Job_batchesModel.php
+2025-12-28T21:11:37+00:00 Inspecting table: jobs
+2025-12-28T21:11:37+00:00 Model exists, skipped: includes/remote_models/JobsModel.php
+2025-12-28T21:11:37+00:00 Inspecting table: media_files
+2025-12-28T21:11:38+00:00 Model exists, skipped: includes/remote_models/Media_filesModel.php
+2025-12-28T21:11:38+00:00 Inspecting table: menu_items
+2025-12-28T21:11:38+00:00 Model exists, skipped: includes/remote_models/Menu_itemsModel.php
+2025-12-28T21:11:38+00:00 Inspecting table: menu_sections
+2025-12-28T21:11:38+00:00 Model exists, skipped: includes/remote_models/Menu_sectionsModel.php
+2025-12-28T21:11:38+00:00 Inspecting table: migrations
+2025-12-28T21:11:38+00:00 Model exists, skipped: includes/remote_models/MigrationsModel.php
+2025-12-28T21:11:38+00:00 Inspecting table: modules
+2025-12-28T21:11:39+00:00 Model exists, skipped: includes/remote_models/ModulesModel.php
+2025-12-28T21:11:39+00:00 Inspecting table: opportunities
+2025-12-28T21:11:39+00:00 Model exists, skipped: includes/remote_models/OpportunitiesModel.php
+2025-12-28T21:11:39+00:00 Inspecting table: page_views
+2025-12-28T21:11:39+00:00 Model exists, skipped: includes/remote_models/Page_viewsModel.php
+2025-12-28T21:11:39+00:00 Inspecting table: pages
+2025-12-28T21:11:40+00:00 Model exists, skipped: includes/remote_models/PagesModel.php
+2025-12-28T21:11:40+00:00 Inspecting table: password_reset_tokens
+2025-12-28T21:11:40+00:00 Model exists, skipped: includes/remote_models/Password_reset_tokensModel.php
+2025-12-28T21:11:40+00:00 Inspecting table: password_resets
+2025-12-28T21:11:40+00:00 Model exists, skipped: includes/remote_models/Password_resetsModel.php
+2025-12-28T21:11:40+00:00 Inspecting table: resources
+2025-12-28T21:11:40+00:00 Model exists, skipped: includes/remote_models/ResourcesModel.php
+2025-12-28T21:11:40+00:00 Inspecting table: sections
+2025-12-28T21:11:41+00:00 Model exists, skipped: includes/remote_models/SectionsModel.php
+2025-12-28T21:11:41+00:00 Inspecting table: sessions
+2025-12-28T21:11:41+00:00 Model exists, skipped: includes/remote_models/SessionsModel.php
+2025-12-28T21:11:41+00:00 Inspecting table: tasks
+2025-12-28T21:11:41+00:00 Model exists, skipped: includes/remote_models/TasksModel.php
+2025-12-28T21:11:41+00:00 Inspecting table: td_interactions
+2025-12-28T21:11:41+00:00 Model exists, skipped: includes/remote_models/Td_interactionsModel.php
+2025-12-28T21:11:41+00:00 Inspecting table: td_projects
+2025-12-28T21:12:01+00:00 Model exists, skipped: includes/remote_models/Td_projectsModel.php
+2025-12-28T21:12:01+00:00 Inspecting table: users
+2025-12-28T21:12:02+00:00 Model exists, skipped: includes/remote_models/UsersModel.php
+2025-12-28T21:12:02+00:00 Saved remote_schema.json and table samples.
+2025-12-28T21:12:02+00:00 LOCAL_DB_* found in .env — attempting local DB comparison (read-only).
+2025-12-28T21:12:02+00:00 No column differences detected or migration stubs empty.
+2025-12-28T21:12:02+00:00 Done.
+2025-12-28T21:23:12+00:00 Connected to remote DB. Reading tables...
+2025-12-28T21:23:12+00:00 Inspecting table: admin_notifications
+2025-12-28T21:23:13+00:00 Model exists, skipped: includes/remote_models/Admin_notificationsModel.php
+2025-12-28T21:23:13+00:00 Inspecting table: admins
+2025-12-28T21:23:13+00:00 Model exists, skipped: includes/remote_models/AdminsModel.php
+2025-12-28T21:23:13+00:00 Inspecting table: backups
+2025-12-28T21:23:13+00:00 Model exists, skipped: includes/remote_models/BackupsModel.php
+2025-12-28T21:23:13+00:00 Inspecting table: cache
+2025-12-28T21:23:13+00:00 Model exists, skipped: includes/remote_models/CacheModel.php
+2025-12-28T21:23:13+00:00 Inspecting table: cache_locks
+2025-12-28T21:23:14+00:00 Model exists, skipped: includes/remote_models/Cache_locksModel.php
+2025-12-28T21:23:14+00:00 Inspecting table: client_finances
+2025-12-28T21:23:14+00:00 Model exists, skipped: includes/remote_models/Client_financesModel.php
+2025-12-28T21:23:14+00:00 Inspecting table: client_interactions
+2025-12-28T21:23:14+00:00 Model exists, skipped: includes/remote_models/Client_interactionsModel.php
+2025-12-28T21:23:14+00:00 Inspecting table: client_notes
+2025-12-28T21:23:14+00:00 Model exists, skipped: includes/remote_models/Client_notesModel.php
+2025-12-28T21:23:14+00:00 Inspecting table: client_projects
+2025-12-28T21:23:15+00:00 Model exists, skipped: includes/remote_models/Client_projectsModel.php
+2025-12-28T21:23:15+00:00 Inspecting table: clients
+2025-12-28T21:23:15+00:00 Model exists, skipped: includes/remote_models/ClientsModel.php
+2025-12-28T21:23:15+00:00 Inspecting table: cms_blocks
+2025-12-28T21:23:15+00:00 Model exists, skipped: includes/remote_models/Cms_blocksModel.php
+2025-12-28T21:23:15+00:00 Inspecting table: cms_pages
+2025-12-28T21:23:15+00:00 Model exists, skipped: includes/remote_models/Cms_pagesModel.php
+2025-12-28T21:23:15+00:00 Inspecting table: contacts
+2025-12-28T21:23:16+00:00 Model exists, skipped: includes/remote_models/ContactsModel.php
+2025-12-28T21:23:16+00:00 Inspecting table: crm_audit
+2025-12-28T21:23:16+00:00 Model exists, skipped: includes/remote_models/Crm_auditModel.php
+2025-12-28T21:23:16+00:00 Inspecting table: crm_customers
+2025-12-28T21:23:16+00:00 Model exists, skipped: includes/remote_models/Crm_customersModel.php
+2025-12-28T21:23:16+00:00 Inspecting table: crm_leads
+2025-12-28T21:23:16+00:00 Model exists, skipped: includes/remote_models/Crm_leadsModel.php
+2025-12-28T21:23:16+00:00 Inspecting table: failed_jobs
+2025-12-28T21:23:17+00:00 Model exists, skipped: includes/remote_models/Failed_jobsModel.php
+2025-12-28T21:23:17+00:00 Inspecting table: forms_submissions
+2025-12-28T21:23:17+00:00 Model exists, skipped: includes/remote_models/Forms_submissionsModel.php
+2025-12-28T21:23:17+00:00 Inspecting table: interactions
+2025-12-28T21:23:17+00:00 Model exists, skipped: includes/remote_models/InteractionsModel.php
+2025-12-28T21:23:17+00:00 Inspecting table: job_batches
+2025-12-28T21:23:17+00:00 Model exists, skipped: includes/remote_models/Job_batchesModel.php
+2025-12-28T21:23:17+00:00 Inspecting table: jobs
+2025-12-28T21:23:18+00:00 Model exists, skipped: includes/remote_models/JobsModel.php
+2025-12-28T21:23:18+00:00 Inspecting table: media_files
+2025-12-28T21:23:18+00:00 Model exists, skipped: includes/remote_models/Media_filesModel.php
+2025-12-28T21:23:18+00:00 Inspecting table: menu_items
+2025-12-28T21:23:18+00:00 Model exists, skipped: includes/remote_models/Menu_itemsModel.php
+2025-12-28T21:23:18+00:00 Inspecting table: menu_sections
+2025-12-28T21:23:18+00:00 Model exists, skipped: includes/remote_models/Menu_sectionsModel.php
+2025-12-28T21:23:18+00:00 Inspecting table: migrations
+2025-12-28T21:23:19+00:00 Model exists, skipped: includes/remote_models/MigrationsModel.php
+2025-12-28T21:23:19+00:00 Inspecting table: modules
+2025-12-28T21:23:19+00:00 Model exists, skipped: includes/remote_models/ModulesModel.php
+2025-12-28T21:23:19+00:00 Inspecting table: opportunities
+2025-12-28T21:23:19+00:00 Model exists, skipped: includes/remote_models/OpportunitiesModel.php
+2025-12-28T21:23:19+00:00 Inspecting table: page_views
+2025-12-28T21:23:19+00:00 Model exists, skipped: includes/remote_models/Page_viewsModel.php
+2025-12-28T21:23:19+00:00 Inspecting table: pages
+2025-12-28T21:23:20+00:00 Model exists, skipped: includes/remote_models/PagesModel.php
+2025-12-28T21:23:20+00:00 Inspecting table: password_reset_tokens
+2025-12-28T21:23:20+00:00 Model exists, skipped: includes/remote_models/Password_reset_tokensModel.php
+2025-12-28T21:23:20+00:00 Inspecting table: password_resets
+2025-12-28T21:23:20+00:00 Model exists, skipped: includes/remote_models/Password_resetsModel.php
+2025-12-28T21:23:20+00:00 Inspecting table: resources
+2025-12-28T21:23:20+00:00 Model exists, skipped: includes/remote_models/ResourcesModel.php
+2025-12-28T21:23:20+00:00 Inspecting table: sections
+2025-12-28T21:23:21+00:00 Model exists, skipped: includes/remote_models/SectionsModel.php
+2025-12-28T21:23:21+00:00 Inspecting table: sessions
+2025-12-28T21:23:21+00:00 Model exists, skipped: includes/remote_models/SessionsModel.php
+2025-12-28T21:23:21+00:00 Inspecting table: tasks
+2025-12-28T21:23:21+00:00 Model exists, skipped: includes/remote_models/TasksModel.php
+2025-12-28T21:23:21+00:00 Inspecting table: td_interactions
+2025-12-28T21:23:21+00:00 Model exists, skipped: includes/remote_models/Td_interactionsModel.php
+2025-12-28T21:23:21+00:00 Inspecting table: td_projects
+2025-12-28T21:23:34+00:00 Model exists, skipped: includes/remote_models/Td_projectsModel.php
+2025-12-28T21:23:34+00:00 Inspecting table: users
+2025-12-28T21:23:35+00:00 Model exists, skipped: includes/remote_models/UsersModel.php
+2025-12-28T21:23:35+00:00 Saved remote_schema.json and table samples.
+2025-12-28T21:23:35+00:00 LOCAL_DB_* found in .env — attempting local DB comparison (read-only).
+2025-12-28T21:23:35+00:00 No column differences detected or migration stubs empty.
+2025-12-28T21:23:35+00:00 Done.
+2025-12-28T21:26:11+00:00 Generated detailed stubs.
+Array
+(
+    [admin_notifications] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                )
+
+        )
+
+    [admins] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                    [2] => updated_at
+                )
+
+        )
+
+    [backups] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                )
+
+        )
+
+    [cache] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => expiration
+                )
+
+        )
+
+    [cache_locks] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => expiration
+                )
+
+        )
+
+    [client_finances] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => client_id
+                    [2] => fecha
+                )
+
+        )
+
+    [client_interactions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => client_id
+                    [2] => fecha
+                )
+
+        )
+
+    [client_notes] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => client_id
+                    [2] => fecha
+                )
+
+        )
+
+    [client_projects] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => client_id
+                    [2] => created_at
+                )
+
+        )
+
+    [clients] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => pipeline_opportunities
+                    [2] => pipeline_progress
+                    [3] => created_by
+                    [4] => created_at
+                )
+
+        )
+
+    [cms_blocks] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => page_id
+                    [2] => order
+                )
+
+        )
+
+    [cms_pages] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_by
+                    [2] => updated_by
+                )
+
+        )
+
+    [contacts] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => status
+                    [2] => created_by
+                )
+
+        )
+
+    [crm_audit] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => entity_id
+                    [2] => user_id
+                    [3] => created_at
+                )
+
+        )
+
+    [crm_customers] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                    [2] => updated_at
+                )
+
+        )
+
+    [crm_leads] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => score
+                    [2] => created_at
+                    [3] => updated_at
+                )
+
+        )
+
+    [failed_jobs] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => failed_at
+                )
+
+        )
+
+    [forms_submissions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => is_read
+                )
+
+        )
+
+    [interactions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => performed_at
+                )
+
+        )
+
+    [job_batches] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => total_jobs
+                    [1] => pending_jobs
+                    [2] => failed_jobs
+                    [3] => cancelled_at
+                    [4] => created_at
+                    [5] => finished_at
+                )
+
+        )
+
+    [jobs] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => attempts
+                    [2] => reserved_at
+                    [3] => available_at
+                    [4] => created_at
+                )
+
+        )
+
+    [media_files] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => size
+                    [2] => uploaded_by
+                )
+
+        )
+
+    [menu_items] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => parent_id
+                    [2] => order
+                )
+
+        )
+
+    [menu_sections] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => parent_id
+                    [2] => is_visible
+                    [3] => sort_order
+                    [4] => created_at
+                    [5] => updated_at
+                )
+
+        )
+
+    [migrations] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => batch
+                )
+
+        )
+
+    [modules] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => page_id
+                    [2] => order_index
+                    [3] => created_at
+                    [4] => updated_at
+                )
+
+        )
+
+    [opportunities] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                )
+
+        )
+
+    [page_views] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => page_id
+                )
+
+        )
+
+    [pages] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                    [2] => updated_at
+                )
+
+        )
+
+    [password_reset_tokens] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                )
+
+        )
+
+    [password_resets] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                )
+
+        )
+
+    [resources] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => created_at
+                )
+
+        )
+
+    [sections] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                )
+
+        )
+
+    [sessions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => user_id
+                    [1] => last_activity
+                )
+
+        )
+
+    [tasks] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                )
+
+        )
+
+    [td_interactions] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => rating
+                    [2] => created_at
+                )
+
+        )
+
+    [td_projects] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => last_updated
+                )
+
+        )
+
+    [users] => Array
+        (
+            [missing_columns] => Array
+                (
+                )
+
+            [modified_columns] => Array
+                (
+                    [0] => id
+                    [1] => reset_token_expires
+                )
+
+        )
+
+)
+

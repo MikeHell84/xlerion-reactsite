@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <style>
+    .bg{fill:#fff}
+    .panel{fill:#f4f6f8;stroke:#d6dbe0}
+    .card{fill:#ffffff;stroke:#e2e6ea}
+    .muted{fill:#8a939a;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+    .title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:20px;fill:#111}
+  </style>
+  <rect class="bg" x="0" y="0" width="1200" height="900"/>
+  <!-- header -->
+  <rect class="card" x="16" y="16" width="1168" height="64" rx="6"/>
+  <text x="36" y="56" class="title">Facturación — Cotizaciones & Facturas</text>
+
+  <!-- actions -->
+  <rect class="card" x="16" y="96" width="1168" height="56" rx="6"/>
+  <text x="36" y="132" class="muted">Nuevo: Cotización • Nueva Factura • Exportar PDF • Filtrar por estado</text>
+
+  <!-- left: list of invoices -->
+  <rect class="card" x="16" y="172" width="720" height="700" rx="6"/>
+  <text x="36" y="204" class="muted">Lista: Nº, Cliente, Fecha, Total, Estado</text>
+  <!-- sample rows -->
+  <g>
+    <rect x="36" y="236" width="680" height="48" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+    <rect x="36" y="292" width="680" height="48" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+    <rect x="36" y="348" width="680" height="48" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+  </g>
+
+  <!-- right: invoice detail / preview -->
+  <rect class="card" x="760" y="172" width="424" height="700" rx="6"/>
+  <text x="780" y="204" class="muted">Vista rápida / PDF preview</text>
+  <rect x="780" y="228" width="384" height="520" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+  <text x="796" y="260" class="muted">Encabezado: Empresa • Cliente • Fecha</text>
+  <text x="796" y="292" class="muted">Tabla: Items, Cantidad, Precio, Impuestos</text>
+  <text x="796" y="324" class="muted">Total • Estado • Botones (Marcar Pagado, Enviar por Email)</text>
+
+  <!-- footer -->
+  <text x="36" y="880" class="muted">Soporte para múltiple moneda y exportación PDF. Mobile: lista + modal de detalle.</text>
+</svg>

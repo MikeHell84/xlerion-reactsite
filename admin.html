@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Admin Dashboard</title>
+  <link href="/xlerion.css" rel="stylesheet">
+</head>
+<body class="admin-dashboard-page">
+  <script>window.XLERION_CSRF='5342b0c78a5fcf6e0c24ece3f5e863f7';</script>  <aside class="admin-sidebar">
+    <h3>Xlerion CMS</h3>
+    <p>Usuario: dev (admin)</p>
+    <ul id="admin-sections-list">
+      <li><a href="/public/admin/index.php?page=list_pages">Todas las páginas</a></li>
+      <li><a href="/public/admin/index.php?page=add_page">Crear nueva página</a></li>
+      <li><strong>Secciones principales</strong></li>
+      <!-- Secciones dinámicas (cargadas vía JS desde /api/pages.php) -->
+      <li style="margin-top:12px"><a href="/public/api/pages.php">API: páginas (JSON)</a></li>
+      <li><a href="/public/admin/logout.php">Salir</a></li>
+    </ul>
+  </aside>
+  <main class="admin-main">
+    <div class="admin-card">
+      <h1>Dashboard</h1>
+            <p>Bienvenido, usa el menú lateral para administrar el contenido.</p>
+    
+    </div>
+
+    <div class="admin-card" id="admin-detail" style="display:none;">
+      <h2 id="detail-title">Detalle</h2>
+      <div id="detail-body">Selecciona una sección en el panel lateral para ver sus detalles aquí.</div>
+    </div>
+
+    <script>
+    (function(){
+      const listEl = document.getElementById('admin-sections-list');
+      const detailCard = document.getElementById('admin-detail');
+      const detailTitle = document.getElementById('detail-title');
+      const detailBody = document.getElementById('detail-body');
+      let pages = [];
+
+      function createSectionItem(p) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '/public/admin/index.php?page=edit_page&slug=' + encodeURIComponent(p.slug || p.id);
+        a.textContent = p.title || p.slug || ('Página ' + (p.id || ''));
+        a.className = 'admin-nav-item';
+        a.dataset.slug = p.slug || '';
+        a.dataset.id = p.id || '';
+        a.addEventListener('click', function(ev){
+          ev.preventDefault();
+          showDetail(p);
+        });
+        li.appendChild(a);
+        return li;
+      }
+
+      function showPagesList() {
+        const server = document.getElementById('server-content');
+        if (server) server.style.display = 'none';
+        detailCard.style.display = '';
+        detailTitle.textContent = 'Todas las páginas';
+        let html = '';
+        if (!pages || pages.length === 0) {
+          html = '<p>No hay páginas disponibles.</p>';
+        } else {
+          html = '<table border="1" cellpadding="6" cellspacing="0"><tr><th>ID</th><th>Slug</th><th>Title</th><th>Acciones</th></tr>';
+          pages.forEach(function(r){
+            html += '<tr>' +
+              '<td>' + (r.id || '') + '</td>' +
+              '<td>' + (r.slug || '') + '</td>' +
+              '<td>' + (r.title || '') + '</td>' +
+              '<td><a href="/public/admin/index.php?page=edit_page&id=' + (r.id || '') + '">Editar</a></td>' +
+              '</tr>';
+          });
+          html += '</table>';
+        }
+        detailBody.innerHTML = html;
+      }
+
+      function showDetail(p) {
+        const server = document.getElementById('server-content');
+        if (server) server.style.display = 'none';
+        detailCard.style.display = '';
+        detailTitle.textContent = p.title || p.slug || ('Página ' + (p.id || ''));
+        let html = '';
+        html += '<p><strong>Slug:</strong> ' + (p.slug || '') + '</p>';
+        html += '<p><strong>ID:</strong> ' + (p.id || '') + '</p>';
+        html += '<div style="margin-top:8px"><strong>Contenido (vista previa):</strong><div style="padding:8px;background:#0b0b0b;color:#fff;border-radius:6px;margin-top:6px">' + (p.content ? p.content : '<em>Sin contenido</em>') + '</div></div>';
+        if (p.modules && p.modules.length) {
+          html += '<div style="margin-top:12px"><strong>Módulos:</strong><ul style="margin-top:6px">';
+          p.modules.forEach(function(m){
+            html += '<li><strong>' + (m.type||'module') + '</strong>: ' + (m.content ? m.content : '') + ' <small style="color:rgba(255,255,255,0.6)">(#' + m.id + ')</small></li>';
+          });
+          html += '</ul></div>';
+        }
+        html += '<div style="margin-top:12px"><a href="/public/admin/index.php?page=edit_page&slug=' + encodeURIComponent(p.slug || '') + '" style="color:var(--xlerion-primary)">Abrir editor completo</a></div>';
+        detailBody.innerHTML = html;
+      }
+
+      // Attach click handlers to existing static links (list_pages)
+      const staticListLinks = listEl.querySelectorAll('a[href*="page=list_pages"]');
+      staticListLinks.forEach(function(link){
+        link.addEventListener('click', function(ev){
+          ev.preventDefault();
+          if (pages && pages.length) {
+            showPagesList();
+            return;
+          }
+          const server = document.getElementById('server-content'); if (server) server.style.display = 'none';
+          detailCard.style.display = '';
+          detailTitle.textContent = 'Cargando...';
+          detailBody.innerHTML = '<p>Cargando páginas…</p>';
+          fetch('/api/pages.php').then(function(res){ if (!res.ok) throw new Error('API error'); return res.json(); }).then(function(data){ if (!data.ok) throw new Error(data.error||'No data'); pages = data.pages || []; showPagesList(); }).catch(function(err){ detailTitle.textContent='Error'; detailBody.innerHTML = '<p>No se pudieron cargar las páginas.</p>'; console.error(err); });
+        });
+      });
+
+      // Attach handler for "Crear nueva página" so form opens in right panel
+      const createLinks = listEl.querySelectorAll('a[href*="page=add_page"]');
+      createLinks.forEach(function(link){
+        link.addEventListener('click', function(ev){
+          ev.preventDefault();
+          const server = document.getElementById('server-content'); if (server) server.style.display = 'none';
+          detailCard.style.display = '';
+          detailTitle.textContent = 'Crear nueva página';
+          detailBody.innerHTML = '';
+          const form = document.createElement('form');
+          form.innerHTML = '<input type="hidden" name="csrf_token" value="' + (window.XLERION_CSRF || '') + '">' +
+            '<div><label>Slug<br><input name="slug" required></label></div>' +
+            '<div><label>Title<br><input name="title" required></label></div>' +
+            '<div><label>Content HTML<br><textarea name="content" rows="10"></textarea></label></div>' +
+            '<div style="margin-top:8px"><button type="submit">Guardar</button></div>';
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const fd = new FormData(form);
+            fetch('/public/admin/save_page.php', {
+              method: 'POST', body: fd, headers: {'X-Requested-With':'XMLHttpRequest'}
+            }).then(function(res){
+              const ct = res.headers.get('Content-Type') || '';
+              if (ct.indexOf('application/json') !== -1) return res.json();
+              return res.text();
+            }).then(function(resp){
+              if (resp && resp.ok) {
+                detailTitle.textContent = 'Guardado';
+                detailBody.innerHTML = '<p>' + (resp.message || 'Página guardada') + '</p>';
+                // insert new item into sidebar dynamically if id present
+                if (resp.id) {
+                  const newPage = { id: resp.id, slug: resp.slug || '', title: resp.title || '' };
+                  const item = createSectionItem(newPage);
+                  const del = document.createElement('a'); del.href='#'; del.textContent=' Eliminar'; del.className='delete-page'; del.style.marginLeft='8px'; del.dataset.id = newPage.id;
+                  item.appendChild(del);
+                  // insert after 'Secciones principales' header
+                  const childrenNow = Array.from(listEl.children);
+                  let anchor = -1; for (let i=0;i<childrenNow.length;i++){ if (childrenNow[i].textContent && childrenNow[i].textContent.trim().toLowerCase().indexOf('secciones principales')!==-1){ anchor=i; break; } }
+                  if (anchor>=0) listEl.insertBefore(item, childrenNow[anchor+1]); else listEl.appendChild(item);
+                }
+              } else {
+                detailBody.innerHTML = '<p>Error al guardar.</p>' + (typeof resp === 'string' ? ('<pre>'+resp+'</pre>') : '');
+              }
+            }).catch(function(err){
+              detailBody.innerHTML = '<p>Error de red al guardar.</p>';
+              console.error(err);
+            });
+          });
+          detailBody.appendChild(form);
+        });
+      });
+
+      // fetch pages and populate dynamic section links
+      fetch('/api/pages.php').then(function(res){
+        if (!res.ok) throw new Error('API error');
+        return res.json();
+      }).then(function(data){
+        if (!data.ok) throw new Error(data.error || 'No data');
+        pages = data.pages || [];
+        let anchorIdx = -1;
+        const children = Array.from(listEl.children);
+        for (let i=0;i<children.length;i++){
+          if (children[i].textContent && children[i].textContent.trim().toLowerCase().indexOf('secciones principales') !== -1) { anchorIdx = i; break; }
+        }
+        pages.forEach(function(p){
+          const item = createSectionItem(p);
+          // add small delete control
+          const del = document.createElement('a'); del.href='#'; del.textContent=' Eliminar'; del.className='delete-page'; del.style.marginLeft='8px'; del.dataset.id = p.id || '';
+          item.appendChild(del);
+          if (anchorIdx >= 0) {
+            listEl.insertBefore(item, children[anchorIdx+1]);
+            anchorIdx++;
+          } else {
+            listEl.appendChild(item);
+          }
+        });
+      }).catch(function(err){
+        console.error('No se pudieron cargar las páginas:', err);
+      });
+      
+      // delegate delete clicks
+      document.addEventListener('click', function(ev){
+        const t = ev.target;
+        if (t && t.classList && t.classList.contains('delete-page')) {
+          ev.preventDefault();
+          const pageId = t.dataset.id;
+          if (!pageId) return;
+          if (!confirm('Confirmar eliminación de la página #' + pageId + '?')) return;
+          // send delete request
+          const fd = new FormData(); fd.append('id', pageId); fd.append('csrf_token', window.XLERION_CSRF || '');
+          fetch('/public/admin/delete_page.php', { method: 'POST', body: fd, headers: {'X-Requested-With':'XMLHttpRequest'} }).then(r=>r.json()).then(function(res){
+            if (res && res.ok) {
+              // remove item from sidebar
+              const li = t.closest('li'); if (li) li.remove();
+              // if detail panel showing this page, clear it
+              if (detailTitle.textContent.indexOf('#'+pageId) !== -1 || detailTitle.textContent === res.slug) {
+                detailTitle.textContent = 'Página eliminada'; detailBody.innerHTML = '<p>'+(res.message||'Eliminada')+'</p>';
+              }
+            } else {
+              alert('Error al eliminar: ' + (res && res.error ? res.error : 'unknown'));
+            }
+          }).catch(function(err){ console.error(err); alert('Error de red al eliminar'); });
+        }
+      });
+    })();
+    </script>
+
+  </main>
+</body>
+</html>

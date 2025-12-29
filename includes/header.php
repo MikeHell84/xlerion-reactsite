@@ -9,11 +9,10 @@
     <title>Xlerion</title>
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tailwind (via CDN for utility classes) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind: removed CDN usage for production; install as PostCSS plugin if needed -->
     <link rel="stylesheet" href="/xlerion.css">
     <!-- React build CSS (if present) -->
-    <link rel="stylesheet" href="/public/build/assets/index-Bw7mgMLM.css">
+    <link rel="stylesheet" href="/build/assets/index-3rRdbllY.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg xlerion-navbar">

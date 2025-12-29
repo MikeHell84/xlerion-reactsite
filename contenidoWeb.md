@@ -37,13 +37,119 @@ Ser referente latinoamericano en toolkits inteligentes que integren técnica, cr
 🎮 Proyectos
 • 	Texto principal: Cada proyecto refleja modularidad, documentación y empoderamiento técnico.
 • 	Proyectos destacados:
-• 	Total Darkness – Pelijuego interactivo con decisiones ramificadas.
+• 	Total Darkness – Pelijuego interactivo con decisiones ramificadas MGC:
+
+🎸 Redemthor – Pioneros del Ultimate Metal
+📍 Origen
+Redemthor nació en 2004 en San Antonio de Pereira (Rionegro, Antioquia, Colombia), como un proyecto independiente que buscaba romper los límites del metal tradicional.
+El fundador, Mick Hellawaits (guitarra líder), concibió la banda como una propuesta disruptiva, con un sonido visceral y filosófico que más tarde se consolidaría bajo el género propio: Ultimate Metal.
+Su debut fue en el festival Metal Attack Rionegro, compartiendo escenario con bandas icónicas de la escena nacional como Witchtrap, Vitaem et Mortem y Revenge, marcando el inicio de su trayectoria en Antioquia y Bogotá.
+
+👥 Miembros y Evolución
+• 	Mick Hellawaits – Fundador y guitarrista líder, principal compositor y motor creativo.
+• 	Hugo – Primer baterista y actual baterista, consolidando el ritmo y la fuerza de la banda.
+• 	Juan Rave – Segundo baterista y primer vocalista, aportando la voz inicial y presencia escénica.
+• 	Wilson – Primer bajista de la formación original.
+• 	Felipe Silva – Bajista actual, quien tomó el relevo de Wilson y aporta nuevas influencias al sonido.
+• 	Fredy – Primer guitarrista rítmico de la banda.
+• 	Sergio Morales – Posterior guitarrista rítmico, continuando la línea de Fredy y ampliando la propuesta sonora.
+
+🎶 Estilo Musical
+Redemthor se autodefine como pioneros del Ultimate Metal, un género que combina:
+• 	Metal clásico y thrash metal – la base de su fuerza y agresividad.
+• 	Rock progresivo – estructuras complejas, exploración conceptual y cambios de ritmo.
+• 	Industrial – atmósferas densas, sonidos mecánicos y experimentación sonora.
+Su música no solo es potencia, sino también reflexión: explora temas de filosofía, mente, tecnología y trascendencia.
+
+📀 Producción y Difusión
+• 	Independientes: Sin sello discográfico oficial, fieles a la autogestión.
+• 	Difusión:
+• 	Presentaciones en televisión nacional (Mucha Música de City TV Bogotá).
+• 	Publicaciones en plataformas como ReverbNation y SoundCloud, consolidándose como parte del metal underground colombiano.
+
+🌍 Impacto
+• 	Escena nacional: Redemthor ha sido parte de la evolución del metal colombiano, especialmente en Antioquia y Bogotá.
+• 	Internacionalización: Aunque independiente, su música ha circulado en plataformas globales, atrayendo seguidores del metal progresivo-industrial.
+• 	Innovación: Se autoproclaman como exponentes del Ultimate Metal, un subgénero que rompe límites entre metal, progresivo e industrial.
+
+🔥 Redemthor y el MGC
+La banda será la encargada de dar vida al primer Music Game Clip (MGC) de Xlerion Games, titulado Total Darkness.
+• 	Su música de Ultimate Metal se convierte en el motor narrativo del juego.
+• 	Cada riff y atmósfera sonora de Redemthor alterará el flujo del MGC, haciendo que las decisiones del jugador cambien tanto la historia como la música.
+• 	Esto posiciona a Redemthor no solo como banda, sino como pioneros en la integración de metal progresivo-industrial con videojuegos disruptivos.
+
+👉 Con esta biografía, Redemthor queda presentado como la banda colombiana que inaugura el formato MGC en Xlerion.com, uniendo música, narrativa y decisiones interactivas.
+
+
+Landing Page Redemthor - Total Darkness
+🎸 Redemthor – Pioneros del Ultimate Metal
+
+🖼️ Hero Banner
+
+Redemthor – La banda colombiana que redefine el metal con su propio género: Ultimate Metal.
+
+🔥 Desde Antioquia y Bogotá hacia el mundo, Redemthor fusiona metal clásico, thrash, rock progresivo e industrial para crear un sonido único, visceral y filosófico.
+CTA: [Descubre el primer Music Game Clip – Total Darkness]
+
+📍 Origen
+
+Fundada en 2004 en San Antonio de Pereira (Rionegro, Antioquia).
+Fundador: Mick Hellawaits, guitarrista líder y compositor principal.
+Debut: Festival Metal Attack Rionegro, junto a Witchtrap, Vitaem et Mortem y Revenge.
+
+👥 Miembros
+
+Mick Hellawaits – Fundador y guitarrista líder.
+Hugo – Primer y actual baterista.
+Juan Rave – Segundo baterista y primer vocalista.
+Wilson – Primer bajista.
+Felipe Silva – Bajista actual.
+Fredy – Primer guitarrista rítmico.
+Sergio Morales – Posterior guitarrista rítmico.
+
+🎶 Estilo Musical
+
+Ultimate Metal: género propio que combina metal clásico, thrash, rock progresivo e industrial.
+Temáticas: filosofía, mente, tecnología y trascendencia.
+Identidad: potencia sonora + reflexión conceptual.
+
+📀 Discografía y Producción
+
+Independientes, sin sello discográfico oficial.
+Presentaciones en televisión nacional (Mucha Música – City TV Bogotá).
+Publicaciones en plataformas como ReverbNation y SoundCloud.
+
+🌍 Impacto
+
+Parte de la evolución del metal colombiano en Antioquia y Bogotá.
+Música difundida internacionalmente en plataformas digitales.
+Innovadores del Ultimate Metal, rompiendo límites entre metal, progresivo e industrial.
+
+🔥 Redemthor y el MGC
+
+Redemthor será la banda que impulse el primer Music Game Clip (MGC) de Xlerion Games: Total Darkness.
+Su música guía la narrativa y las decisiones del jugador.
+Cada riff y atmósfera sonora cambia el flujo del MGC.
+Pioneros en integrar música y videojuegos disruptivos.
+CTA: [Juega el MGC Total Darkness]
+
+📣 Call to Action
+
+👉 Explora más sobre Redemthor y vive la experiencia del primer MGC en Xlerion.com.
+
+
+
 • 	Xlerion Toolkit – Módulos activos para diagnóstico y rendimiento.
 • 	Colombia 4.0 – Presentación institucional.
 • 	CoCrea 2025 – Proyecto cultural territorial.
 • 	Ejemplo: Adaptación de Total Darkness a pelijuego 3D inmersivo.
 • 	Servicios basados en proyectos: Pelijuegos, pitch institucional, proyectos culturales.
 • 	Línea de tiempo interactiva: Hitos 2019–2025.
+
+
+
+
+
 
 📚 Documentación
 • 	Texto principal: La documentación es el legado de Xlerion.
@@ -102,3 +208,331 @@ Ser referente latinoamericano en toolkits inteligentes que integren técnica, cr
 • 	Suscripción a newsletter.
 • 	Información legal y certificaciones.
 • 	Mini misión/visión resumida: “Soluciones modulares que empoderan la cultura y la tecnología.”
+
+## CRM - Secciones - Xlerion.com
+
+🧱 1. Estructura base del CRM
+
+Antes de diseñar pantallas, define los módulos principales:
+
+Autenticación y usuarios
+
+Clientes / Contactos
+
+Leads / Prospectos
+
+Oportunidades / Ventas
+
+Actividades y tareas
+
+Comunicaciones
+
+Productos / Servicios
+
+Facturación / Cotizaciones
+
+Reportes y métricas
+
+Automatizaciones
+
+Configuración del sistema
+
+🔐 2. Autenticación y gestión de usuarios
+
+Páginas / Secciones
+
+Login
+
+Registro
+
+Recuperar contraseña
+
+Verificación 2FA (opcional)
+
+Perfil de usuario
+
+Funciones
+
+Roles (Admin, Ventas, Soporte, Supervisor)
+
+Permisos granulares
+
+Sesiones activas
+
+Historial de accesos
+
+👥 3. Clientes y contactos
+
+Secciones
+
+Lista de clientes
+
+Ficha de cliente (vista 360°)
+
+Contactos asociados
+
+Historial de interacciones
+
+Datos clave
+
+Información básica
+
+Etiquetas (tags)
+
+Estado del cliente
+
+Origen
+
+Notas internas
+
+Archivos adjuntos
+
+🎯 4. Leads / Prospectos
+
+Páginas
+
+Bandeja de leads
+
+Detalle del lead
+
+Conversión a cliente
+
+Funciones modernas
+
+Scoring automático
+
+Fuente del lead (web, WhatsApp, ads)
+
+Pipeline visual
+
+Asignación automática
+
+💼 5. Oportunidades / Ventas
+
+Secciones
+
+Pipeline (Kanban)
+
+Detalle de oportunidad
+
+Historial de cambios
+
+Campos
+
+Etapa
+
+Valor estimado
+
+Probabilidad
+
+Fecha de cierre
+
+Responsable
+
+✅ 6. Actividades y tareas
+
+Páginas
+
+Agenda
+
+Tareas
+
+Recordatorios
+
+Funciones
+
+Llamadas
+
+Reuniones
+
+Seguimientos
+
+Integración con calendario
+
+Notificaciones push/email
+
+💬 7. Comunicaciones
+
+Canales
+
+Email
+
+WhatsApp (API)
+
+SMS
+
+Notas internas
+
+Funciones
+
+Historial unificado
+
+Plantillas
+
+Respuestas rápidas
+
+Archivos adjuntos
+
+📦 8. Productos y servicios
+
+Secciones
+
+Catálogo
+
+Precios
+
+Impuestos
+
+Descuentos
+
+Funciones
+
+Productos recurrentes
+
+Paquetes
+
+Control de stock (opcional)
+
+💰 9. Cotizaciones y facturación
+
+Páginas
+
+Crear cotización
+
+Facturas
+
+Pagos
+
+Funciones
+
+PDF automático
+
+Estados (pagada, pendiente)
+
+Métodos de pago
+
+Moneda múltiple
+
+📊 10. Reportes y métricas (Dashboard)
+
+Widgets modernos
+
+Ventas por período
+
+Conversiones
+
+Rendimiento por usuario
+
+Leads por fuente
+
+Clientes activos
+
+Funciones
+
+Filtros dinámicos
+
+Exportar (PDF, Excel)
+
+Gráficas en tiempo real
+
+🤖 11. Automatizaciones (muy moderno)
+
+Ejemplos
+
+Si lead cambia a X → enviar email
+
+Recordatorios automáticos
+
+Asignación por reglas
+
+Alertas internas
+
+⚙️ 12. Configuración del sistema
+
+Secciones
+
+Campos personalizados
+
+Estados y pipelines
+
+Roles y permisos
+
+Integraciones
+
+Idioma y zona horaria
+
+Logs del sistema
+
+🧭 13. Menús recomendados
+
+Menú lateral
+
+Dashboard
+
+Clientes
+
+Leads
+
+Ventas
+
+Actividades
+
+Comunicaciones
+
+Reportes
+
+Automatizaciones
+
+Configuración
+
+Menú superior
+
+Buscador global
+
+Notificaciones
+
+Perfil de usuario
+
+🎨 14. Diseño moderno (UX/UI)
+
+Características
+
+Diseño responsive
+
+Modo oscuro
+
+Kanban drag & drop
+
+Componentes reutilizables
+
+Animaciones suaves
+
+Colores por estado
+
+Skeleton loading
+
+🧠 15. Extras avanzados (nivel pro)
+
+IA para predicción de ventas
+
+Recomendaciones automáticas
+
+Chat interno
+
+Historial completo (auditoría)
+
+API REST / GraphQL
+
+Multiempresa (SaaS)
+
+Si quieres, en el próximo mensaje puedo:
+
+📐 Diseñarte el mapa de pantallas
+
+🧩 Proponerte arquitectura backend + frontend
+
+🎮 Adaptarlo a Unity / apps / web
+
+🖌️ Crear wireframes por sección
+
+🛠️ Sugerirte stack tecnológico moderno

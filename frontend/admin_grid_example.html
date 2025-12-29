@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Grid Example — Xlerion</title>
+    <link rel="stylesheet" href="../public/xlerion.css">
+</head>
+
+<body class="admin-dashboard-page">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-12 col-md-3 col-lg-2 p-4 admin-sidebar bg-black text-white">
+                <h3 class="mb-3">Xlerion CMS</h3>
+                <p id="admin-user-info" class="mb-3">Usuario: <strong>dev</strong> (admin)</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Dashboard</a></li>
+                    <li class="mt-3 mb-1 small text-uppercase text-muted">Contenido</li>
+                    <li><a href="#" class="d-block text-white-50">Todas las páginas (0)</a></li>
+                    <li><a href="#" class="d-block text-white-50">Crear nueva página</a></li>
+                    <li class="mt-3 small text-uppercase text-muted">Sistema</li>
+                    <li><a href="#" class="d-block text-white-50">API: páginas (JSON)</a></li>
+                    <li class="mt-4"><a href="#" class="btn btn-sm btn-light w-100">Salir</a></li>
+                </ul>
+            </nav>
+
+            <main class="col-12 col-md-9 col-lg-10 p-4 admin-main">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="h3 text-primary">Panel de administración</h1>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-light">Acción</button>
+                        <button class="btn btn-primary">Nuevo</button>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="card p-3 xlerion-card">
+                            <h4 class="mb-2">Resumen</h4>
+                            <p class="text-muted">Vistas, últimos cambios y estadísticas rápidas.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="card p-3 xlerion-card">
+                            <h4 class="mb-2">Notificaciones</h4>
+                            <ul class="mb-0">
+                                <li class="small text-muted">No hay notificaciones nuevas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card p-3 xlerion-card">
+                            <h4 class="mb-2">Editor rápido</h4>
+                            <div class="row g-2">
+                                <div class="col-12 col-md-4">
+                                    <input class="form-control" placeholder="Título de la página">
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input class="form-control" placeholder="Slug / URL">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Demonstrative: highlight sidebar link
+        document.querySelectorAll('.admin-sidebar a').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelectorAll('.admin-sidebar a').forEach(x => x.classList.remove('text-primary'));
+                a.classList.add('text-primary');
+            });
+        });
+    </script>
+</body>
+
+</html>

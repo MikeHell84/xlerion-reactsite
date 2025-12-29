@@ -1,5 +1,9 @@
 <?php
 // Router for PHP built-in server
+// Enable verbose errors in development when using built-in server
+@ini_set('display_errors', '1');
+@ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 // Serve static files in /public, also allow PHP pages located in project root.
 $uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 $publicDir = __DIR__;

@@ -1,0 +1,2310 @@
+{
+    "admin_notifications": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "title",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "body",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "type",
+                "Type": "varchar(32)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "info",
+                "Extra": ""
+            },
+            {
+                "Field": "is_read",
+                "Type": "tinyint(1)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/admin_notifications.json"
+    },
+    "admins": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "name",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "email",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "UNI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "password",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "role",
+                "Type": "varchar(50)",
+                "Null": "NO",
+                "Key": "",
+                "Default": "editor",
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": "on update current_timestamp()"
+            }
+        ],
+        "count": 1,
+        "sample_path": "data\/remote_data\/admins.json"
+    },
+    "backups": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "name",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "path",
+                "Type": "varchar(1024)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/backups.json"
+    },
+    "cache": {
+        "columns": [
+            {
+                "Field": "key",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "value",
+                "Type": "mediumtext",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "expiration",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/cache.json"
+    },
+    "cache_locks": {
+        "columns": [
+            {
+                "Field": "key",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "owner",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "expiration",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/cache_locks.json"
+    },
+    "client_finances": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "client_id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "tipo",
+                "Type": "enum('factura','presupuesto','pago')",
+                "Null": "YES",
+                "Key": "",
+                "Default": "factura",
+                "Extra": ""
+            },
+            {
+                "Field": "monto",
+                "Type": "decimal(10,2)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "concepto",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "fecha",
+                "Type": "date",
+                "Null": "YES",
+                "Key": "",
+                "Default": "curdate()",
+                "Extra": ""
+            },
+            {
+                "Field": "estado",
+                "Type": "varchar(50)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "pendiente",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/client_finances.json"
+    },
+    "client_interactions": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "client_id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "tipo",
+                "Type": "varchar(20)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "nota",
+                "Extra": ""
+            },
+            {
+                "Field": "contenido",
+                "Type": "text",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "responsable",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "fecha",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/client_interactions.json"
+    },
+    "client_notes": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "client_id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "contenido",
+                "Type": "text",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "responsable",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "fecha",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/client_notes.json"
+    },
+    "client_projects": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "client_id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "nombre",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "descripcion",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "estado",
+                "Type": "varchar(20)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "activo",
+                "Extra": ""
+            },
+            {
+                "Field": "fecha_inicio",
+                "Type": "date",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "fecha_vencimiento",
+                "Type": "date",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "responsable",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/client_projects.json"
+    },
+    "clients": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "nombre",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "correo",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "telefono",
+                "Type": "varchar(100)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "empresa",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "estado",
+                "Type": "varchar(50)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "notas",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "pipeline_stage",
+                "Type": "varchar(50)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "pipeline_opportunities",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "pipeline_value",
+                "Type": "decimal(10,2)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0.00",
+                "Extra": ""
+            },
+            {
+                "Field": "pipeline_progress",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "logo_url",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_by",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "1",
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": "on update current_timestamp()"
+            }
+        ],
+        "count": 4,
+        "sample_path": "data\/remote_data\/clients.json"
+    },
+    "cms_blocks": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "bigint(20) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "key_name",
+                "Type": "varchar(191)",
+                "Null": "NO",
+                "Key": "UNI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "title",
+                "Type": "varchar(191)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "content",
+                "Type": "longtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "page_id",
+                "Type": "bigint(20) unsigned",
+                "Null": "YES",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "order",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "is_active",
+                "Type": "tinyint(1)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "1",
+                "Extra": ""
+            },
+            {
+                "Field": "meta",
+                "Type": "longtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/cms_blocks.json"
+    },
+    "cms_pages": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "bigint(20) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "slug",
+                "Type": "varchar(191)",
+                "Null": "NO",
+                "Key": "UNI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "title",
+                "Type": "varchar(191)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "excerpt",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "content",
+                "Type": "longtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "meta",
+                "Type": "longtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "is_published",
+                "Type": "tinyint(1)",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": "1",
+                "Extra": ""
+            },
+            {
+                "Field": "created_by",
+                "Type": "bigint(20) unsigned",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "updated_by",
+                "Type": "bigint(20) unsigned",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 11,
+        "sample_path": "data\/remote_data\/cms_pages.json"
+    },
+    "contacts": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "first_name",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "last_name",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "email",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "phone",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "phone_alt",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "source",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "status",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": "'\\'active\\''",
+                "Extra": ""
+            },
+            {
+                "Field": "notes",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_by",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 1,
+        "sample_path": "data\/remote_data\/contacts.json"
+    },
+    "crm_audit": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(10) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "entity",
+                "Type": "varchar(100)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "entity_id",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "action",
+                "Type": "varchar(100)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "user_id",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "meta",
+                "Type": "longtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/crm_audit.json"
+    },
+    "crm_customers": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(10) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "name",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "email",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "status",
+                "Type": "varchar(50)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "active",
+                "Extra": ""
+            },
+            {
+                "Field": "tags",
+                "Type": "longtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "datetime",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": "on update current_timestamp()"
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/crm_customers.json"
+    },
+    "crm_leads": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(10) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "source",
+                "Type": "varchar(100)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "web",
+                "Extra": ""
+            },
+            {
+                "Field": "name",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "email",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "score",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "status",
+                "Type": "varchar(50)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "new",
+                "Extra": ""
+            },
+            {
+                "Field": "metadata",
+                "Type": "longtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "datetime",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": "on update current_timestamp()"
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/crm_leads.json"
+    },
+    "failed_jobs": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "bigint(20) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "uuid",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "UNI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "connection",
+                "Type": "text",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "queue",
+                "Type": "text",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "payload",
+                "Type": "longtext",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "exception",
+                "Type": "longtext",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "failed_at",
+                "Type": "timestamp",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/failed_jobs.json"
+    },
+    "forms_submissions": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "form_name",
+                "Type": "text",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "payload",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "ip",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "user_agent",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "is_read",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/forms_submissions.json"
+    },
+    "interactions": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "performed_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/interactions.json"
+    },
+    "job_batches": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "name",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "total_jobs",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "pending_jobs",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "failed_jobs",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "failed_job_ids",
+                "Type": "longtext",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "options",
+                "Type": "mediumtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "cancelled_at",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "finished_at",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/job_batches.json"
+    },
+    "jobs": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "bigint(20) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "queue",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "payload",
+                "Type": "longtext",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "attempts",
+                "Type": "tinyint(3) unsigned",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "reserved_at",
+                "Type": "int(10) unsigned",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "available_at",
+                "Type": "int(10) unsigned",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "int(10) unsigned",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/jobs.json"
+    },
+    "media_files": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "bigint(20) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "filename",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "path",
+                "Type": "varchar(1024)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "mime",
+                "Type": "varchar(100)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "size",
+                "Type": "int(10) unsigned",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "uploaded_by",
+                "Type": "bigint(20) unsigned",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "usages",
+                "Type": "longtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/media_files.json"
+    },
+    "menu_items": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "bigint(20) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "title",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "short_title",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "href",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "parent_id",
+                "Type": "bigint(20) unsigned",
+                "Null": "YES",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "order",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "icon",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 10,
+        "sample_path": "data\/remote_data\/menu_items.json"
+    },
+    "menu_sections": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "parent_id",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "title",
+                "Type": "varchar(100)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "slug",
+                "Type": "varchar(100)",
+                "Null": "NO",
+                "Key": "UNI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "icon",
+                "Type": "varchar(100)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "href",
+                "Type": "varchar(500)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "description",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "is_visible",
+                "Type": "tinyint(4)",
+                "Null": "YES",
+                "Key": "MUL",
+                "Default": "1",
+                "Extra": ""
+            },
+            {
+                "Field": "sort_order",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "MUL",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": "on update current_timestamp()"
+            }
+        ],
+        "count": 13,
+        "sample_path": "data\/remote_data\/menu_sections.json"
+    },
+    "migrations": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(10) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "migration",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "batch",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 7,
+        "sample_path": "data\/remote_data\/migrations.json"
+    },
+    "modules": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "page_id",
+                "Type": "int(10) unsigned",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "type",
+                "Type": "varchar(100)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "content",
+                "Type": "mediumtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "order_index",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": "on update current_timestamp()"
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/modules.json"
+    },
+    "opportunities": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "stage",
+                "Type": "varchar(50)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/opportunities.json"
+    },
+    "page_views": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "bigint(20) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "page_id",
+                "Type": "bigint(20) unsigned",
+                "Null": "YES",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "slug",
+                "Type": "varchar(191)",
+                "Null": "YES",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "ip",
+                "Type": "varchar(45)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "user_agent",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 232,
+        "sample_path": "data\/remote_data\/page_views.json"
+    },
+    "pages": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(10) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "slug",
+                "Type": "varchar(191)",
+                "Null": "NO",
+                "Key": "UNI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "title",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "content",
+                "Type": "text",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "datetime",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": "on update current_timestamp()"
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/pages.json"
+    },
+    "password_reset_tokens": {
+        "columns": [
+            {
+                "Field": "email",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "token",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/password_reset_tokens.json"
+    },
+    "password_resets": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "email",
+                "Type": "text",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "token",
+                "Type": "text",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "expires_at",
+                "Type": "datetime",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/password_resets.json"
+    },
+    "resources": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "title",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "slug",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "UNI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "body",
+                "Type": "longtext",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "status",
+                "Type": "varchar(50)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "draft",
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": "on update current_timestamp()"
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/resources.json"
+    },
+    "sections": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "bigint(20) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "title",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "UNI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "description",
+                "Type": "text",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "image",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/sections.json"
+    },
+    "sessions": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "user_id",
+                "Type": "bigint(20) unsigned",
+                "Null": "YES",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "ip_address",
+                "Type": "varchar(45)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "user_agent",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "payload",
+                "Type": "longtext",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "last_activity",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 3,
+        "sample_path": "data\/remote_data\/sessions.json"
+    },
+    "tasks": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "status",
+                "Type": "varchar(50)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "pending",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/tasks.json"
+    },
+    "td_interactions": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "int(11)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "project_id",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "MUL",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "item_id",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "item_type",
+                "Type": "varchar(50)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "user_email",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "rating",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "comment",
+                "Type": "text",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": ""
+            }
+        ],
+        "count": 0,
+        "sample_path": "data\/remote_data\/td_interactions.json"
+    },
+    "td_projects": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "data",
+                "Type": "longtext",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "last_updated",
+                "Type": "timestamp",
+                "Null": "NO",
+                "Key": "",
+                "Default": "current_timestamp()",
+                "Extra": "on update current_timestamp()"
+            }
+        ],
+        "count": 2,
+        "sample_path": "data\/remote_data\/td_projects.json"
+    },
+    "users": {
+        "columns": [
+            {
+                "Field": "id",
+                "Type": "bigint(20) unsigned",
+                "Null": "NO",
+                "Key": "PRI",
+                "Default": null,
+                "Extra": "auto_increment"
+            },
+            {
+                "Field": "name",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "email",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "UNI",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "email_verified_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "password",
+                "Type": "varchar(255)",
+                "Null": "NO",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "remember_token",
+                "Type": "varchar(100)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "created_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "updated_at",
+                "Type": "timestamp",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "totp_secret",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "two_factor_enabled",
+                "Type": "tinyint(1)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "last_login_at",
+                "Type": "datetime",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "is_admin",
+                "Type": "tinyint(1)",
+                "Null": "YES",
+                "Key": "",
+                "Default": "0",
+                "Extra": ""
+            },
+            {
+                "Field": "reset_token",
+                "Type": "varchar(255)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            },
+            {
+                "Field": "reset_token_expires",
+                "Type": "int(11)",
+                "Null": "YES",
+                "Key": "",
+                "Default": null,
+                "Extra": ""
+            }
+        ],
+        "count": 1,
+        "sample_path": "data\/remote_data\/users.json"
+    }
+}

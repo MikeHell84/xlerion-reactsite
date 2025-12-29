@@ -42,12 +42,12 @@ function Find-PHP {
 
 $phpPath = Find-PHP
 if (-not $phpPath) {
-    Write-Host "PHP executable not found."
-    Write-Host "Install PHP with Scoop: `scoop install php` or add php.exe to your PATH."
-    Write-Host "Fallback: start a Python server: `python -m http.server 8000 --directory public`"
+    Write-Host 'PHP executable not found.'
+    Write-Host 'Install PHP with Scoop: scoop install php or add php.exe to your PATH.'
+    Write-Host 'Fallback: start a Python server: python -m http.server 8000 --directory public'
     exit 1
 }
 
 Write-Host "Starting PHP built-in server using: $phpPath (port $Port)"
-Start-Process -FilePath $phpPath -ArgumentList ('-S','localhost:{0}' -f $Port,'-t','public') -WindowStyle Hidden
+Start-Process -FilePath $phpPath -ArgumentList ('-S', 'localhost:{0}' -f $Port, '-t', 'public') -WindowStyle Hidden
 Write-Host "PHP server started on http://localhost:$Port"

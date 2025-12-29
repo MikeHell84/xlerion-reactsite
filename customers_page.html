@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xlerion</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind: removed CDN usage for production; install as PostCSS plugin if needed -->
+    <link rel="stylesheet" href="/xlerion.css">
+    <!-- React build CSS (if present) -->
+    <link rel="stylesheet" href="/build/assets/index-3rRdbllY.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg xlerion-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/inicio.php">Xlerion</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/inicio.php">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/filosofia.php">Filosofía</a></li>
+        <li class="nav-item"><a class="nav-link" href="/soluciones.php">Soluciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="/proyectos.php">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="/documentacion.php">Documentación</a></li>
+        <li class="nav-item"><a class="nav-link" href="/fundador.php">Fundador</a></li>
+        <li class="nav-item"><a class="nav-link" href="/convocatorias.php">Convocatorias</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blog.php">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contacto.php">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="/legal.php">Legal</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main style="padding:24px;">
+  <h1>Clientes / Contactos</h1>
+  <p>Lista de clientes. Usa el API en <code>/api/crm/customers.php</code>.</p>
+
+  <div style="margin-bottom:16px;">
+    <form id="new-customer-form">
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Email">
+      <select name="status"><option value="active">Activo</option><option value="lead">Lead</option><option value="inactive">Inactivo</option></select>
+      <button type="submit" class="xlerion-btn-primary">Crear</button>
+    </form>
+  </div>
+
+  <div id="crm-customers">
+    <p>Cargando...</p>
+  </div>
+
+  <script>
+    const CSRF_TOKEN = '5a8adb00c8b300519e88e19961eef732';
+    async function loadCustomers() {
+      const r = await fetch('/api/crm/customers.php');
+      const j = await r.json();
+      const el = document.getElementById('crm-customers');
+      if (!j.ok) { el.innerHTML = '<div class="alert alert-danger">Error cargando clientes</div>'; return; }
+      if (!j.data || j.data.length === 0) { el.innerHTML = '<div>No hay clientes registrados.</div>'; return; }
+      let html = '<table class="table"><thead><tr><th>Id</th><th>Nombre</th><th>Email</th><th>Status</th><th>Acciones</th></tr></thead><tbody>';
+      for (const c of j.data) {
+        html += `<tr><td>${c.id}</td><td>${c.name}</td><td>${c.email||''}</td><td>${c.status||''}</td><td><button data-id="${c.id}" class="btn btn-sm btn-danger crm-delete">Eliminar</button></td></tr>`;
+      }
+      html += '</tbody></table>';
+      el.innerHTML = html;
+      document.querySelectorAll('.crm-delete').forEach(btn=>btn.addEventListener('click', async e=>{
+        if (!confirm('Eliminar este cliente?')) return;
+        const id = btn.dataset.id;
+        const res = await fetch('/api/crm/customers.php', {method:'DELETE', headers:{'Content-Type':'application/json','X-CSRF-Token':CSRF_TOKEN}, body: JSON.stringify({id: id})});
+        const out = await res.json(); if (out.ok) loadCustomers(); else alert('Error: '+(out.error||''));
+      }));
+    }
+
+    document.getElementById('new-customer-form').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const fd = new FormData(this);
+      const obj = {};
+      fd.forEach((v,k)=>obj[k]=v);
+      obj.csrf_token = CSRF_TOKEN;
+      const res = await fetch('/api/crm/customers.php', {method:'POST', headers:{'Content-Type':'application/json','X-CSRF-Token':CSRF_TOKEN}, body: JSON.stringify(obj)});
+      const j = await res.json(); if (j.ok) { this.reset(); loadCustomers(); } else alert('Error: '+(j.error||''));
+    });
+
+    loadCustomers().catch(e=>console.error(e));
+  </script>
+</main>
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-0">&copy; 2025 Xlerion. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- React build JS is only loaded from the dedicated frontend entry (public/build/index.html) -->
+</body>
+</html>

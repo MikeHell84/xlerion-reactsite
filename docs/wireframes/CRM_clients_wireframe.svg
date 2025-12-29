@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <style>
+    .bg{fill:#fff}
+    .panel{fill:#f4f6f8;stroke:#d6dbe0}
+    .card{fill:#ffffff;stroke:#e2e6ea}
+    .muted{fill:#8a939a;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+    .title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:20px;fill:#111}
+  </style>
+  <rect class="bg" x="0" y="0" width="1200" height="800"/>
+  <!-- sidebar -->
+  <rect class="panel" x="16" y="16" width="220" height="768" rx="8"/>
+  <text x="36" y="48" class="title">CRM</text>
+  <text x="36" y="78" class="muted">Dashboard</text>
+  <text x="36" y="104" class="muted">Clientes</text>
+  <text x="36" y="130" class="muted">Leads</text>
+  <text x="36" y="156" class="muted">Oportunidades</text>
+
+  <!-- header -->
+  <rect class="card" x="252" y="16" width="932" height="64" rx="6"/>
+  <text x="268" y="56" class="title">Clientes — Lista</text>
+
+  <!-- filters area -->
+  <rect class="card" x="252" y="96" width="932" height="56" rx="6"/>
+  <text x="268" y="132" class="muted">Search • Filter: Estado • Etiquetas • Asignado</text>
+
+  <!-- main list -->
+  <rect class="card" x="252" y="168" width="520" height="616" rx="6"/>
+  <text x="268" y="196" class="muted">Lista de clientes (columnas: Nombre, Empresa, Estado, Último contacto)</text>
+  <!-- rows -->
+  <g fill="#fafbfc">
+    <rect x="262" y="216" width="500" height="48" rx="4" stroke="#eef2f4"/>
+    <rect x="262" y="272" width="500" height="48" rx="4" stroke="#eef2f4"/>
+    <rect x="262" y="328" width="500" height="48" rx="4" stroke="#eef2f4"/>
+    <rect x="262" y="384" width="500" height="48" rx="4" stroke="#eef2f4"/>
+  </g>
+
+  <!-- detail panel -->
+  <rect class="card" x="788" y="168" width="396" height="616" rx="6"/>
+  <text x="804" y="196" class="muted">Ficha cliente — vista 360°</text>
+  <rect x="804" y="212" width="364" height="120" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+  <text x="820" y="244" class="muted">Datos clave: Nombre, Empresa, Email, Teléfono</text>
+  <rect x="804" y="344" width="364" height="160" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+  <text x="820" y="372" class="muted">Pestañas: Interacciones, Oportunidades, Facturación, Archivos, Notas</text>
+
+  <!-- footer note -->
+  <text x="268" y="780" class="muted">Mobile: lista apilada; detalle como modal</text>
+</svg>

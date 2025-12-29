@@ -1,3 +1,7 @@
+## Iniciar los servidores:
+
+la ruta es: X:\Programacion\UltimateSite\scripts
+
 # Copilot Instructions for UltimateSite
 
 # Hallazgo: por qué los prompts se están cumpliendo cabalmente
@@ -41,102 +45,116 @@ Archivos relevantes (evidencia)
 Conclusión
 El éxito actual se debe a instrucciones precisas del usuario, edición en la fuente (SCSS), y un flujo disciplinado (compilar, respaldar, commitear). Este patrón es repetible y recomendable.
 
-
-## Media Files
-
-- All media assets (images, fonts, videos) are stored in the `media/` directory at the project root.
-
-## Project Overview
-- **UltimateSite** is a hybrid PHP + React (Vite) web platform.
-- The backend is classic PHP (see root and public/), while the frontend is a modern React app (frontend/), built with Vite and output to public/build/.
-- Data and content are managed via JSON files (data/pages.json) and SQL migrations (database/migrations/).
-
-## Key Directories
-- `frontend/`: React app (Vite). Entry: src/main.jsx, main component: App.jsx. Styles: styles/xlerion.scss.
-- `public/`: PHP entrypoint (index.php), router (router.php), and static assets. Built frontend is in public/build/.
-- `database/`: Migration scripts (migrate.php, run_migrations.php), SQL migrations in migrations/.
-- `data/`: JSON data files for dynamic content.
-- `includes/`: Shared PHP includes (config.php, header.php, footer.php).
-- `scripts/`: Utility scripts for validation and data checks.
-
-## Developer Workflows
-- **Frontend build:**
-  ```bash
-  cd frontend
-  npm install
-  npm run build
-  ```
-  Output: ../public/build
-- **Run PHP migrations:**
-  ```bash
-  php database/migrate.php
-  ```
-- **Validate before deploy:**
-  Use scripts/validate_before_deploy.ps1 (Windows) or .sh (Linux).
-
-## Conventions & Patterns
-- **Frontend:**
-  - Use React functional components.
-  - SCSS modules for component styles (e.g., Navbar.module.scss).
-  - Main styles in styles/xlerion.scss.
-- **Backend:**
-  - PHP pages in root and public/.
-  - Shared includes in includes/.
-  - Data access via JSON or SQL migrations.
-- **Data:**
-  - Content pages defined in data/pages.json.
-  - Contacts and other data in backup/contacts/ and data/.
-
-## Integration Points
-- Frontend communicates with backend via public/api/ endpoints (e.g., contact.php, pages.php).
-- PHP includes shared via includes/.
-- Static assets (images, fonts) in media/ and public/media/.
-
-## Examples
-- To add a new page: update data/pages.json, create PHP/React components as needed.
-- To add a new API: add PHP file in public/api/.
-
-## References
-- See frontend/README.md for React build details.
-- See database/migrations/ for SQL structure.
-- See scripts/ for validation and utility scripts.
+Perfecto Mike 👌. Aquí tienes el **texto plano completo** con todas las reglas que hemos definido para tu proyecto Xlerion.com. Puedes guardarlo como `COPILOT_RULES.md` o cualquier archivo de referencia en tu repositorio para que siempre tengas la “memoria técnica” a mano:
 
 ---
-For questions, check README.md files or ask the project maintainer.
 
+# Reglas del Proyecto Xlerion.com
 
-# Mapa de control de estilos CSS/SCSS para el login admin y botones
+## 1. Arquitectura Modular
+- Cada sección debe estar en su propio archivo (`inicio.php`, `login.php`, `contacto.php`, etc.).
+- `navbar.php` y `footer.php` son componentes globales, no editables desde el panel de contenido.
+- Prefijo de clases: `.xlerion-*` para evitar conflictos.
+- ReactJS compilado localmente para interactividad, integrado con PHP/MariaDB.
 
-## /public/admin/login.php
-- **Botones de login y recuperación:**
-  - Clases: `.xlerion-btn-primary`, `.forgot-password-link`
-  - Controlados por: `/public/admin/admin-login.css` (compilado de `/public/admin/admin-login.scss`)
-  - Bootstrap 5 también está enlazado, pero los estilos personalizados tienen prioridad si la especificidad es suficiente.
+## 2. Estilos
+- Usar **SCSS corporativo** (`xlerion.scss`) con variables, mixins y breakpoints.
+- Usar **CSS Modules** para componentes críticos (`Navbar.module.scss`, `Footer.module.scss`, `Login.module.scss`).
+- Usar **Bootstrap 5** para estructura responsiva y **TailwindCSS** para utilidades rápidas.
+- **Compilación obligatoria**: siempre compilar SCSS a CSS después de cualquier cambio.
+- Nunca editar directamente archivos `.css` compilados.
+- Verificar que el CSS compilado esté vinculado en el HTML/PHP.
 
-## /public/xlerion.css
-- **Botones generales:**
-  - Clase: `.xlerion-btn`
-  - No afecta a los botones del login admin (a menos que se use esa clase).
+## 3. Tokens Globales
+- Definir variables globales en `xlerion.scss` y CSS custom properties:
+  - `--xlerion-primary: #00d9ffff`
+  - `--xlerion-secondary: #212529`
+  - `--xlerion-accent: #00f5b8fd`
+- Todos los módulos deben usar estas variables, nunca hex directos ni variables locales.
 
-## /total-darkness/styles.css
-- **Botones genéricos:**
-  - Clases: `.btn`, `.btn-primary`, `.btn-secondary`
-  - No afectan al login admin (a menos que se usen esas clases en el HTML).
+## 4. Diseño Responsive
+- Aplicar **mobile‑first** como regla principal.
+- Breakpoints SCSS:
+  - `sm: 576px`
+  - `md: 768px`
+  - `lg: 992px`
+  - `xl: 1200px`
+  - `xxl: 1400px`
+- Tipografía fluida con `clamp()`.
+- Imágenes adaptables con `.img-fluid` y `object-cover`.
+- Cards: una columna en móvil, múltiples columnas en escritorio.
+- Navbar colapsable en móvil, expandida en escritorio.
+- Footer apilado en móvil, distribuido en escritorio.
 
-## /frontend/src/styles/xlerion.scss
-- **Botones generales para frontend React:**
-  - Clase: `.xlerion-btn` (con mixin)
-  - No afecta al login admin PHP.
+## 5. Base de Datos
+- Conexión segura usando credenciales desde `.env`.
+- Tablas:
+  - `pages`: id, slug, title, content, created_at, updated_at.
+  - `modules`: id, page_id, type, content, order.
+- Operaciones seguras:
+  - `UPDATE` solo sobre el registro seleccionado.
+  - `INSERT` para nuevos módulos o páginas.
+  - `DELETE` con confirmación y backup previo.
 
-## Resumen visual rápido
-| Sección/Componente         | Archivo CSS/SCSS que controla |
-|---------------------------|-------------------------------|
-| Login admin (botones)     | admin-login.css / .scss       |
-| Botones generales (web)   | xlerion.css                   |
-| Botones Total Darkness    | total-darkness/styles.css     |
-| Botones React frontend    | frontend/src/styles/xlerion.scss |
+## 6. Panel de Administración (CMS)
+- Ubicado en `/admin/` con login seguro y roles (admin, editor).
+- Dashboard con navegación lateral y topbar.
+- Funcionalidades:
+  - Crear nuevas páginas o módulos.
+  - Editar contenido existente.
+  - Eliminar módulos o secciones con confirmación.
+  - Organizar módulos mediante drag & drop.
+- Validación previa antes de aplicar cambios.
+- Generar backups automáticos antes de cada operación.
 
----
+## 7. Control de Versiones
+- Repositorio Git exclusivo (`xlerion-backups`).
+- Commit antes de aceptar cualquier cambio.
+# Copilot instructions — UltimateSite (concise)
+
+Purpose: give AI coding agents the minimal, repo-specific guidance to be immediately productive.
+
+Quick architecture summary
+- Hybrid PHP + React (Vite) site. Public PHP entrypoints in `public/`; React source in `frontend/` and build output in `public/build/`.
+- Content lives in `data/pages.json` (fallback) and the `pages` / `modules` DB tables when MariaDB is available.
+- Admin UI: `public/admin/` (login, page CRUD). APIs live under `public/api/` (e.g. `public/api/pages.php`).
+
+Essential workflows (run locally on Windows workspace root)
+ - Start dev / build CSS: `cd frontend && npm run build:css` (produces `public/xlerion.css`). See [frontend/package.json](frontend/package.json).
+- Build frontend JS (Vite): `cd frontend && npm run build` → output `public/build/`.
+- Apply DB migrations: `php database/migrate.php` (runner: `database/run_migrations.php`).
+
+Key file locations and edit rules
+- Edit SCSS source: `frontend/src/styles/xlerion.scss`. NEVER edit compiled `public/xlerion.css` permanently.
+- Admin styles: `public/admin/admin-login.scss` → compiled to `public/admin/admin-login.css`.
+- API entrypoints: `public/api/*.php` (example: `public/api/pages.php`).
+- Shared PHP helpers / config: `includes/config.php` (loads `.env`, PDO helpers).
+
+Patterns & conventions specific to this repo
+- Mobile-first SCSS; global tokens (use variables in `frontend/src/styles/xlerion.scss`).
+- Prefixed CSS classes: `.xlerion-*` to avoid collisions.
+- Backups: file/asset backups stored in `xlerion-backups/` and DB dumps in `backups/` — create a backup before destructive edits.
+- DB credentials come from `.env` (do not commit). Example keys in root `.env` are referenced by `includes/config.php`.
+
+Agent behaviour rules (must follow)
+- Ask before any destructive change (DB DROP, mass DELETE, or replacing compiled assets in `public/`).
+- Before writing edits to source files: run or create a backup (copy file to `xlerion-backups/`) and commit with a descriptive message.
+- Prefer editing source (SCSS, `frontend/src/`, `public/api/*.php`) over compiled or built outputs.
+
+Quick examples (what to run)
+```powershell
+cd frontend
+npm run build:css   # compiles SCSS → public/xlerion.css
+npm run build       # builds Vite frontend → public/build/
+php database/migrate.php
+```
+
+Where to look for more context
+    - Frontend build and tooling: [frontend/README.md](frontend/README.md) and [frontend/package.json](frontend/package.json).
+ - Admin area and login: [public/admin/login.php](public/admin/login.php) and styles [public/admin/admin-login.css](public/admin/admin-login.css).
+ - API patterns and DB interactions: [public/api/pages.php](public/api/pages.php) and [includes/config.php](includes/config.php).
+
+If anything is unclear or you want this converted to a short checklist for PR reviewers, tell me which sections to expand or example commands to include.
 
 **Nota:** Si los estilos de los botones del login admin no se aplican, el único archivo relevante es `/public/admin/admin-login.css`. Si hay conflicto, es por Bootstrap o por falta de especificidad en ese archivo.
 
@@ -456,4 +474,6 @@ He registrado y organizado la lista de trabajo completa para construir el CMS mo
 
 ---
 
-Si quieres, marco tareas prioritarias (siguiente: implementar CRUD de módulos y editor drag&drop) y comienzo a desarrollar la UI React del editor. ¿Procedo con el editor de módulos ahora o prefieres que implemente primero el backup/Git y la seguridad (CSRF, auditoría)?
+
+
+
