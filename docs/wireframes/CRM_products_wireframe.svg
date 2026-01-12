@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <style>
+    .bg{fill:#fff}
+    .card{fill:#fff;stroke:#e6eaef}
+    .muted{fill:#6f7a80;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+    .title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:20px;fill:#111}
+  </style>
+  <rect class="bg" x="0" y="0" width="1200" height="900"/>
+  <rect class="card" x="16" y="16" width="1168" height="64" rx="6"/>
+  <text x="36" y="56" class="title">Productos / Servicios — Catálogo</text>
+
+  <!-- toolbar -->
+  <rect class="card" x="16" y="96" width="1168" height="56" rx="6"/>
+  <text x="36" y="132" class="muted">Nuevo producto • Importar • Filtros: categoría, activo, stock</text>
+
+  <!-- grid of products -->
+  <rect class="card" x="16" y="172" width="1168" height="700" rx="6"/>
+  <text x="36" y="204" class="muted">Grid: imagen • nombre • SKU • precio • stock • acciones</text>
+  <g>
+    <rect x="36" y="236" width="260" height="120" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+    <rect x="312" y="236" width="260" height="120" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+    <rect x="588" y="236" width="260" height="120" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+  </g>
+
+  <text x="36" y="880" class="muted">Soporte para precios, impuestos, descuentos y productos recurrentes. Opcional control de stock.</text>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <style>
+    .bg{fill:#fff}
+    .card{fill:#fff;stroke:#e6eaef}
+    .muted{fill:#6f7a80;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+    .title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:20px;fill:#111}
+  </style>
+  <rect class="bg" x="0" y="0" width="1200" height="900"/>
+  <rect class="card" x="16" y="16" width="1168" height="64" rx="6"/>
+  <text x="36" y="56" class="title">Actividades — Agenda y Tareas</text>
+
+  <!-- controls -->
+  <rect class="card" x="16" y="96" width="1168" height="56" rx="6"/>
+  <text x="36" y="132" class="muted">Nuevo evento • Nueva tarea • Filtro: Fecha • Responsable</text>
+
+  <!-- left: calendar -->
+  <rect class="card" x="16" y="172" width="720" height="700" rx="6"/>
+  <text x="36" y="204" class="muted">Vista calendario (mes/semana/día)</text>
+  <rect x="36" y="236" width="680" height="560" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+
+  <!-- right: tasks list and detail -->
+  <rect class="card" x="760" y="172" width="424" height="340" rx="6"/>
+  <text x="780" y="204" class="muted">Tareas pendientes</text>
+  <rect x="780" y="228" width="384" height="240" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+
+  <rect class="card" x="760" y="532" width="424" height="340" rx="6"/>
+  <text x="780" y="564" class="muted">Detalle rápido: evento seleccionado</text>
+  <rect x="780" y="588" width="384" height="240" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+
+  <text x="36" y="880" class="muted">Integraciones: Calendario (Google/Outlook), notificaciones por email/push.</text>
+</svg>

@@ -9,5 +9,6 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- React build JS is only loaded from the dedicated frontend entry (public/build/index.html) -->
 </body>
 </html>

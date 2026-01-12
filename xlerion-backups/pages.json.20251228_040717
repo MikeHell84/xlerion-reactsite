@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "slug": "inicio",
+        "title": "Inicio",
+        "content": "<p>Bienvenido a Xlerion<\/p>",
+        "modules": [
+            {
+                "id": 1,
+                "page_id": 1,
+                "type": "hero",
+                "content": "{\"heading\":\"Xlerion – Ingeniería Modular\"}",
+                "order": 0
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "slug": "smoke-test-54415",
+        "title": "Smoke Test",
+        "content": "Hello from smoke test"
+    }
+]

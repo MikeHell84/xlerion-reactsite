@@ -1,0 +1,10 @@
+{
+    "HTTP_ACCEPT": "application\/json",
+    "CONTENT_TYPE": "application\/x-www-form-urlencoded",
+    "REQUEST_METHOD": "POST",
+    "POST": {
+        "name": "Nuevo",
+        "email": "nuevo@example.com",
+        "message": "mensaje prueba"
+    }
+}

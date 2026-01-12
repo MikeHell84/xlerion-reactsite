@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <style>
+    .bg{fill:#fff}
+    .card{fill:#ffffff;stroke:#e2e6ea}
+    .muted{fill:#8a939a;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+    .title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:20px;fill:#111}
+  </style>
+  <rect class="bg" x="0" y="0" width="1400" height="900"/>
+  <!-- header -->
+  <rect class="card" x="16" y="16" width="1368" height="64" rx="6"/>
+  <text x="36" y="56" class="title">Reportes — Dashboards</text>
+
+  <!-- filters row -->
+  <rect class="card" x="16" y="96" width="1368" height="56" rx="6"/>
+  <text x="36" y="132" class="muted">Rango fecha • Usuario • Canal • Exportar (PDF / Excel)</text>
+
+  <!-- top metrics -->
+  <g>
+    <rect class="card" x="36" y="172" width="320" height="160" rx="8"/>
+    <rect class="card" x="380" y="172" width="320" height="160" rx="8"/>
+    <rect class="card" x="724" y="172" width="320" height="160" rx="8"/>
+    <rect class="card" x="1068" y="172" width="320" height="160" rx="8"/>
+    <text x="56" y="208" class="muted">Ventas periodo</text>
+    <text x="404" y="208" class="muted">Conversiones</text>
+    <text x="748" y="208" class="muted">Leads por fuente</text>
+    <text x="1096" y="208" class="muted">Clientes activos</text>
+  </g>
+
+  <!-- charts area -->
+  <rect class="card" x="36" y="360" width="900" height="500" rx="8"/>
+  <text x="56" y="392" class="muted">Grafica principal (ventas por periodo)</text>
+  <rect class="card" x="954" y="360" width="430" height="500" rx="8"/>
+  <text x="974" y="392" class="muted">Tabla / Top items / Filtros rapidos</text>
+
+  <!-- footer -->
+  <text x="36" y="880" class="muted">Widgets exportables y configurables por usuario. Considerar caching para grandes datasets.</text>
+</svg>

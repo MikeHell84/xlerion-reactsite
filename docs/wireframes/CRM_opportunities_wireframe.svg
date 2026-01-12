@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <style>
+    .bg{fill:#fff}
+    .panel{fill:#f4f6f8;stroke:#d6dbe0}
+    .card{fill:#ffffff;stroke:#e2e6ea}
+    .muted{fill:#8a939a;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+    .title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:20px;fill:#111}
+  </style>
+  <rect class="bg" x="0" y="0" width="1400" height="900"/>
+  <!-- header -->
+  <rect class="card" x="16" y="16" width="1368" height="64" rx="6"/>
+  <text x="36" y="56" class="title">Oportunidades — Pipeline (Kanban)</text>
+
+  <!-- kanban columns -->
+  <g>
+    <rect class="card" x="36" y="96" width="320" height="760" rx="6"/>
+    <text x="56" y="130" class="muted">Prospect</text>
+    <rect x="56" y="156" width="280" height="72" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+    <rect x="56" y="236" width="280" height="72" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+  </g>
+
+  <g>
+    <rect class="card" x="380" y="96" width="320" height="760" rx="6"/>
+    <text x="400" y="130" class="muted">Qualified</text>
+    <rect x="420" y="156" width="240" height="72" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+  </g>
+
+  <g>
+    <rect class="card" x="724" y="96" width="320" height="760" rx="6"/>
+    <text x="744" y="130" class="muted">Proposal</text>
+  </g>
+
+  <g>
+    <rect class="card" x="1068" y="96" width="320" height="760" rx="6"/>
+    <text x="1088" y="130" class="muted">Closed</text>
+  </g>
+
+  <!-- footer note -->
+  <text x="36" y="880" class="muted">Drag & drop entre columnas; tarjetas muestran nombre, valor, probabilidad y fecha estimada</text>
+</svg>

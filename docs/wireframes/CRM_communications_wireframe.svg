@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="900" viewBox="0 0 1300 900">
+  <style>
+    .bg{fill:#fff}
+    .card{fill:#fff;stroke:#e6eaef}
+    .muted{fill:#6f7a80;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+    .title{font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:20px;fill:#111}
+  </style>
+  <rect class="bg" x="0" y="0" width="1300" height="900"/>
+  <rect class="card" x="16" y="16" width="1268" height="64" rx="6"/>
+  <text x="36" y="56" class="title">Comunicaciones — Inbox unificado</text>
+
+  <!-- controls -->
+  <rect class="card" x="16" y="96" width="1268" height="56" rx="6"/>
+  <text x="36" y="132" class="muted">Nuevo: Email • WhatsApp • SMS • Plantillas • Filtrar por canal</text>
+
+  <!-- left: channels & templates -->
+  <rect class="card" x="16" y="172" width="260" height="700" rx="6"/>
+  <text x="36" y="204" class="muted">Canales</text>
+  <text x="36" y="232" class="muted">Plantillas</text>
+
+  <!-- middle: unified inbox list -->
+  <rect class="card" x="292" y="172" width="620" height="700" rx="6"/>
+  <text x="312" y="204" class="muted">Inbox: remitente • asunto • canal • estado</text>
+  <rect x="312" y="236" width="580" height="560" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+
+  <!-- right: message thread / composer -->
+  <rect class="card" x="932" y="172" width="352" height="460" rx="6"/>
+  <text x="952" y="204" class="muted">Hilo de conversación</text>
+  <rect x="952" y="228" width="312" height="392" rx="6" fill="#fbfcfd" stroke="#eef2f4"/>
+
+  <rect class="card" x="932" y="640" width="352" height="232" rx="6"/>
+  <text x="952" y="672" class="muted">Composer: plantilla • adjuntar • enviar</text>
+
+  <text x="36" y="880" class="muted">Soporte para integraciones (SMTP, WhatsApp API, Twilio). Historial unificado por contacto.</text>
+</svg>

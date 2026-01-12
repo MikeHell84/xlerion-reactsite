@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "title": "Inicio",
+        "short_title": "Inicio",
+        "href": "\/",
+        "parent_id": null,
+        "order": 1,
+        "icon": "FaHome",
+        "created_at": "2025-11-10 16:31:08",
+        "updated_at": "2025-11-10 16:31:08"
+    },
+    {
+        "id": 2,
+        "title": "Filosofía",
+        "short_title": "Filosofía",
+        "href": "\/filosofia",
+        "parent_id": null,
+        "order": 2,
+        "icon": "FaLightbulb",
+        "created_at": "2025-11-10 16:31:08",
+        "updated_at": "2025-11-10 16:31:08"
+    },
+    {
+        "id": 3,
+        "title": "Soluciones",
+        "short_title": "Soluciones",
+        "href": "\/soluciones",
+        "parent_id": null,
+        "order": 3,
+        "icon": "FaTools",
+        "created_at": "2025-11-10 16:31:08",
+        "updated_at": "2025-11-10 16:31:08"
+    },
+    {
+        "id": 4,
+        "title": "Proyectos",
+        "short_title": "Proyectos",
+        "href": "\/proyectos",
+        "parent_id": null,
+        "order": 4,
+        "icon": "FaProjectDiagram",
+        "created_at": "2025-11-10 16:31:08",
+        "updated_at": "2025-11-10 16:31:08"
+    },
+    {
+        "id": 5,
+        "title": "Documentación",
+        "short_title": "Docs",
+        "href": "\/documentacion",
+        "parent_id": null,
+        "order": 5,
+        "icon": "FaBook",
+        "created_at": "2025-11-10 16:31:08",
+        "updated_at": "2025-11-10 16:31:08"
+    },
+    {
+        "id": 6,
+        "title": "Sobre el Fundador",
+        "short_title": "Fundador",
+        "href": "\/sobre-el-fundador",
+        "parent_id": null,
+        "order": 6,
+        "icon": "FaUser",
+        "created_at": "2025-11-10 16:31:08",
+        "updated_at": "2025-11-10 16:31:08"
+    },
+    {
+        "id": 7,
+        "title": "Convocatorias y Alianzas",
+        "short_title": "Alianzas",
+        "href": "\/convocatorias-y-alianzas",
+        "parent_id": null,
+        "order": 7,
+        "icon": "FaHandshake",
+        "created_at": "2025-11-10 16:31:09",
+        "updated_at": "2025-11-10 16:31:09"
+    },
+    {
+        "id": 8,
+        "title": "Contacto",
+        "short_title": "Contacto",
+        "href": "\/contacto",
+        "parent_id": null,
+        "order": 8,
+        "icon": "FaEnvelope",
+        "created_at": "2025-11-10 16:31:09",
+        "updated_at": "2025-11-10 16:31:09"
+    },
+    {
+        "id": 9,
+        "title": "Blog \/ Bitácora",
+        "short_title": "Blog",
+        "href": "\/blog-bitacora",
+        "parent_id": null,
+        "order": 9,
+        "icon": "FaNewspaper",
+        "created_at": "2025-11-10 16:31:09",
+        "updated_at": "2025-11-10 16:31:09"
+    },
+    {
+        "id": 10,
+        "title": "Legal y Privacidad",
+        "short_title": "Legal",
+        "href": "\/legal-y-privacidad",
+        "parent_id": null,
+        "order": 10,
+        "icon": "FaBalanceScale",
+        "created_at": "2025-11-10 16:31:09",
+        "updated_at": "2025-11-10 16:31:09"
+    }
+]

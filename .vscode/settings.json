@@ -1,0 +1,31 @@
+{
+    "sqltools.connections": [
+        {
+            "name": "Xlerion Remote",
+            "driver": "MySQL",
+            "server": "51.222.104.17",
+            "port": 3306,
+            "database": "xlerionc_xlerion_db",
+            "username": "xlerionc_admin",
+            "password": "",
+            "previewLimit": 50,
+            "options": {}
+        },
+        {
+            "name": "Xlerion Local (readonly)",
+            "driver": "MySQL",
+            "server": "127.0.0.1",
+            "port": 3306,
+            "database": "xlerionc_xlerion_db",
+            "username": "xlerion_ro",
+            "password": "",
+            "previewLimit": 50,
+            "options": {}
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
+{
+    "github.copilot.chat.agent.autoFix": true,
+    "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true
+}

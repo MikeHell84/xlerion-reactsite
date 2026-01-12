@@ -1,0 +1,38 @@
+/* Minimal admin SCSS module for the CMS admin panel.
+   Mobile-first. Use variables from global xlerion.scss where available.
+*/
+:root {
+    --xlerion-primary: #00d9ff;
+    --xlerion-accent: #00f5b8;
+}
+
+.admin-wrapper {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: #eaeaea;
+}
+
+.admin-sidebar {
+    width: 260px;
+    padding: 16px;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.95), rgba(18, 18, 18, 0.95));
+}
+
+.admin-main {
+    padding: 18px;
+}
+
+.admin-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.section-card {
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,157 @@
+{
+    "generated_at": "2025-12-28T22:35:47+00:00",
+    "summary": {
+        "admin_notifications": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/admin_notifications_remote_only.json"
+        },
+        "admins": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/admins_remote_only.json"
+        },
+        "backups": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/backups_remote_only.json"
+        },
+        "cache": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/cache_remote_only.json"
+        },
+        "cache_locks": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/cache_locks_remote_only.json"
+        },
+        "client_finances": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/client_finances_remote_only.json"
+        },
+        "client_interactions": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/client_interactions_remote_only.json"
+        },
+        "client_notes": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/client_notes_remote_only.json"
+        },
+        "client_projects": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/client_projects_remote_only.json"
+        },
+        "clients": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/clients_remote_only.json"
+        },
+        "cms_blocks": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/cms_blocks_remote_only.json"
+        },
+        "cms_pages": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/cms_pages_remote_only.json"
+        },
+        "contacts": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/contacts_remote_only.json"
+        },
+        "crm_audit": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/crm_audit_remote_only.json"
+        },
+        "crm_customers": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/crm_customers_remote_only.json"
+        },
+        "crm_leads": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/crm_leads_remote_only.json"
+        },
+        "failed_jobs": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/failed_jobs_remote_only.json"
+        },
+        "forms_submissions": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/forms_submissions_remote_only.json"
+        },
+        "interactions": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/interactions_remote_only.json"
+        },
+        "job_batches": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/job_batches_remote_only.json"
+        },
+        "jobs": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/jobs_remote_only.json"
+        },
+        "media_files": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/media_files_remote_only.json"
+        },
+        "menu_items": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/menu_items_remote_only.json"
+        },
+        "menu_sections": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/menu_sections_remote_only.json"
+        },
+        "migrations": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/migrations_remote_only.json"
+        },
+        "modules": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/modules_remote_only.json"
+        },
+        "opportunities": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/opportunities_remote_only.json"
+        },
+        "page_views": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/page_views_remote_only.json"
+        },
+        "pages": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/pages_remote_only.json"
+        },
+        "password_reset_tokens": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/password_reset_tokens_remote_only.json"
+        },
+        "password_resets": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/password_resets_remote_only.json"
+        },
+        "resources": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/resources_remote_only.json"
+        },
+        "sections": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/sections_remote_only.json"
+        },
+        "sessions": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/sessions_remote_only.json"
+        },
+        "tasks": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/tasks_remote_only.json"
+        },
+        "td_interactions": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/td_interactions_remote_only.json"
+        },
+        "td_projects": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/td_projects_remote_only.json"
+        },
+        "users": {
+            "remote_only": 0,
+            "out": "X:\\Programacion\\UltimateSite\\scripts\/..\/xlerion-backups\/remote_only\/users_remote_only.json"
+        }
+    }
+}

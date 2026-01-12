@@ -1,0 +1,231 @@
+Remote diff report generated at 2025-12-28T21:48:12+00:00
+
+Table: admin_notifications
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: admins
+  remote_count: 1
+  local_count: 1
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: backups
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: cache
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: cache_locks
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: client_finances
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: client_interactions
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: client_notes
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: client_projects
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: clients
+  remote_count: 4
+  local_count: 4
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: cms_blocks
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: cms_pages
+  remote_count: 11
+  local_count: 11
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: contacts
+  remote_count: 1
+  local_count: 1
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: crm_audit
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: crm_customers
+  remote_count: 0
+  local_count: 1
+  remote_only_count: 0
+  local_only_count: 1
+
+Table: crm_leads
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: failed_jobs
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: forms_submissions
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: interactions
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: job_batches
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: jobs
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: media_files
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: menu_items
+  remote_count: 10
+  local_count: 10
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: menu_sections
+  remote_count: 13
+  local_count: 13
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: migrations
+  remote_count: 7
+  local_count: 7
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: modules
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: opportunities
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: page_views
+  remote_count: 20
+  local_count: 232
+  remote_only_count: 0
+  local_only_count: 212
+  local_only_sample: [21,22,23,24,25,26,27,28,29,30]
+
+Table: pages
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: password_reset_tokens
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: password_resets
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: resources
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: sections
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: sessions
+  remote_count: 3
+  local_count: 3
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: tasks
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: td_interactions
+  remote_count: 0
+  local_count: 0
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: td_projects
+  remote_count: 2
+  local_count: 2
+  remote_only_count: 0
+  local_only_count: 0
+
+Table: users
+  remote_count: 1
+  local_count: 1
+  remote_only_count: 0
+  local_only_count: 0
+

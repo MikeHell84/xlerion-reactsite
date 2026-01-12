@@ -1,0 +1,760 @@
+// xlerion.scss - Global design tokens, utilities and component primitives
+// Compiled to `public/xlerion.css` for production. Edit partials under
+// `frontend/src/styles/` and run `npm run build:css` to regenerate.
+
+@use "sass:color";
+
+// Fonts - use local Work Sans from media/fonts as the site default
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/media/fonts/WorkSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/media/fonts/WorkSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/media/fonts/WorkSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/media/fonts/WorkSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// --------------------------------------------------
+// Design tokens
+// --------------------------------------------------
+$xlerion-blue: #0affe9 !default; // Azul láser (primario)
+$xlerion-dark: #212529 !default; // Gris oscuro (secundario)
+$xlerion-accent: #00FF88 !default; // Verde neón (acento)
+$xlerion-muted: #6c757d !default;
+
+// Spacing scale (modular)
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 16px;
+$space-4: 32px;
+
+// Typography
+$font-sans: 'Work Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+// Breakpoints
+$bp-mobile: 0;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+
+// --------------------------------------------------
+// Tokens: CSS custom properties for runtime interop
+// --------------------------------------------------
+:root {
+  --xlerion-primary: #{$xlerion-blue};
+  --xlerion-primary-rgb: 10, 255, 233;
+  /* derived RGB for opacity use */
+  --xlerion-dark: #{$xlerion-dark};
+  --xlerion-accent: #{$xlerion-accent};
+  --xlerion-accent-rgb: 0, 255, 136;
+  /* derived RGB for opacity use */
+  --xlerion-muted: #{$xlerion-muted};
+  --xlerion-space-1: #{$space-1};
+  --xlerion-space-2: #{$space-2};
+  --xlerion-space-3: #{$space-3};
+  --xlerion-space-4: #{$space-4};
+  --xlerion-font-sans: #{$font-sans};
+
+  /* Warning / accent palettes (centralized tokens for gradients) */
+  --xlerion-warn-start: #ff005c;
+  --xlerion-warn-end: #ffb300;
+  --xlerion-warn-start-rgb: 255, 0, 92;
+  --xlerion-warn-end-rgb: 255, 179, 0;
+
+  /* Gradient tokens */
+  --xlerion-gradient-primary: linear-gradient(90deg, rgba(var(--xlerion-primary-rgb), 1) 0%, rgba(var(--xlerion-primary-rgb), 0.85) 100%);
+  --xlerion-gradient-warn: linear-gradient(90deg, var(--xlerion-warn-start) 0%, var(--xlerion-warn-end) 100%);
+
+  /* Surface & alerts used by admin UI */
+  --xlerion-surface: #f7f7f7;
+  --xlerion-alert-bg: #ffecec;
+  --xlerion-alert-border: #f5c2c2;
+
+  /* Map Bootstrap core colors to Xlerion tokens for consistent components */
+  --bs-primary: var(--xlerion-primary);
+  --bs-dark: var(--xlerion-dark);
+  --bs-link-color: var(--xlerion-primary);
+
+  // Tokens globales Xlerion
+  --xlerion-dark-mobile: #111;
+  --xlerion-white: #fff;
+  --xlerion-text: #222;
+  --xlerion-danger: #dc3545;
+  --xlerion-success: #198754;
+}
+
+// --------------------------------------------------
+// Mixins & utilities
+// --------------------------------------------------
+// Button mixin: low-specificity primitive used by component styles
+@mixin xlerion-button($bg: $xlerion-blue, $color: #fff, $radius: 8px) {
+  display: inline-block;
+  background: $bg;
+  color: $color;
+  padding: $space-2 $space-3;
+  border-radius: $radius;
+  border: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+
+  &:hover {
+    background: color.adjust($bg, $lightness: -6%);
+    transform: translateY(-1px);
+  }
+}
+
+// Card mixin
+@mixin xlerion-card($radius: 10px, $shadow: 0 6px 18px rgba(16, 24, 40, 0.08)) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  background: #fff;
+}
+
+// Utility mixins
+@mixin xlerion-transition($props: all, $time: 200ms, $fn: ease) {
+  transition: $props $time $fn;
+}
+
+@mixin xlerion-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// --------------------------------------------------
+// Base styles
+// --------------------------------------------------
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: transparent;
+  color: #111827;
+  font-family:#{$font-sans};
+}
+
+/* Reset default page margins so full-bleed layouts work reliably */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// Headings and typography scale
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:#{$font-sans};
+  margin: 0 0 $space-3 0;
+}
+
+p {
+  margin: 0 0 $space-3 0;
+}
+
+// Buttons global utility
+.xlerion-btn {
+  @include xlerion-button();
+}
+
+// Forms
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+// --------------------------------------------------
+// Components: navbar, footer, cards, forms, hero
+// Prefixed with .xlerion- to avoid conflicts
+// --------------------------------------------------
+
+// Navbar primitive (light weight)
+.xlerion-navbar {
+  background: var(--xlerion-primary);
+  color: #fff;
+  padding: $space-2 $space-3;
+}
+
+// Navbar link and toggler colors to match corporate palette
+.xlerion-navbar .navbar-brand,
+.xlerion-navbar .nav-link {
+  color: #fff !important;
+}
+
+.xlerion-navbar .nav-link:hover,
+.xlerion-navbar .nav-link:focus {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.xlerion-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.xlerion-navbar .navbar-toggler-icon {
+  filter: invert(1) brightness(2);
+}
+
+/* Brand weight and more-specific navbar selector to override competing rules */
+.xlerion-navbar .navbar-brand {
+  font-weight: 600;
+}
+
+nav.navbar.xlerion-navbar {
+  background: var(--xlerion-primary);
+  color: #fff;
+}
+
+nav.navbar.xlerion-navbar .navbar-brand,
+nav.navbar.xlerion-navbar .nav-link {
+  color: #fff;
+}
+
+// Footer has its own module (Footer.module.scss) but keep base helpers here
+.xlerion-footer {
+  font-size: 0.95rem;
+}
+
+.xlerion-card {
+  @include xlerion-card();
+  padding: $space-3;
+}
+
+.xlerion-hero {
+  padding: $space-4 0;
+  background: linear-gradient(180deg, rgba(0, 123, 255, 0.06), rgba(0, 123, 255, 0.02));
+}
+
+// Estilos para login admin
+.login-box {
+  background: var(--xlerion-white);
+  color: var(--xlerion-text);
+  padding: 3rem 2rem 3rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 32px 0 #0008;
+  max-width: 370px;
+  width: 100%;
+}
+
+/* Center all textual content inside the login box */
+.login-box {
+  text-align: center;
+}
+
+.login-box .form-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+/* Improve vertical rhythm between input groups in the login form */
+.login-box .mb-3 {
+  margin-bottom: 1.25rem;
+}
+
+.login-box input.form-control,
+.login-box textarea.form-control {
+  padding-top: 0.9rem !important;
+  padding-bottom: 0.9rem !important;
+}
+
+.login-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+/* Logo in login box */
+.login-logo {
+  display: block;
+  margin: 0 auto 0.8rem auto;
+  width: 140px;
+  height: auto;
+}
+
+.form-control {
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+}
+
+.xlerion-btn-primary {
+  background: var(--xlerion-primary);
+  color: #000;
+  font-family: 'Work Sans', var(--xlerion-font-sans);
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1.2rem;
+  padding: 0.7rem 0;
+  transition: background 0.2s;
+
+  &:hover {
+    background: color.adjust($xlerion-blue, $lightness: -10%);
+  }
+}
+
+/* Recovery form: align action buttons and keep brand colors/shapes */
+.recovery-form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  align-items: stretch;
+}
+
+.recovery-form>div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recovery-form .xlerion-btn-primary {
+  flex: 1 1 auto;
+  width: auto;
+  margin-top: 0;
+  padding: 0.85rem 0.9rem;
+  border-radius: 0.8rem;
+}
+
+.recovery-form .xlerion-btn {
+  flex: 0 0 96px;
+  padding: 0.68rem 0.9rem;
+  border-radius: 0.7rem;
+  background: var(--xlerion-primary);
+  color: #000;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(var(--xlerion-primary-rgb), 0.12);
+}
+
+.recovery-form .xlerion-btn:hover,
+.recovery-form .xlerion-btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.96);
+}
+
+/* Center input text and placeholders inside recovery form */
+.recovery-form input.form-control,
+.recovery-form textarea.form-control {
+  text-align: center;
+  caret-color: var(--xlerion-primary);
+}
+
+.recovery-form input.form-control::placeholder,
+.recovery-form textarea.form-control::placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Mobile: stack buttons and make both full-width for easy tapping */
+@media (max-width: 600px) {
+  .recovery-form>div {
+    flex-direction: column;
+    gap: $space-2;
+  }
+
+  .recovery-form .xlerion-btn,
+  .recovery-form .xlerion-btn-primary {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.forgot-password-link {
+  display: block;
+  text-align: right;
+  margin-top: 0.7rem;
+  color: var(--xlerion-primary);
+  text-decoration: none;
+  font-size: 0.98rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// MOBILE: diseño radicalmente diferente
+@media (max-width: 600px) {
+  body {
+    background: var(--xlerion-dark-mobile) !important;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    display: block;
+    margin: 0;
+  }
+
+  .login-box {
+    background: var(--xlerion-dark-mobile) !important;
+    color: var(--xlerion-white) !important;
+    box-shadow: 0 8px 30px rgba(var(--xlerion-primary-rgb), 0.12) !important;
+    border: 1px solid rgba(var(--xlerion-primary-rgb), 0.9) !important;
+    border-radius: 0.8rem !important;
+    max-width: 420px !important;
+    width: 100% !important;
+    min-height: auto !important;
+    margin: 0 auto !important;
+    padding: 3rem 1rem 2.5rem 1rem !important;
+    display: block !important;
+  }
+
+  .login-title {
+    font-size: 1.8rem !important;
+    color: var(--xlerion-primary) !important;
+    margin-bottom: 1.6rem !important;
+    text-align: center !important;
+  }
+
+  .login-logo {
+    width: 110px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .form-control {
+    border-radius: 0.3rem !important;
+    font-size: 1.15rem !important;
+  }
+
+  /* Mobile input visual polish: rounded, padded, company colors */
+  input.form-control,
+  input[type="text"],
+  input[type="password"],
+  textarea.form-control {
+    width: 100% !important;
+    padding: 0.7rem 0.9rem !important;
+    border-radius: 0.6rem !important;
+    border: 1px solid rgba(var(--xlerion-primary-rgb), 0.18) !important;
+    background: #fff !important;
+    color: #111 !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+
+  input.form-control:focus,
+  textarea.form-control:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    outline: none !important;
+    border-color: var(--xlerion-primary) !important;
+    box-shadow: 0 6px 18px rgba(var(--xlerion-primary-rgb), 0.08) !important;
+  }
+
+  .xlerion-btn-primary {
+    background: var(--xlerion-primary) !important;
+    color: #000 !important;
+    font-family: 'Work Sans', var(--xlerion-font-sans) !important;
+    border-radius: 0.3rem !important;
+    font-size: 1.2rem !important;
+    margin-top: 1.7rem !important;
+    padding: 1.1rem 0 !important;
+  }
+
+  .forgot-password-link {
+    color: var(--xlerion-white) !important;
+    text-align: center !important;
+    margin-top: 1.2rem !important;
+    font-size: 1.05rem !important;
+  }
+}
+
+/* Ensure the admin wrapper centers content on all viewports */
+.admin-login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: $space-3;
+}
+
+// Small utilities
+.xlerion-shadow-sm {
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.06);
+}
+
+.xlerion-rounded {
+  border-radius: 8px;
+}
+
+// Responsive helpers (mobile-first)
+@media (min-width: $bp-tablet) {
+  .xlerion-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 $space-3;
+  }
+}
+
+/* Parallax background base: enable on mobile by default with lower opacity
+     Desktop-specific overrides live in the desktop media query below. */
+.parallax-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: url('/media/images/parallax/documentacion-recursos-parallax.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0) scale(1);
+  transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
+  /* slightly brighter on mobile so image reads better over dark surfaces */
+  filter: saturate(0.95) contrast(0.98) brightness(0.9) blur(13px);
+  opacity: 0.6;
+  /* increased for better visibility on mobile */
+  /* subtle presence on mobile */
+}
+
+/* Admin-login specific overrides (applied only to the login page via body.admin-login-page) */
+body.admin-login-page,
+body.admin-login-page html {
+  background: var(--xlerion-dark-mobile) !important;
+  color: var(--xlerion-white) !important;
+  overflow-x: hidden !important;
+}
+
+/* Admin Dashboard styles */
+body.admin-dashboard-page {
+  background: #000;
+  color: #fff;
+}
+
+.admin-sidebar {
+  width: 220px;
+  float: left;
+  padding: $space-4;
+  background: rgba(255, 255, 255, 0.04);
+  min-height: 100vh;
+  border-right: 1px solid rgba(var(--xlerion-primary-rgb), 0.06);
+}
+
+.admin-sidebar h3 {
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.admin-sidebar li {
+  margin: 0.35rem 0;
+}
+
+.admin-sidebar a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.admin-sidebar a:hover {
+  color: var(--xlerion-primary);
+  text-decoration: underline;
+}
+
+.admin-main {
+  margin-left: 260px;
+  padding: $space-4;
+  min-height: 100vh;
+}
+
+.admin-main h1 {
+  color: var(--xlerion-primary);
+  font-size: 2rem;
+  margin-bottom: $space-3;
+}
+
+.admin-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: $space-3;
+  border-radius: 0.8rem;
+}
+
+body.admin-login-page .parallax-bg {
+  opacity: 0.6 !important;
+  filter: saturate(0.95) contrast(0.98) brightness(0.9) blur(13px) !important;
+}
+
+body.admin-login-page .login-box {
+  background: var(--xlerion-dark-mobile) !important;
+  color: var(--xlerion-white) !important;
+  border: 1px solid rgba(var(--xlerion-primary-rgb), 0.18) !important;
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.6) !important;
+  z-index: 2;
+}
+
+// Center admin login on larger screens
+@media (min-width: 601px) {
+  .admin-login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: $space-4;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .xlerion-container {
+    max-width: 1140px;
+  }
+}
+
+/* Ensure tablet and mobile-landscape widths show the dark admin background
+   so the parallax image reads and login box remains dark. Covers widths
+   from 0 up to desktop breakpoint (exclusive). */
+@media (max-width: 1199px) {
+  body {
+    background: var(--xlerion-dark-mobile) !important;
+    color: var(--xlerion-white);
+  }
+
+  .parallax-bg {
+    /* keep the mobile-visible opacity but ensure it's present on tablets/landscape */
+    opacity: 0.6 !important;
+    filter: saturate(0.95) contrast(0.98) brightness(0.9) blur(13px) !important;
+  }
+
+  .admin-login-wrapper {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  .login-box {
+    background: var(--xlerion-dark-mobile) !important;
+    color: var(--xlerion-white) !important;
+    border: 1px solid rgba(var(--xlerion-primary-rgb), 0.18) !important;
+    box-shadow: 0 8px 36px rgba(0, 0, 0, 0.6) !important;
+    z-index: 2;
+  }
+
+  /* Inputs on dark surfaces: subtle translucent backgrounds instead of full white */
+  input.form-control,
+  textarea.form-control,
+  input[type="text"],
+  input[type="password"] {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  input.form-control::placeholder,
+  textarea.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+/* Desktop-specific: black login panel and parallax background */
+@media (min-width: $bp-desktop) {
+
+  /* Ensure a consistent dark backdrop on desktop so low-opacity parallax
+     doesn't reveal the default white page background when it translates. */
+  body {
+    background: #000;
+    color: #fff;
+  }
+
+  .parallax-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    /* keep behind all UI */
+    background-image: url('/media/images/parallax/documentacion-recursos-parallax.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0) scale(1);
+    transition: transform 400ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
+    /* brighten slightly so image doesn't read as black against the dark body */
+    filter: saturate(1.05) contrast(1.02) brightness(1.05) blur(13px);
+    opacity: 1;
+    /* fully visible on desktop */
+  }
+
+  .admin-login-wrapper {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  .login-box {
+    background: #000 !important;
+    color: #fff !important;
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.65) !important, 0 0 24px rgba(var(--xlerion-primary-rgb), 0.18) !important;
+    border: 1px solid var(--xlerion-primary);
+    position: relative;
+    z-index: 2;
+    /* sit above parallax */
+  }
+
+  .form-control {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+  }
+
+  input.form-control::placeholder,
+  textarea.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .xlerion-btn-primary {
+    background: var(--xlerion-primary);
+    color: #000 !important;
+    font-family: 'Work Sans', var(--xlerion-font-sans) !important;
+    box-shadow: 0 6px 18px rgba(var(--xlerion-primary-rgb), 0.12);
+  }
+
+  .forgot-password-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+  }
+}
+
+// --------------------------------------------------
+// Documentation comments: where to place partials
+// - base/ (reset, typography, tokens)
+// - components/ (buttons, cards, navbar, footer)
+// - layout/ (grid, containers)
+// - utilities/ (helpers, mixins)
+// Keep partials imported here when the project grows.
+// --------------------------------------------------
